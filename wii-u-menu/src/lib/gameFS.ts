@@ -364,6 +364,18 @@ export async function installTitle(
   }
 }
 
+/** Uninstall any title by id — branches on its catalog type. */
+export async function uninstallTitle(titleId: string): Promise<void> {
+  const t = (await getCatalog()).find((g) => g.titleId === titleId);
+  if (t?.type === 'bundle') {
+    await uninstallBundle(titleId);
+  } else {
+    // Unknown/absent in catalog → try both stores so nothing is orphaned.
+    await uninstallGame(titleId);
+    await uninstallBundle(titleId);
+  }
+}
+
 /** All installed titles (single VFS payloads + bundle caches), with type. */
 export async function listInstalledAll(): Promise<{ titleId: string; type: 'single' | 'bundle' }[]> {
   const out: { titleId: string; type: 'single' | 'bundle' }[] = [];

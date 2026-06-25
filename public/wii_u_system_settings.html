@@ -312,6 +312,12 @@
         }
         .dm-card:hover { filter: brightness(1.04); transform: scale(1.015); }
         .dm-card:active { transform: scale(0.985); }
+        .dm-del {
+            margin-left: auto; flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #9aa1a9; font-size: 16px; transition: color 0.12s, background 0.12s;
+        }
+        .dm-card:hover .dm-del { color: var(--wiiu-red); background: rgba(193,39,45,0.10); }
         .dm-tile {
             width: 64px; height: 64px; border-radius: 10px; flex: 0 0 auto;
             display: flex; align-items: center; justify-content: center;
@@ -528,6 +534,25 @@
             <button onclick="closeModal()" onmouseenter="playHoverSound()" class="px-8 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl text-lg font-bold text-gray-600 transition-colors shadow-inner">
                 OK
             </button>
+        </div>
+    </div>
+
+    <!-- Delete-game confirm (Yes/No) -->
+    <div id="confirmModal" class="modal-overlay fixed inset-0 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-3xl shadow-2xl border-2 border-gray-200 max-w-sm text-center relative overflow-hidden transform transition-all">
+            <div class="w-16 h-16 mx-auto bg-red-50 rounded-full flex items-center justify-center mb-4 text-[var(--wiiu-red)] text-3xl">
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-700 mb-2">Delete Software</h2>
+            <p id="confirmMessage" class="text-gray-500 font-semibold mb-6">Do you want to get rid of this game?</p>
+            <div class="flex gap-3 justify-center">
+                <button id="confirmYes" onmouseenter="playHoverSound()" class="px-8 py-3 bg-[var(--wiiu-red)] hover:brightness-110 rounded-xl text-lg font-bold text-white transition-all shadow">
+                    Yes
+                </button>
+                <button onclick="closeConfirm()" onmouseenter="playHoverSound()" class="px-8 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl text-lg font-bold text-gray-600 transition-colors shadow-inner">
+                    No
+                </button>
+            </div>
         </div>
     </div>
 
@@ -1099,13 +1124,44 @@
             setTimeout(() => { if (dmPending) { dmPending = false; renderDataGames([]); } }, 2500);
         }
 
+        let dmGames = [];   // last-known installed list (for delete lookups)
+
         window.addEventListener('message', (e) => {
             if (e.data && e.data.type === 'INSTALLED_GAMES') {
                 dmPending = false;
-                const games = e.data.games || [];
-                applySystemMemory(games);
-                renderDataGames(games);
+                dmGames = e.data.games || [];
+                applySystemMemory(dmGames);
+                renderDataGames(dmGames);
             }
+        });
+
+        // ── Delete game data ──────────────────────────────────────────────
+        let dmDeleteId = null;
+        function dmAskDelete(titleId) {
+            playClickSound();
+            const g = dmGames.find(x => x.titleId === titleId);
+            dmDeleteId = titleId;
+            const nm = g ? String(g.name || titleId) : titleId;
+            document.getElementById('confirmMessage').textContent = 'Do you want to get rid of ' + nm + '?';
+            document.getElementById('confirmModal').classList.add('active');
+        }
+        function closeConfirm() {
+            playClickSound();
+            document.getElementById('confirmModal').classList.remove('active');
+            dmDeleteId = null;
+        }
+        document.getElementById('confirmYes').addEventListener('click', () => {
+            if (!dmDeleteId) return;
+            playClickSound();
+            window.parent.postMessage({ type: 'DELETE_GAME', id: dmDeleteId }, '*');
+            document.getElementById('confirmModal').classList.remove('active');
+            dmDeleteId = null;
+            // Show progress + refresh the list once the parent finishes the uninstall.
+            const grid = document.getElementById('dm-grid');
+            if (grid) grid.innerHTML = '<div class="dm-empty">Deleting…</div>';
+            dmPending = true;
+            setTimeout(requestInstalledGames, 400);
+            setTimeout(() => { if (dmPending) { dmPending = false; requestInstalledGames(); } }, 2000);
         });
 
         function dmFmtSize(bytes) {
@@ -1126,13 +1182,15 @@
                     const tile = g.icon
                         ? `<div class="dm-tile dm-tile-icon"><img src="${g.icon}" alt=""></div>`
                         : `<div class="dm-tile" style="background:${color}">${i + 1}</div>`;
+                    const tid = String(g.titleId || '').replace(/'/g, '');
                     return `
-                        <div class="dm-card" onmouseenter="playHoverSound()" onclick="playClickSound()">
+                        <div class="dm-card" onmouseenter="playHoverSound()" onclick="dmAskDelete('${tid}')" title="Delete this software">
                             ${tile}
                             <div class="dm-info">
                                 <div class="dm-name">${name}</div>
                                 <div class="dm-size"><span class="dm-num">${s.num}</span><span class="dm-unit ${s.cls}">${s.unit}</span></div>
                             </div>
+                            <div class="dm-del"><i class="fa-solid fa-trash-can"></i></div>
                         </div>`;
                 }).join('');
             }

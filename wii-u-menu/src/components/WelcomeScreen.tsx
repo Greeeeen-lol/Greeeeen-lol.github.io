@@ -6,7 +6,7 @@ import { PlazaMiiPanel } from './PlazaMiiPanel';
 import {
   listInstalledDetailed,
   installTitle, listInstalledAll, getCatalog, getTitleLaunchSrc,
-  bundleSize, ensureVfsServiceWorker, type CatalogTitle,
+  bundleSize, ensureVfsServiceWorker, uninstallTitle, type CatalogTitle,
 } from '../lib/gameFS';
 
 // ── TV Audio Output (System Settings) ──────────────────────────────────────
@@ -3277,6 +3277,31 @@ export function WelcomeScreen({
               (event.source as Window | null)?.postMessage({ type: 'INSTALLED_GAMES', games }, '*');
             } catch (err) {
               (event.source as Window | null)?.postMessage({ type: 'INSTALLED_GAMES', games: [] }, '*');
+            }
+          })();
+        } else if (event.data.type === 'DELETE_GAME') {
+          // Data Management → confirmed delete. Uninstall locally, refresh the
+          // home menu, and send the settings iframe the updated list.
+          const target = event.source as Window | null;
+          (async () => {
+            try {
+              await uninstallTitle(event.data.id);
+              await fetchInstalledGames();
+              const [singles, installedAll, catalog] = await Promise.all([
+                listInstalledDetailed(),
+                listInstalledAll(),
+                getCatalog().catch(() => [] as CatalogTitle[]),
+              ]);
+              const sizeOf = new Map(singles.map(s => [s.titleId, s.size]));
+              const games = await Promise.all(installedAll.map(async g => {
+                const meta = catalog.find(c => c.titleId === g.titleId);
+                const size = g.type === 'bundle' ? await bundleSize(g.titleId) : (sizeOf.get(g.titleId) || 0);
+                return { titleId: g.titleId, size, name: meta?.name || g.titleId, icon: meta?.icon || null };
+              }));
+              target?.postMessage({ type: 'INSTALLED_GAMES', games }, '*');
+            } catch (err) {
+              console.error('Failed to delete game data:', err);
+              target?.postMessage({ type: 'INSTALLED_GAMES', games: [] }, '*');
             }
           })();
         } else if (event.data.type === 'eshop-sound') {
