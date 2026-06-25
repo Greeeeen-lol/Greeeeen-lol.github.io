@@ -13,6 +13,12 @@ platform-server/assets/games/
 # Game source mirrors (backed up off-drive)
 /games to put on eshop/
 
+# Fighting-game backend — stays local, never on GitHub
+/server/
+
+# Personal Mii file
+/GreenArts.miic
+
 # Env / logs / OS cruft
 .env
 .env.*
