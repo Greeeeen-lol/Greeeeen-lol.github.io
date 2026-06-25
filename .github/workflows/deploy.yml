@@ -14,10 +14,11 @@ permissions:
   pages: write
   id-token: write
 
-# One deploy at a time; let an in-progress run finish.
+# One deploy at a time; a new push cancels a stale/stuck in-progress run so
+# deployments can't deadlock on the Pages lock.
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
