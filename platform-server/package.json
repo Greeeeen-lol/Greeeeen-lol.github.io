@@ -1,0 +1,15 @@
+{
+  "name": "platform-server",
+  "version": "1.0.0",
+  "description": "Wii U Menu platform backend: asset host + eShop game download/stream. Separate from server/ (the fighting-game network).",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

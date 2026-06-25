@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta http-equiv="Content-Script-Type" content="text/javascript"><meta http-equiv="Content-Style-Type" content="text/css"><title data-message="history04_01_001">ご利用記録</title><link rel="stylesheet" href="css/minified/mymenu.css"><link rel="stylesheet" href="css/index.css"><link rel="stylesheet" href="css/history.css"><script type="text/javascript" src="js/import.js?ts=1465872859469" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script><script type="text/javascript" src="js/history.js" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script><script type="text/javascript" src="js/history04_01.js" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script></head><body><div id="wrap"><div id="history04_01"><div id="sb_cont"><div id="header_common"><h1 data-message="history04_01_001">ご利用記録</h1></div><div id="contents_common"><div id="data_exist" style="display:none;"><div class="page_sending_div clearfix"><ul class="page_sending_ul sel_tran_navi"></ul></div><ul id="use_record_ul"></ul><div class="page_sending_div clearfix"><ul class="page_sending_ul sel_tran_navi ngo"></ul></div></div><div id="data_none" class="dn"><p data-message="history04_01_009">ご利用記録はありません。</p></div></div></div><div id="sel_menu_bar"></div></div></div><script id="template_transaction" type="text/x-jquery-tmpl"><li class="clearfix">
+        <div class="ur_finding clearfix">
+            <h2>${ str_type }</h2>
+            <p>${ str_date }</p>
+        </div>
+        <h3>{{html html_desc }}</h3>
+        <dl class="h21_counts">
+            <dt>${ str_amount }</dt>
+            <dd>${ str_amount_data }</dd>
+            <dt>${ str_balance }</dt>
+            <dd>${ str_balance_data }</dd>
+        </dl>
+        <p class="h21_details" style="display:${ param_receipt_disp }"><a href="${ url_receipt }" class="btn_002 se" data-se-label="SE_WAVE_OK">${ str_receipt }</a></p>
+    </li></script><div style="display: none;"><span id="str_amount" data-message="common01_01_019">Amount</span> <span id="str_balance" data-message="common01_01_020">Balance:</span> <span id="str_receipt" data-message="common01_01_018">View Details</span></div></body></html>

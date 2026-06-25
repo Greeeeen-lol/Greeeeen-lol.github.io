@@ -1,0 +1,51 @@
+<script id="wrapper" type="text/template">
+    <div id="header-check">
+        <h1 data-message="data03_05_001">選んだものを確認</h1>
+    </div>
+    {{if (checked_num) { }}
+    <div id="main-check">
+        <p>{{= str_checked_num }}</p>
+        <div class="item">
+            <ul>
+            </ul>
+        </div>
+        <a href="" class="next se" data-se-label="SE_WAVE_DECIDE"><span data-message="common01_01_033">Next</span></a>
+    </div>
+    {{ } else { }}
+    <!-- ↓チェック項目0件時の表示 -->
+    <div id="main-check-disable">
+        <div class="text">
+            <p data-message="data03_05_003">現在、選んでいるものはありません。</p>
+        </div>
+        <p data-message="common01_01_033">Next</p>
+    </div>
+    {{ } }}
+</script>
+
+<script id="item" type="text/template">
+    <a href="#" class="outline se" data-se-label="SE_WAVE_OK"
+        data-aoc-id="{{- id }}" data-variation="{{- variation }}" data-content-index="{{- content_index }}" data-allow-over-lap="{{- allow_overlap }}">
+        <div class="icon">
+            <div class="image"><img src="image/placeholder/place_icon_add_c.png" data-original="{{- icon_url }}" width="100" height="100"/></div>
+            {{if (is_discount) { }}
+            <div class="status"><span data-message="common01_01_047">SALE</span></div>
+            {{ } }}
+        </div>
+        <div class="title">
+            <div class="name">{{- name }}</div>
+            {{if (is_discount) { }}
+            <span class="strike-through"><span class="ordinary-price">{{= regular_price }}</span></span>
+            <span class="price sale">{{= discount_price }}</span>
+            {{ } else { }}
+            <span class="strike-through"><span class="ordinary-price"></span></span>
+            <span class="price">{{= regular_price }}</span>
+            {{ } }}
+            {{if (mov_disp) { }}
+            <span class="movie"></span>
+            {{ } }}
+        </div>
+    </a>
+    <a href="#" class="delete se" data-se-label="SE_WAVE_CANCEL">
+        <span data-message="wish01_01_003">はずす</span>
+    </a>
+</script>

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/*-- 設定・その他 set --*/
+
+#sb_cont { text-align:center; padding:auto; position:relative; }
+#set04_01 #sb_cont,
+#set09_01 #sb_cont { height:720px; overflow:hidden; }
+
+
+/*-- 01_01 --*/
+
+#set01_01 #contents_common { padding-bottom:40px; }
+#set01_01 h3 { height:60px; line-height:60px; margin:45px 50px -10px 35px; font-size:30px; color:#ffffff; border-radius:15px;
+    background:-webkit-gradient(linear, left top, left bottom, from(#ffb900), to(#ffa000)); 
+    text-shadow:0 -2px 0 #ff7d00; }
+
+/*-- 02_01 --*/
+
+#set02_choice { width:550px; min-height:50px; text-align:center; margin:30px auto 35px auto; padding:35px 0 25px 0; font-size:30px; }
+#set02_choice ul { text-align:left; margin:0 0 0 40px; }
+#set02_choice ul li { height:50px; margin:0 0 40px 0; }
+#set02_choice ul li:last-child { margin:0 !important; }
+#set02_ok a { display:block; width:790px; height:85px; line-height:85px; text-align:center; margin:auto; font-size:30px; }
+
+
+/*-- 03_01 --*/
+
+#set03_01 h2,
+#set09_01 h2 { line-height:1.5; color:#323333; margin:0 0 35px 0; }
+#set03_01 .btn_2p { width:940px; min-height:43px; margin:0 0 35px 50px; padding:30px 30px; }
+#set03_01 .btn_2p li { width:440px; min-height:43px; text-align:left; font-size:25px; float:left; }
+#set03_01 .btn_c,
+#set09_01 .btn_c { padding-bottom:35px; }
+#set03_01 .ck_lamp { display:block; min-height:43px; background:url(../image/icon_lamp.png) 8px 8px no-repeat; }
+#set03_01 .ck_lamp_on { display:block; min-height:43px; background:url(../image/icon_lamp_on.png) 8px 8px no-repeat; }
+
+
+/*-- 04_01 --*/
+#set04_01 #result_dl dt { width:480px; }
+#set04_01 #result_dl dd { width:520px; }
+#set04_01 .flow_ul { width:auto; display: block; overflow:visible; }
+#set04_01 .flow_ul a { width:1000px; height:65px; text-align:center; margin:125px auto 0 auto; font-size:27px; }
+#set04_01 .none_attention { height:550px; }
+#set04_01 .none_register_attention { width: 1020px; margin: 35px 50px 0 35px; display: block; }
+
+/*-- 05_01 --*/
+
+#set05_01 #contents_common { padding-bottom:40px; }
+#set05_01 h3 { text-align:left; margin:0 25px 0 25px; padding:0 8px 5px 8px; border-bottom:2px #cccccc solid; font-size:30px; }
+#set05_01 ul.lf li{ padding:0; text-indent: 0; }
+
+/*-- 06_01 --*/
+
+#set06_01 h2 { color:#323333; margin:35px 0 50px 0; }
+#set06_01 .ctr { line-height:1.6; margin:0 auto 60px auto; font-size:25px; #323333; }
+#set06_01 .btn_2p { width:820px; min-height:43px; margin:0 0 45px 50px; padding:30px 90px; }
+#set06_01 .btn_2p li { width:380px; min-height:43px; text-align:left; font-size:25px; float:left; }
+#set06_01 .ck_lamp { display:block; min-height:43px; background:url(../image/icon_lamp.png) 8px 8px no-repeat; }
+#set06_01 .ck_lamp_on { display:block; min-height:43px; background:url(../image/icon_lamp_on.png) 8px 8px no-repeat; }
+
+
+/*-- 07_01 --*/
+
+#set07_01 h2 { width:890px; line-height:1.5; text-align:left; margin:0 0 0 60px !important; font-size:28px; }
+#set07_01 .lf { margin:30px 0 45px 105px; border-left:2px #cccccc solid; padding:0 0 0 20px; }
+#set07_01 div.lf p { margin:0 50px 25px 0; font-size:25px; color:#646464; }
+#set07_01 #code_in { padding:17px 20px 22px 20px; }
+#set07_01 #code_in dt { width:974px; text-align:center; margin:0 auto 5px auto; float:none; clear:both; }
+#set07_01 #code_in dd { width:974px; text-align:center; margin:0 auto 5px auto; float:none; clear:both; }
+#set07_01 input { width:940px; }
+#set07_01 .btn_c { padding:0 0 45px 0; }
+
+
+/*-- 07_03 --*/
+
+#lb_box { min-height:245px; line-height:1.5; text-align:left; margin:0 50px 40px 45px; font-size:26px; }
+#lb_box p { margin:0 0 15px 0; padding:0 0 0 28px; border-left:2px #cccccc solid; }
+
+#set07_03 #flow_dl { width:970px; margin:0 auto 50px auto; font-size:30px; }
+#set07_03 #flow_dl dt { width:970px; text-align:center; margin:auto; padding:15px 0 15px 0; float:none; }
+#set07_03 #flow_dl dd { width:970px; text-align:center; margin:auto; padding:15px 0 15px 0; float:none; }
+#set07_03 .btn_c { margin: 40px auto; }
+
+
+/*-- 09_01 --*/
+
+.code_in_large { margin: 0 0 50px 0;}
+

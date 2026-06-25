@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output (GitHub Actions rebuilds it)
+dist/
+geisha_wup.cdn.nintendo.net/dist/
+
+# Backend-only game payloads — too big for GitHub (3 zips > 100MB hard limit)
+# and never served by Pages. They live on the PC backend; rebuild with
+# platform-server/scripts/package-games.js from the backed-up sources.
+platform-server/assets/games/
+
+# Game source mirrors (backed up off-drive)
+/games to put on eshop/
+
+# Env / logs / OS cruft
+.env
+.env.*
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

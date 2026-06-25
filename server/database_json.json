@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "username": "GreenArts",
+    "passwordHash": "$2b$10$yJ0jF76oxYdZk/rOKnBdqebL3Jf4pv3mIeoB4luiFZ.xGovoM823q",
+    "wins": 0,
+    "forGloryWins": 0,
+    "forFunWins": 0,
+    "losses": 0,
+    "currentStatus": "offline",
+    "createdAt": "2026-06-15T20:07:44.834Z",
+    "mii": {
+      "nickname": "GreenArts",
+      "creator": "",
+      "ffsd": "",
+      "data": "BAWAIVgkwMSgANRQBm8YKnsJvmBHAHIAZQBlAG4AQQByAHQAcwAAAEcAcgBlAGUAbgBBAHIAdABzAAAACAABCAfYNwMBAwYCAAMJCgQEAgMMAQAAAP8ABAAACAQACgMAMf//EQD/BAACFAQVAxYOBAAKBAEJ//8A/wAAAAP///8=",
+      "studio": "",
+      "id": "archived_1781554060002"
+    },
+    "purchasedTitles": [],
+    "balance": 0
+  }
+]

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="TextBox_0000">ニンテンドーeショップ電子説明書 もくじ</entry>
+<entry key="TextBox_0001">説明書</entry>
+<entry key="TextBox_0002">ニンテンドーeショップ電子説明書 もくじ</entry>
+<entry key="TextBox_0003">はじめに</entry>
+<entry key="TextBox_0004">    &lt;a href=&quot;manual01_01.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;1&lt;/span&gt;    &lt;span class=&quot;mm_title&quot;&gt;ご使用になる前に&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0005">    &lt;a href=&quot;manual01_02.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;2&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;ニンテンドーeショップとは&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0006">    &lt;a href=&quot;manual01_03.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;3&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;トップ画面の見かた&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0008">    &lt;a href=&quot;manual01_04.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;4&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;マイメニュー&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0012">情報を見る</entry>
+<entry key="TextBox_0013">    &lt;a href=&quot;manual01_05.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;5&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;ソフトをさがす&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0014">    &lt;a href=&quot;manual01_06.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;6&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;ソフトの情報を見る&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0015">    &lt;a href=&quot;manual01_07.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;7&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;映像を見る&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0016">購入する</entry>
+<entry key="TextBox_0017">    &lt;a href=&quot;manual01_08.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;8&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;残高を追加する&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0018">    &lt;a href=&quot;manual01_09.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;9&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;ソフトを購入する&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0019">    &lt;a href=&quot;manual01_10.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;10&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;追加コンテンツや利用券を購入する&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0020">その他のできること</entry>
+<entry key="TextBox_0021">    &lt;a href=&quot;manual01_11.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;11&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;ダウンロード番号の入力&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0022">    &lt;a href=&quot;manual01_12.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;12&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;ランキングを見る&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0023">各種情報</entry>
+<entry key="TextBox_0024">    &lt;a href=&quot;manual01_13.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;13&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;Ｑ＆Ａ&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0025">    &lt;a href=&quot;manual01_14.html&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK&quot;&gt;&lt;span class=&quot;mm_num&quot;&gt;14&lt;/span&gt;      &lt;span class=&quot;mm_title&quot;&gt;集計方法について&lt;/span&gt;&lt;/a&gt;</entry>
+<entry key="TextBox_0026">説明書をとじる</entry>
+<entry key="TextBox_0106">ご使用になる前に</entry>
+<entry key="TextBox_0100">安全に使用するために</entry>
+<entry key="TextBox_0101">説明書</entry>
+<entry key="TextBox_0102">安全に使用するために</entry>
+<entry key="TextBox_0108">この電子説明書をよくお読みいただき、正しくお使いください。</entry>
+<entry key="TextBox_0103">Wii&amp;nbsp;Uメニューの &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;safe_i.jpg&quot; width=&quot;38&quot; height=&quot;38&quot; class=&quot;mid lazy&quot;/&gt;（安全に使用するために）は、ご使用になる前に必ずお読みください。ここには、お客様の健康と安全のための大切な内容が書かれています。ご使用になる方が小さなお子様の場合は、保護者の方がよく読んでご説明ください。</entry>
+<entry key="TextBox_0109">©2012 Nintendo</entry>
+<entry key="TextBox_0104">説明書をとじる</entry>
+<entry key="TextBox_0105">もくじへ</entry>
+<entry key="TextBox_0200">ニンテンドーeショップとは</entry>
+<entry key="TextBox_0201">説明書</entry>
+<entry key="TextBox_0202">ニンテンドーeショップとは</entry>
+<entry key="TextBox_0203">ニンテンドーeショップとは、Wii&amp;nbsp;Uダウンロードソフトや追加コンテンツなどを購入できるインターネット上のお店です。また、ソフトの詳細情報や紹介映像を見たり、体験版をダウンロードしたりすることもできます。</entry>
+<entry key="TextBox_0220">※ソフトなどを購入するには残高にチャージ（入金）する必要があります。&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_08.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;8&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0221">※Wii&amp;nbsp;U本体とニンテンドー3DSシリーズ本体に同じニンテンドーネットワークIDを登録すると、そのIDで残高やご利用記録を共有できます。</entry>
+<entry key="TextBox_0204">購入できるソフト</entry>
+<entry key="TextBox_0205">&lt;span&gt;●&lt;/span&gt;Wii&amp;nbsp;Uダウンロードソフト</entry>
+<entry key="TextBox_0206">Wii&amp;nbsp;Uのダウンロード専用ソフトや、Wii&amp;nbsp;Uディスクソフトのダウンロード版です。</entry>
+<entry key="TextBox_0212">&lt;span&gt;●&lt;/span&gt;バーチャルコンソール</entry>
+<entry key="TextBox_0213">ファミコン・スーパーファミコンなど、昔のゲーム機のなつかしいソフトです。</entry>
+<entry key="TextBox_0214">バーチャルコンソール優待価格のお知らせ</entry>
+<entry key="TextBox_0215">Wii版のバーチャルコンソールタイトルをすでにお持ちの方（Wii で購入したバーチャルコンソールタイトルをWii&amp;nbsp;Uに引っ越した方や、WiiメニューのWiiショッピングチャンネルでバーチャルコンソールタイトルを購入した方）は、同じタイトルのWii&amp;nbsp;U版バーチャルコンソールを購入する場合に優待価格が適用されます。くわしくは、任天堂ホームページをご覧ください。</entry>
+<entry key="TextBox_0207">※お子様の使用を制限したい場合は、Wii&amp;nbsp;Uメニューの「保護者による使用制限」で次の制限をすることができます。Wii&amp;nbsp;U電子説明書は、Wii&amp;nbsp;Uメニューで &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;HOMEbutton_i.png&quot; width=&quot;38&quot; height=&quot;38&quot; class=&quot;mid lazy&quot;/&gt; を押し、HOMEボタンメニューで &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;manual_i.jpg&quot; width=&quot;38&quot; height=&quot;38&quot; class=&quot;mid lazy&quot;/&gt; を選ぶと表示されます。</entry>
+<entry key="TextBox_0216">項目名</entry>
+<entry key="TextBox_0217">制限内容</entry>
+<entry key="TextBox_0218">ニンテンドーeショップ等での商品やサービスの購入</entry>
+<entry key="TextBox_0219">ソフトの購入や、クレジットカード・電子マネーの使用を制限することができます。</entry>
+<entry key="TextBox_0211">※データの読み込み中やセーブ中は、画面に &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;loading_i.png&quot; width=&quot;38&quot; height=&quot;38&quot; class=&quot;mid lazy&quot;/&gt; が表示されます。セーブ中は &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;HOMEbutton_i.png&quot; width=&quot;38&quot; height=&quot;38&quot; class=&quot;mid lazy&quot;/&gt; を押してもHOMEボタンメニューを表示できません。</entry>
+<entry key="TextBox_0208">※この説明書で使用している画面は一例です。実際の画面とは異なる場合があります。</entry>
+<entry key="TextBox_0209">説明書をとじる</entry>
+<entry key="TextBox_0210">もくじへ</entry>
+<entry key="TextBox_0300">トップ画面の見かた</entry>
+<entry key="TextBox_0301">説明書</entry>
+<entry key="TextBox_0302">トップ画面の見かた</entry>
+<entry key="TextBox_0303">Wii&amp;nbsp;U GamePadの画面をタッチして操作します。画面をタッチしたまま上下にスライドすると画面がスクロールします。アイコンなどをタッチして選んでください。</entry>
+<entry key="TextBox_0304">    &lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;1&lt;/a&gt;&lt;/span&gt;    メニューバー  </entry>
+<entry key="TextBox_0305">ニンテンドーeショップのトップ画面にもどります。</entry>
+<entry key="TextBox_0306">さまざまな情報の確認や設定を行えます。&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0312">チャージ（入金）されている残高が表示されます。タッチすると、残高にチャージする画面が表示されます。&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_08.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;8&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0313">キーワードやソフトの分類、ジャンルなどの条件からソフトをさがせます。 &lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_05.html&quot; class=&quot;cat02 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;5&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0314">ひとつ前の画面にもどります。</entry>
+<entry key="TextBox_0315">※トップ画面の場合は「おわる」が表示されます。タッチするとニンテンドーeショップを終了します。</entry>
+<entry key="TextBox_0316">    &lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;2&lt;/a&gt;&lt;/span&gt;    キーワード検索 &lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_05.html&quot; class=&quot;cat02 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;5&lt;/a&gt;&lt;/span&gt;  </entry>
+<entry key="TextBox_0317">    &lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;3&lt;/a&gt;&lt;/span&gt;ダウンロード番号の入力 / ランキング / ニュース  </entry>
+<entry key="TextBox_0318">&lt;span&gt;●&lt;/span&gt;ダウンロード番号の入力　&lt;span class=&quot;go_to_link_02&quot;&gt;&lt;a href=&quot;manual01_11.html&quot; class=&quot;cat04 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;11&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0319">ダウンロード番号を入力すると、ソフトをダウンロードできます。</entry>
+<entry key="TextBox_0320">&lt;span&gt;●&lt;/span&gt;ランキング　&lt;span class=&quot;go_to_link_02&quot;&gt;&lt;a href=&quot;manual01_12.html&quot; class=&quot;cat04 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;12&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0321">売れているソフトやみんながおすすめ投票したソフト、みんながよく見ている映像などのランキングを見ることができます。</entry>
+<entry key="TextBox_0322">&lt;span&gt;●&lt;/span&gt;ニュース</entry>
+<entry key="TextBox_0323">ニンテンドーeショップからのニュースを見ることができます。</entry>
+<entry key="TextBox_0324">    &lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt; 各種アイコン  </entry>
+<entry key="TextBox_0325">ソフトや特集、映像などが並んでいます。</entry>
+<entry key="TextBox_0326">説明書をとじる</entry>
+<entry key="TextBox_0327">もくじへ</entry>
+<entry key="TextBox_0400">マイメニュー</entry>
+<entry key="TextBox_0401">説明書</entry>
+<entry key="TextBox_0402">マイメニュー</entry>
+<entry key="TextBox_0403">説明書をとじる</entry>
+<entry key="TextBox_0404">もくじへ</entry>
+<entry key="TextBox_0405">メニューバーの「マイメニュー」をタッチすると、さまざまな情報の確認や設定を行えます。</entry>
+<entry key="TextBox_0412">&lt;span&gt;●&lt;/span&gt;ヘルプ&lt;/h3&gt;</entry>
+<entry key="TextBox_0413">説明書</entry>
+<entry key="TextBox_0414">本書が表示されます。</entry>
+<entry key="TextBox_0415">ニンテンドーeショップについて</entry>
+<entry key="TextBox_0421">ニンテンドーeショップのサービスなどについて説明しています。</entry>
+<entry key="TextBox_0422">お問い合わせについて</entry>
+<entry key="TextBox_0423">お問い合わせ先の一覧が表示されます。電話番号などをご確認のうえ、お問い合わせください。</entry>
+<entry key="TextBox_0416">&lt;span&gt;●&lt;/span&gt;残高の追加&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_08.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;8&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0417">気になるリスト</entry>
+<entry key="TextBox_0424">「気になるリスト」に登録したソフトが表示されます。</entry>
+<entry key="TextBox_0418">ソフトのアイコンをタッチすると、そのソフトの情報画面に移動します。&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_06.html&quot; class=&quot;cat02 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;6&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0419">「一覧を見る」ボタンをタッチすると、「気になるリスト」に登録したソフトが一覧で表示されます。</entry>
+<entry key="TextBox_0425">※登録できるソフトの数は最大200個です。</entry>
+<entry key="TextBox_0440">おすすめ投票</entry>
+<entry key="TextBox_0441">おすすめ投票できるソフトが表示されます。</entry>
+<entry key="TextBox_0437">ソフトのアイコンをタッチしておすすめ度などの3つの質問に答えると、遊んだソフトをみんなにおすすめできます。</entry>
+<entry key="TextBox_0442">「一覧を見る」ボタンをタッチすると、おすすめ投票できるソフトが一覧で表示されます。</entry>
+<entry key="TextBox_0438">投票内容を集計した結果は、ソフト情報&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_06.html&quot; class=&quot;cat02 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;6&lt;/a&gt;&lt;/span&gt;やランキング&lt;span class=&quot;go_to_link_02&quot;&gt;&lt;a href=&quot;manual01_12.html&quot; class=&quot;cat04 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;12&lt;/a&gt;&lt;/span&gt;などで表示されます。</entry>
+<entry key="TextBox_0427">※投票できるのは、ユーザーごとに、1ソフトにつき1回だけです。合計1時間以上遊んだソフトについて投票できます。</entry>
+<entry key="TextBox_0428">※ユーザーの年齢がソフトの年齢区分に含まれない場合は、投票できません。</entry>
+<entry key="TextBox_0429">※一部投票できないソフトがあります。</entry>
+<entry key="TextBox_0439">※おすすめした内容は「おすすめ投票履歴」で確認できます。</entry>
+<entry key="TextBox_0420">これまでの履歴</entry>
+<entry key="TextBox_0406">&lt;span&gt;●&lt;/span&gt;購入済みソフト</entry>
+<entry key="TextBox_0407">これまでに購入したソフトや追加コンテンツを、確認したり再ダウンロードしたりできます。</entry>
+<entry key="TextBox_0408">&lt;span&gt;●&lt;/span&gt;ご利用記録</entry>
+<entry key="TextBox_0409">購入したソフトの記録や、残高にチャージした記録が表示されます。「明細を見る」をタッチすると、お買い上げ明細を確認できます。</entry>
+<entry key="TextBox_0426">※Wii&amp;nbsp;U本体とニンテンドー3DSシリーズ本体に同じニンテンドーネットワークIDを登録した場合、ご利用記録が共有されます。ただし、IDを登録する前のニンテンドー3DSのご利用記録はWii&amp;nbsp;Uのニンテンドーeショップでは表示されません。</entry>
+<entry key="TextBox_0430">設定</entry>
+<entry key="TextBox_0431">&lt;span&gt;●&lt;/span&gt;おしらせ配信の設定</entry>
+<entry key="TextBox_0432">ニンテンドーeショップからのおしらせを、Wii&amp;nbsp;Uメニューの「おしらせリスト」に配信を希望するかどうかを設定できます。</entry>
+<entry key="TextBox_0443">&lt;span&gt;●&lt;/span&gt;住所情報の設定</entry>
+<entry key="TextBox_0444">住所情報の登録や変更、消去ができます。</entry>
+<entry key="TextBox_0445">※住所情報はソフト購入時の税率計算に使用されます。</entry>
+<entry key="TextBox_0446">※設定した住所情報はニンテンドーeショップだけに適用されます。</entry>
+<entry key="TextBox_0447">&lt;span&gt;●&lt;/span&gt;言語の切り替え</entry>
+<entry key="TextBox_0448">ニンテンドーeショップの表示言語を変更できます。変更した言語で表示するには、ニンテンドーeショップを終了してもう一度起動する必要があります。</entry>
+<entry key="TextBox_0449">※設定した言語はニンテンドーeショップだけに適用されます。</entry>
+<entry key="TextBox_0500">ソフトをさがす</entry>
+<entry key="TextBox_0501">説明書</entry>
+<entry key="TextBox_0502">ソフトをさがす</entry>
+<entry key="TextBox_0503">ソフトのさがしかたには、次の3つの方法があります。</entry>
+<entry key="TextBox_0504">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;1&lt;/a&gt;&lt;/span&gt;キーワードを入力してさがす</entry>
+<entry key="TextBox_0505">さがしたいソフトのタイトルや、気になるキーワードなどを入力してさがします。</entry>
+<entry key="TextBox_0506">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;2&lt;/a&gt;&lt;/span&gt;条件からさがす</entry>
+<entry key="TextBox_0507">キーワードやソフトの分類、ジャンルなどの条件からさがします。</entry>
+<entry key="TextBox_0508">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;3&lt;/a&gt;&lt;/span&gt;任天堂がおすすめする特集からさがす</entry>
+<entry key="TextBox_0509">特集やソフトの分類など、トップ画面のアイコンからさがします。</entry>
+<entry key="TextBox_0510">検索結果について</entry>
+<entry key="TextBox_0511">ソフトや紹介映像が新着順に表示されます。ソフトをタッチすると、ソフトの情報画面が見られます。また、「気になる」をタッチすると、そのソフトが気になるリスト&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;に登録されます。</entry>
+<entry key="TextBox_0512">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#mdd_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;1&lt;/a&gt;&lt;/span&gt;「新着順」や「みんなのおすすめ順」、「名前順」に並び替えることができます。</entry>
+<entry key="TextBox_0513">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#mdd_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;2&lt;/a&gt;&lt;/span&gt;ソフトの情報画面でダウンロードできるものが、次のアイコンで表示されます。</entry>
+<entry key="TextBox_0515">&lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;ico_search_soft_dmm01_02.jpg&quot; width=&quot;57&quot; height=&quot;51&quot; class=&quot;lazy&quot;/&gt; 体験版</entry>
+<entry key="TextBox_0516">&lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;ico_search_soft_dmm01_03.jpg&quot; width=&quot;57&quot; height=&quot;51&quot; class=&quot;lazy&quot;/&gt; 追加コンテンツ</entry>
+<entry key="TextBox_0517">説明書をとじる</entry>
+<entry key="TextBox_0518">もくじへ</entry>
+<entry key="TextBox_0600">ソフトの情報を見る</entry>
+<entry key="TextBox_0601">説明書</entry>
+<entry key="TextBox_0602">ソフトの情報を見る</entry>
+<entry key="TextBox_0603">「詳細を見る」をタッチすると、ソフトの情報画面が表示されます。</entry>
+<entry key="TextBox_0604">ソフトの詳細な情報を見てソフトを購入したり、気になるリストに追加したりすることができます。また、ソフトによっては体験版をダウンロードしたり、追加コンテンツや利用券を購入したりできます。</entry>
+<entry key="TextBox_0621">※表示される内容は、ソフトによって異なります。</entry>
+<entry key="TextBox_0605">&lt;span&gt;●&lt;/span&gt;購入画面にすすむ&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_09.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;9&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0622">&lt;span&gt;●&lt;/span&gt;気になるリストに登録</entry>
+<entry key="TextBox_0615">タッチすると、気になるリスト&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;に登録されます。</entry>
+<entry key="TextBox_0623">&lt;span&gt;●&lt;/span&gt;体験版</entry>
+<entry key="TextBox_0609">ソフトの体験版を無料でダウンロードできます。      &lt;p class=&quot;indent02&quot;&gt;※体験版ソフトは起動できる回数や時間が制限されている場合があります。体験版ソフトを消去してもう一度ダウンロードし直しても、制限回数や時間は元に戻りません。&lt;/p&gt;      &lt;p class=&quot;indent02&quot;&gt;※制限回数や時間は、本体に登録されているすべてのユーザーで合計してカウントされます。&lt;/p&gt;</entry>
+<entry key="TextBox_0606">&lt;span&gt;●&lt;/span&gt;追加コンテンツ&lt;span class=&quot;go_to_link_02&quot;&gt;&lt;a href=&quot;manual01_10.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;10&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0607">&lt;span&gt;●&lt;/span&gt;利用券&lt;span class=&quot;go_to_link_02&quot;&gt;&lt;a href=&quot;manual01_10.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;10&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0608">「ソフトの評価」について</entry>
+<entry key="TextBox_0616">ソフト情報画面に表示される「ソフトの評価」には、おすすめ投票 &lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;で投票されたみんなのおすすめ度が★0.5個単位で表示されます。</entry>
+<entry key="TextBox_0617">※発売前のソフトは表示されません。</entry>
+<entry key="TextBox_0618">※おすすめ投票の集計については「集計方法について」をご覧ください。&lt;br&gt;&lt;span class=&quot;go_to_link_02&quot;&gt;&lt;a href=&quot;manual01_14.html&quot; class=&quot;cat05 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;14&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_0619">説明書をとじる</entry>
+<entry key="TextBox_0620">もくじへ</entry>
+<entry key="TextBox_0700">映像を見る</entry>
+<entry key="TextBox_0701">説明書</entry>
+<entry key="TextBox_0702">映像を見る</entry>
+<entry key="TextBox_0703">ソフト情報画面などで映像を選ぶと、ソフトに関連した映像が楽しめます。</entry>
+<entry key="TextBox_0704">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;1&lt;/a&gt;&lt;/span&gt;一時停止/再生ボタン</entry>
+<entry key="TextBox_0705">タッチすると一時停止できます。もう一度押すと再生できます。</entry>
+<entry key="TextBox_0706">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;2&lt;/a&gt;&lt;/span&gt;再生バー</entry>
+<entry key="TextBox_0707">再生位置を表します。&lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;movie_01.png&quot; width=&quot;25&quot; class=&quot;lazy&quot;/&gt; をスライドすると、再生位置を戻したり先に進めたりすることができます。</entry>
+<entry key="TextBox_0708">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;3&lt;/a&gt;&lt;/span&gt;画面フィットボタン</entry>
+<entry key="TextBox_0709">映像をテレビ画面の縦幅や横幅いっぱいに表示できます。もう一度タッチすると元に戻ります。</entry>
+<entry key="TextBox_0710">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;オプション</entry>
+<entry key="TextBox_0711">映像のタイトルや関連動画が表示されます。また、映像の画質を変更したり、「ソフト情報」をタッチしてソフト情報画面に移動したりできます。</entry>
+<entry key="TextBox_0712">※ご利用の通信環境によっては、映像や音声が途切れることがあります。</entry>
+<entry key="TextBox_0716">ボタンやスティックで操作する場合は</entry>
+<entry key="TextBox_0717">映像は、Wii&amp;nbsp;U&amp;nbsp;GamePadのボタンやスティックでも操作できます。</entry>
+<entry key="TextBox_0720">ツールバーの非表示/表示</entry>
+<entry key="TextBox_0722">ビデオの再生/停止</entry>
+<entry key="TextBox_0724">早送り/巻き戻し</entry>
+<entry key="TextBox_0726">15秒送り</entry>
+<entry key="TextBox_0728">倍速再生</entry>
+<entry key="TextBox_0730">&lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;WU_R.png&quot; width=&quot;82&quot; height=&quot;37&quot; class=&quot;mid lazy&quot;/&gt;&amp;nbsp;長押し</entry>
+<entry key="TextBox_0729">10秒戻し</entry>
+<entry key="TextBox_0732">ビデオ再生を終了</entry>
+<entry key="TextBox_0713">※映像を本体保存メモリーやUSB記録メディア、SDカードに保存することはできません。</entry>
+<entry key="TextBox_0714">説明書をとじる</entry>
+<entry key="TextBox_0715">もくじへ</entry>
+<entry key="TextBox_0800">残高を追加する</entry>
+<entry key="TextBox_0801">説明書</entry>
+<entry key="TextBox_0802">残高を追加する</entry>
+<entry key="TextBox_0803">メニューバーの「残高」をタッチすると、残高の追加画面が表示されます。</entry>
+<entry key="TextBox_0820">※残高はユーザーごとに管理されます。</entry>
+<entry key="TextBox_0804">残高にチャージ（入金）するには、次のいずれかが必要です。</entry>
+<entry key="TextBox_0805">ニンテンドープリペイドカード</entry>
+<entry key="TextBox_0806">ニンテンドープリペイド番号</entry>
+<entry key="TextBox_0807">クレジットカード</entry>
+<entry key="TextBox_0808">※追加した残高はWii ショッピングチャンネルでは使用できません。</entry>
+<entry key="TextBox_0824">※Wii&amp;nbsp;U本体とニンテンドー3DSシリーズ本体に同じニンテンドーネットワークIDを登録している場合、チャージした残高はニンテンドー3DSのニンテンドーeショップでも使用できます。</entry>
+<entry key="TextBox_0809">購入済みのニンテンドープリペイド番号を使って残高にチャージする</entry>
+<entry key="TextBox_0810">ニンテンドープリペイドカード、または、ニンテンドープリペイド番号を使用する場合に選びます。ニンテンドープリペイド番号の購入方法も確認できます。</entry>
+<entry key="TextBox_0811">クレジットカードで残高にチャージする</entry>
+<entry key="TextBox_0812">クレジットカードを使用する場合に選びます。お買い上げ明細は「マイメニュー」の「ご利用記録」で確認できます。&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;また、クレジットカード情報を登録しておくと、次回から、登録時に入力したクレジットカード情報管理用のパスワードを入力するだけで、残高にチャージできるようになります。</entry>
+<entry key="TextBox_0814">※クレジットカード情報管理用のパスワードの入力を3回間違えると、クレジットカード情報が消去されますので、ご注意ください。</entry>
+<entry key="TextBox_0815">※パスワードを忘れた場合は、クレジットカード情報を一度消去した後、登録し直してください。</entry>
+<entry key="TextBox_0821">クレジットカード情報の確認</entry>
+<entry key="TextBox_0822">クレジットカード情報の確認や消去ができます。</entry>
+<entry key="TextBox_0823">&lt;span&gt;※&lt;/span&gt;ユーザーが18歳未満の場合は、クレジットカードを使用できません。18歳未満のユーザーがクレジットカードを使用する場合は、保護者の方の同意が必要です。画面の指示に従って操作してください。</entry>
+<entry key="TextBox_0816">資金決済法に基づく表示</entry>
+<entry key="TextBox_0817">資金決済法に基づく表示を確認できます。</entry>
+<entry key="TextBox_0818">説明書をとじる</entry>
+<entry key="TextBox_0819">もくじへ</entry>
+<entry key="TextBox_0825">Suica・PASMOなど一部のプリペイド式電子マネー</entry>
+<entry key="TextBox_0826">電子マネーを使う</entry>
+<entry key="TextBox_0827">電子マネーを使用して残高をチャージする場合に選びます。お買い上げ明細は「マイメニュー」の「ご利用記録」で確認できます。 &lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt; チャージするときは、画面の案内に従って電子マネーのカードをWii U GamePadのNFCエリアマーク &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;nfc_i.gif&quot; width=&quot;38&quot; height=&quot;38&quot; class=&quot;mid lazy&quot;/&gt; にタッチします。</entry>
+<entry key="TextBox_0828">ご利用可能な電子マネーは次のとおりです。（2014年7月22日時点）</entry>
+<entry key="TextBox_0829">※チャージするときに、カードがNFCエリアマークから遠すぎたり、タッチする時間が短すぎたりすると、うまく読み取れない場合があります。画面の案内に従って、しっかりタッチしてください。</entry>
+<entry key="TextBox_0900">ソフトを購入する</entry>
+<entry key="TextBox_0901">説明書</entry>
+<entry key="TextBox_0902">ソフトを購入する</entry>
+<entry key="TextBox_0903">説明書をとじる</entry>
+<entry key="TextBox_0904">もくじへ</entry>
+<entry key="TextBox_0905">ソフト情報画面&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_06.html&quot; class=&quot;cat02 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;6&lt;/a&gt;&lt;/span&gt;や検索結果画面&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_05.html&quot; class=&quot;cat02 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;5&lt;/a&gt;&lt;/span&gt;で「購入画面にすすむ」をタッチすると、購入画面に進みます。画面の案内に従って購入してください。</entry>
+<entry key="TextBox_0906">※購入後、自動でソフトのダウンロードがはじまります。ソフトのダウンロード状況については、HOMEボタンメニューの「ダウンロード管理」で確認できます。</entry>
+<entry key="TextBox_0907">※購入したソフトは、購入したユーザーだけでなく、同じ本体に登録されているすべてのユーザーで使用できます。</entry>
+<entry key="TextBox_1000">追加コンテンツや利用券を購入する</entry>
+<entry key="TextBox_1001">説明書</entry>
+<entry key="TextBox_1002">追加コンテンツや利用券を購入する</entry>
+<entry key="TextBox_1003">ソフト情報画面&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_09.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;9&lt;/a&gt;&lt;/span&gt;で、そのソフトの「追加コンテンツ」や「利用券」を選んで購入することができます。</entry>
+<entry key="TextBox_1004">追加コンテンツを購入する</entry>
+<entry key="TextBox_1005">追加コンテンツが配信されている場合に購入できます。</entry>
+<entry key="TextBox_1006">&lt;span&gt;●&lt;/span&gt;コンテンツをさがす</entry>
+<entry key="TextBox_1007">そのソフトで購入できる追加コンテンツを、フリーワードやジャンル、価格から絞り込めます。</entry>
+<entry key="TextBox_1008">&lt;span&gt;●&lt;/span&gt;追加コンテンツの一覧</entry>
+<entry key="TextBox_1009">タッチすると、その追加コンテンツの詳細画面が表示されます。</entry>
+<entry key="TextBox_1010">&lt;span&gt;●&lt;/span&gt;チェックボックス</entry>
+<entry key="TextBox_1011">購入したい追加コンテンツの &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;adc_checkbox_off.png&quot; width=&quot;44&quot; height=&quot;44&quot; class=&quot;mid lazy&quot;/&gt; をタッチすると、 &lt;img src=&quot;image/placeholder.png&quot; data-original=&quot;adc_checkbox_on.png&quot; width=&quot;44&quot; height=&quot;44&quot; class=&quot;mid lazy&quot;/&gt; になります。「選んだものを確認」をタッチし、画面の案内に従って購入してください。</entry>
+<entry key="TextBox_1012">※追加コンテンツの種類や価格はソフトによって異なります。</entry>
+<entry key="TextBox_1013">※追加コンテンツの購入履歴は、「マイメニュー」の「ご利用記録」で確認できます。&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_1014">※購入した追加コンテンツの返品・返金・交換はできません。</entry>
+<entry key="TextBox_1015">※一度購入した追加コンテンツは、消去しても無料で再ダウンロードできます。</entry>
+<entry key="TextBox_1016">※ニンテンドーネットワークIDを消去した場合は、再ダウンロードできません。</entry>
+<entry key="TextBox_1017">※配信が中止または終了した場合は、再ダウンロードできなくなることがあります。あらかじめご了承ください。</entry>
+<entry key="TextBox_1018">※購入した追加コンテンツは、ソフトを保存している場所に保存されます。</entry>
+<entry key="TextBox_1019">※追加コンテンツは、購入したユーザーだけでなく、同じ本体に登録されているすべてのユーザーで使用できます。</entry>
+<entry key="TextBox_1020">利用券を購入する</entry>
+<entry key="TextBox_1021">利用券によって利用可能なサービスがある場合に購入できます。</entry>
+<entry key="TextBox_1022">利用券には有効期間があり、購入と同時に有効になります。また、購入した利用券の有効期間が終了する前に追加で購入した場合は、有効期限日から購入した日数が足されます。</entry>
+<entry key="TextBox_1023">&lt;span&gt;●&lt;/span&gt;例１:&lt;br&gt;30日券を購入した場合</entry>
+<entry key="TextBox_1024">&lt;span&gt;●&lt;/span&gt;例２:&lt;br&gt;有効期限前に30日券を購入した場合</entry>
+<entry key="TextBox_1025">※利用券の種類や価格はソフトによって異なります。</entry>
+<entry key="TextBox_1026">※利用券の期限が切れた場合は、残高があっても自動的に利用期限が延長されることはありません。必要に応じて利用券を購入してください。</entry>
+<entry key="TextBox_1027">※利用券の購入日（利用開始日）などの購入履歴は、「マイメニュー」の「ご利用記録」で確認できます。&lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_1028">※購入した利用券の返品・返金・交換はできません。</entry>
+<entry key="TextBox_1029">※利用券は、購入したユーザーだけでなく、同じ本体に登録されているすべてのユーザーで使用できます。</entry>
+<entry key="TextBox_1030">※期間が残っている状態で追加購入するには、以前に購入したときのユーザーで購入する必要があります。</entry>
+<entry key="TextBox_1031">説明書をとじる</entry>
+<entry key="TextBox_1032">もくじへ</entry>
+<entry key="TextBox_1033">※追加コンテンツによっては、ジャンルによる絞り込みができないものもあります。</entry>
+<entry key="TextBox_1100">ダウンロード番号の入力</entry>
+<entry key="TextBox_1101">説明書</entry>
+<entry key="TextBox_1102">ダウンロード番号の入力</entry>
+<entry key="TextBox_1103">ダウンロード番号を入力して、ソフトをダウンロードできます。</entry>
+<entry key="TextBox_1104">ダウンロード番号とは</entry>
+<entry key="TextBox_1105">有料または無料のソフトや追加コンテンツ、利用券をダウンロードするための16文字の番号（英数字）です。</entry>
+<entry key="TextBox_1106">ダウンロード番号を購入するには</entry>
+<entry key="TextBox_1107">任天堂商品取扱店と一部のコンビニエンスストアで、ダウンロード番号が記載された「ダウンロードカード」を購入できます。</entry>
+<entry key="TextBox_1108">特定のオンラインショップでダウンロード番号を直接購入できます。</entry>
+<entry key="TextBox_1109">※購入方法は取り扱いサイトやお店によって異なります。くわしくは任天堂ホームページをご覧ください。</entry>
+<entry key="TextBox_1110">説明書をとじる</entry>
+<entry key="TextBox_1111">もくじへ</entry>
+<entry key="TextBox_1200">ランキングを見る</entry>
+<entry key="TextBox_1201">説明書</entry>
+<entry key="TextBox_1202">ランキングを見る</entry>
+<entry key="TextBox_1203">トップ画面で「ランキング」をタッチすると、売れているソフトやみんながおすすめ投票したソフト、みんながよく見ている映像などのランキングを見ることができます。</entry>
+<entry key="TextBox_1204">&lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;1&lt;/a&gt;&lt;/span&gt;    ランキングの種類を選ぶ</entry>
+<entry key="TextBox_1205">「最近売れているソフト」と「最近よく見られている映像」は最近2週間のランキングです。「最近のおすすめソフト」は最近12週間のランキングです。</entry>
+<entry key="TextBox_1206">※投票の集計については、「集計方法について」をご覧ください。&lt;br /&gt;    &lt;span class=&quot;go_to_link_02&quot;&gt;&lt;a href=&quot;manual01_14.html&quot; class=&quot;cat05 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;14&lt;/a&gt;&lt;/span&gt;  </entry>
+<entry key="TextBox_1207">※同じ順位の場合は、発売日の新しいものから順に表示されます。</entry>
+<entry key="TextBox_1208">    &lt;span class=&quot;mdd_num&quot;&gt;&lt;a href=&quot;#manual_display_img&quot; class=&quot;se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;2&lt;/a&gt;&lt;/span&gt;    条件で絞り込む</entry>
+<entry key="TextBox_1209">ソフトの分類別に絞り込むことができます。</entry>
+<entry key="TextBox_1210">説明書をとじる</entry>
+<entry key="TextBox_1211">もくじへ</entry>
+<entry key="TextBox_1300">Ｑ＆Ａ</entry>
+<entry key="TextBox_1301">説明書</entry>
+<entry key="TextBox_1302">Ｑ＆Ａ</entry>
+<entry key="TextBox_1303">&lt;span&gt;●&lt;/span&gt;ソフト購入について</entry>
+<entry key="TextBox_1304">&lt;h3&gt;Q&lt;/h3&gt;支払いはどうやってするの？</entry>
+<entry key="TextBox_1305">&lt;h3&gt;A&lt;/h3&gt;プリペイドカードやクレジットカード、電子マネーを利用して、あらかじめ追加しておいた残高から差し引かれます。</entry>
+<entry key="TextBox_1374">&lt;h3&gt;Q&lt;/h3&gt;クーポンはどうやって使うの？</entry>
+<entry key="TextBox_1375">&lt;h3&gt;A&lt;/h3&gt;キャンペーンなどでもらったクーポンコードをお持ちの場合は、「購入画面にすすむ」をタッチした後に表示される画面で「クーポンを使用する」にチェックを入れ、画面の案内に従って使用してください。</entry>
+<entry key="TextBox_1306">&lt;h3&gt;Q&lt;/h3&gt;残高にチャージできるプリペイドカードやプリペイド番号には何があるの？</entry>
+<entry key="TextBox_1307">A</entry>
+<entry key="TextBox_1308">次のものが使えます。</entry>
+<entry key="TextBox_1309">ニンテンドープリペイドカード</entry>
+<entry key="TextBox_1310">ニンテンドープリペイド番号</entry>
+<entry key="TextBox_1311">次のものは使えません。</entry>
+<entry key="TextBox_1312">Wiiポイント プリペイドカード</entry>
+<entry key="TextBox_1313">Wiiポイント プリペイド番号</entry>
+<entry key="TextBox_1314">ニンテンドーポイント プリペイドカード</entry>
+<entry key="TextBox_1315">ニンテンドーポイント プリペイド番号</entry>
+<entry key="TextBox_1316">※くわしくは、残高にチャージする画面で「ニンテンドープリペイド番号を購入するには？」をご覧ください。      &lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_08.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;8&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_1317">&lt;h3&gt;Q&lt;/h3&gt;ニンテンドープリペイドカードはどこで買えるの？</entry>
+<entry key="TextBox_1318">&lt;h3&gt;A&lt;/h3&gt;任天堂商品取扱店や一部のコンビニエンスストアで購入できます。</entry>
+<entry key="TextBox_1319">&lt;h3&gt;Q&lt;/h3&gt;ニンテンドープリペイドカードはどうやって使うの？</entry>
+<entry key="TextBox_1320">&lt;h3&gt;A&lt;/h3&gt;カード裏面のスクラッチ部分を削ると出てくる16文字の番号（英数字）を登録します。    &lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_08.html&quot; class=&quot;cat03 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;8&lt;/a&gt;&lt;/span&gt;</entry>
+<entry key="TextBox_1321">&lt;h3&gt;Q&lt;/h3&gt;ニンテンドープリペイド番号はどこで買えるの？</entry>
+<entry key="TextBox_1322">&lt;h3&gt;A&lt;/h3&gt;コンビニエンスストア店頭の端末やレジで購入できます。購入可能なコンビニエンスストアチェーンは任天堂ホームページでご確認ください。</entry>
+<entry key="TextBox_1323">&lt;h3&gt;Q&lt;/h3&gt;使えるクレジットカードは？</entry>
+<entry key="TextBox_1324">&lt;h3&gt;A&lt;/h3&gt;VISA、マスターカード、JCBカードの3種類です。</entry>
+<entry key="TextBox_1325">&lt;h3&gt;Q&lt;/h3&gt;WiiショッピングチャンネルのWiiポイントで購入できるの？</entry>
+<entry key="TextBox_1326">&lt;h3&gt;A&lt;/h3&gt;購入できません。WiiポイントはWiiショッピングチャンネルのみで使用できます。</entry>
+<entry key="TextBox_1356">&lt;h3&gt;Q&lt;/h3&gt;ニンテンドー3DSのニンテンドーeショップにある残高で購入できるの？</entry>
+<entry key="TextBox_1357">&lt;h3&gt;A&lt;/h3&gt;購入できます(Wii&amp;nbsp;Uとニンテンドー3DSシリーズ本体に同じニンテンドーネットワークIDを登録する必要があります)。</entry>
+<entry key="TextBox_1354">&lt;h3&gt;Q&lt;/h3&gt;ソフトを購入したときに発行されたコードは、どこで確認できるの？</entry>
+<entry key="TextBox_1355">&lt;h3&gt;A&lt;/h3&gt;ソフトの明細書で確認できます。明細書は、ニンテンドーeショップのメニューバーから「マイメニュー」→「ご利用記録」→「明細を見る」で確認できます。明細書の「発行番号」の項目をご覧ください。</entry>
+<entry key="TextBox_1358">&lt;h3&gt;Q&lt;/h3&gt;同じニンテンドーネットワークIDを登録したニンテンドー3DSのご利用記録は見られないの？</entry>
+<entry key="TextBox_1359">&lt;h3&gt;A&lt;/h3&gt;見られます。ただし、ニンテンドーネットワークIDを登録する前のニンテンドー3DSのご利用記録はWii&amp;nbsp;Uでは表示されません。</entry>
+<entry key="TextBox_1327">&lt;span&gt;●&lt;/span&gt;ソフトについて</entry>
+<entry key="TextBox_1328">&lt;h3&gt;Q&lt;/h3&gt;ニンテンドーeショップで購入したソフトの説明書はあるの？</entry>
+<entry key="TextBox_1329">&lt;h3&gt;A&lt;/h3&gt;ソフトを起動中にHOMEボタンメニューで「説明書」を選ぶと電子説明書が表示されます。</entry>
+<entry key="TextBox_1330">&lt;h3&gt;Q&lt;/h3&gt;ソフトの再ダウンロードは有料なの？</entry>
+<entry key="TextBox_1331">&lt;h3&gt;A&lt;/h3&gt;無料です（ニンテンドーネットワークIDを消去した場合は除く）。なお、諸般の事情により、ソフトの提供を予告なく中止または終了する場合があります。あらかじめご了承ください。</entry>
+<entry key="TextBox_1332">&lt;span&gt;●&lt;/span&gt;データ管理について</entry>
+<entry key="TextBox_1333">&lt;h3&gt;Q&lt;/h3&gt;購入したソフトのダウンロード時間はどれくらいかかるの？</entry>
+<entry key="TextBox_1334">&lt;h3&gt;A&lt;/h3&gt;データ容量やインターネット環境によってはダウンロードに時間がかかる場合があります。</entry>
+<entry key="TextBox_1353">ダウンロード状況はHOMEボタンメニューの「ダウンロード管理」で確認できます。</entry>
+<entry key="TextBox_1335">&lt;h3&gt;Q&lt;/h3&gt;購入したソフトはどこに保存されるの？</entry>
+<entry key="TextBox_1336">&lt;h3&gt;A&lt;/h3&gt;本体保存メモリーまたはUSB記録メディアに保存されます。SDカードには保存できません。</entry>
+<entry key="TextBox_1337">&lt;h3&gt;Q&lt;/h3&gt;本体保存メモリーとUSB記録メディアの間でコピーや移動することはできるの？</entry>
+<entry key="TextBox_1338">&lt;h3&gt;A&lt;/h3&gt;できます。くわしくは、Wii&amp;nbsp;Uメニュー「本体設定」の「データ管理」をご覧ください。</entry>
+<entry key="TextBox_1348">&lt;span&gt;●&lt;/span&gt;お問い合わせについて</entry>
+<entry key="TextBox_1349">&lt;h3&gt;Q&lt;/h3&gt;問い合わせはどこにすればいいの？</entry>
+<entry key="TextBox_1350">&lt;h3&gt;A&lt;/h3&gt;お問い合わせの内容によって、問い合わせ先が異なります。「マイメニュー」→「ヘルプ」→「お問い合わせについて」をご覧ください。    &lt;span class=&quot;go_to_link_01&quot;&gt;&lt;a href=&quot;manual01_04.html&quot; class=&quot;cat01 se&quot; data-se-label=&quot;SE_WAVE_OK_SUB&quot;&gt;4&lt;/a&gt;</entry>
+<entry key="TextBox_1351">説明書をとじる</entry>
+<entry key="TextBox_1352">もくじへ</entry>
+<entry key="TextBox_1360">&lt;h3&gt;Q&lt;/h3&gt;SuicaやPASMOなどに、Wii U本体で電子マネーを入金（チャージ）できるの？</entry>
+<entry key="TextBox_1361">&lt;h3&gt;A&lt;/h3&gt;Wii U本体では入金（チャージ）できません。電子マネーのチャージ方法については、それぞれの電子マネーサービスのホームページなどをご覧ください。</entry>
+<entry key="TextBox_1362">&lt;h3&gt;Q&lt;/h3&gt;使える電子マネーは？</entry>
+<entry key="TextBox_1363">A</entry>
+<entry key="TextBox_1364">次のものが使えます。（2014年7月22日時点）</entry>
+<entry key="TextBox_1365">Kitaca</entry>
+<entry key="TextBox_1366">PASMO</entry>
+<entry key="TextBox_1367">Suica</entry>
+<entry key="TextBox_1368">manaca</entry>
+<entry key="TextBox_1369">TOICA</entry>
+<entry key="TextBox_1370">ICOCA</entry>
+<entry key="TextBox_1371">はやかけん</entry>
+<entry key="TextBox_1372">nimoca</entry>
+<entry key="TextBox_1373">SUGOCA</entry>
+<entry key="TextBox_1400">集計方法について</entry>
+<entry key="TextBox_1401">説明書</entry>
+<entry key="TextBox_1402">集計方法について</entry>
+<entry key="TextBox_1403">おすすめ投票でのおすすめ度や、映像を見た回数などは、一定の基準に基づいて集計されています。</entry>
+<entry key="TextBox_1404">&lt;span&gt;●&lt;/span&gt;おすすめ度</entry>
+<entry key="TextBox_1405">おすすめ投票で投票されたみんなの「おすすめ度」の平均値を算出して、★0.5個単位で表示します。</entry>
+<entry key="TextBox_1406">※投票は1票目から反映されます。</entry>
+<entry key="TextBox_1407">※より正確な平均値を算出するため、高い評価および低い評価からそれぞれ5％分を除いた投票を対象とします。</entry>
+<entry key="TextBox_1408">&lt;span&gt;●&lt;/span&gt;ソフトのランキング</entry>
+<entry key="TextBox_1409">各ソフトの投票数を集計し、20票以上集まったソフトの中から、「おすすめ度」の高い順に表示します。</entry>
+<entry key="TextBox_1410">&lt;span&gt;●&lt;/span&gt;映像のランキング</entry>
+<entry key="TextBox_1411">ニンテンドーeショップで、映像が視聴された回数を集計し、視聴回数の多い順に表示します。</entry>
+<entry key="TextBox_1412">更新のタイミングについて</entry>
+<entry key="TextBox_1413">３時間ごとに集計され、更新されます（投票および視聴後、すぐには反映されません）。</entry>
+<entry key="TextBox_1414">※システムの都合上、前後する場合や反映されるまで時間がかかる場合があります。</entry>
+<entry key="TextBox_1415">説明書をとじる</entry>
+<entry key="TextBox_1416">もくじへ</entry>
+</properties>

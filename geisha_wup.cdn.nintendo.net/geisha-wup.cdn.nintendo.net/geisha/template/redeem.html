@@ -1,0 +1,49 @@
+<script type="text/template" id="main">
+<div id="top03_01" class="soft-redeem">
+
+<div class="soft-redeem-header">
+  <h1 data-message="top03_01_001">Redeem Code</h1>
+</div>
+
+<div class="soft-redeem-main">
+
+<div class="soft-redeem-message">
+  <h2 data-message="top03_01_002">If you have a download code, please enter it below.<br>You can download software, add-on content, and more.</h2>
+
+  <p class="soft-redeem-redownload" data-message="top03_01_003">To redownload previously purchased software, go to My Menu and select<br>"Redownloadable Software."</p>
+</div>
+
+<input type="text" name="redeem_num" value="" placeholder="Please enter download code" keyboard="nnid" invalidchar="downloadcode" capslock="true" maxlength="16" minlength="16" separate="0x00000888" class="soft-redeem-textbox">
+
+<div id="sel_redeem_next" class="soft-redeem-next" style="display: none;">
+  <a href="#" id="evt_redeem" class="se" data-se-label="SE_WAVE_OK">
+    <span data-message="common01_01_033">Next</span>
+  </a>
+</div>
+
+</div>
+
+</div>
+
+<div style="display: none">
+ <!-- string textbox -->
+ <span id="str_redeem_num" data-message="top03_01_007">Please enter download code</span>
+ <span id="dialog_msg" data-message="top03_01_005">The entered code is a Nintendo Prepaid Code.
+
+Proceed to add funds.</span>
+ <span id="dialog_msg_block_prepaid" data-message="top03_01_006">The entered code is a Nintendo Prepaid Code.
+
+Prepaid cards cannot be used in your region.</span>
+ <span id="dialog_msg_DL" data-message="top03_03_001">Already purchased or downloaded.
+Download code is not required.</span>
+ <span id="dialog_msg_invalid" data-message="top03_01_008">Could not confirm the download code.
+
+Please double check the number.</span>
+ <span id="dialog_msg_unused_char" data-message="top03_01_009">Could not confirm the code.
+It may have been typed incorrectly.
+Please verify and try again.
+
+Note: Letters I, O, Z, and hyphen (-) are not used.</span>
+ <span id="dialog_ok" data-message="common01_01_006">OK</span>
+</div>
+</script>

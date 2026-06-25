@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/*-- 法令 legal --*/
+
+#sb_cont { text-align:center; padding:auto; position:relative; }
+
+
+/*-- 01_01 --*/
+
+#legal01_01 h2 { line-height:1.5; padding:25px 80px 25px 95px !important; text-align:left; font-size:27px; }
+#legal01_01 .lf {  margin:0 80px 0 95px !important; }
+
+
+/*-- 02_01 03_01 04_01 --*/
+
+#legal02_01 h3, 
+#legal03_01 h3, 
+#legal04_01 h3 { text-align:left; }
+
+
+#legal02_01 .fox, 
+#legal03_01 .fox, 
+#legal04_01 .fox,
+#legal08_01 .fox,
+#legal08_01bbfc .fox,
+#legal08_01cob .fox,
+#legal08_01oflc .fox,
+#legal08_01usk .fox { margin-bottom:100px; }
+
+#legal05_01 #contents_common { margin:86px 0 0 0; }
+
+
+/*-- 06_01 --*/
+
+#legal06_01 h2 { text-align:left; margin:0 80px 0 95px !important; }
+#legal06_01 input { width:875px; height:80px; text-align:center; margin:0 auto 0 auto; padding:0 25px; font-size:30px; }
+
+
+/*-- 07_01 --*/
+
+#legal07_01 h2 { margin:0 0 15px 0; }
+#legal07_01 #result_dl dt { width:200px; padding:8px 0; }
+#legal07_01 #result_dl dd { width:800px; text-align:left; padding:8px 0; }
+.legal_province { margin:65px 0; }
+
+
+/*-- 07_02 --*/
+
+#legal07_02 h2 { text-align:left; margin:0 80px 0 95px !important; }
+#legal07_02 input { width:875px; height:80px; text-align:center; margin:0 auto 0 auto; padding:0 25px; font-size:30px; }
+
+
+/*-- 07_04 --*/
+
+#legal07_04 #result_dl { margin:70px auto 0 auto; }
+#legal07_04 #result_dl dt { width:200px; padding:10px 0; }
+#legal07_04 #result_dl dd { width:800px; text-align:left; padding:10px 0; }
+#legal07_04 .ctr { margin:35px 0 70px 0; }
+
+
+/*-- 08_01 --*/
+
+.fox_0801 { text-align: left; padding: 34px; line-height: 1.5; background: #ffffff; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 15px; margin: 34px 30px 100px 15px; font-size:27px; }
+#legal08_01 h1, 
+#legal08_01bbfc h1, 
+#legal08_01oflc h1, 
+#legal08_01usk h1 { margin:0 0 14px 0; padding:0 0 14px 0; border-bottom:#969696 2px solid; font-size:30px; color:#787878; line-height: 1; }
+.foxp { line-height:1.5; margin:0 0 50px 0; font-size:25px; color:#323333; }
+#legal08_01 h2 { height:32px; line-height:1; margin:0 0 12px 0; padding:0 0 0 16px; border-left:8px #787878 solid; border-bottom:2px #969696 solid; font-size:30px; color:#787878; }
+#legal08_01 h3, 
+#legal08_01cob h3, 
+#legal08_01oflc h3 { height:25px; line-height:1; margin:0 0 22px 0; padding:0 0 0 16px; border-left:8px #787878 solid; font-size:25px; color:#787878; }
+#ac_img, 
+#ct_img { margin:0 0 24px 0; overflow: hidden; }
+#ac_img img { margin:0 10px 0 0; float:left;}
+#ct_img img { margin:0 8px 0 0; float:left;}
+#rate_dl01 { margin:0 0 30px 0; border-top:2px #656565 dashed; }
+#rate_dl01 dt { line-height:1; margin:24px 0 5px 0; font-size:30px; clear:both; float:left; }
+#rate_dl01 dt img { margin:0 10px 0 0; vertical-align:top; }
+#rate_dl01 dd { width:882px; margin:-45px 0 0 0; padding:0 0 22px 110px; border-bottom:2px #656565 dashed; font-size:25px; color:#787878; float:left; }
+#rate_dl01 dd.pegi { margin-top: -63px;}
+#dl_cap01, 
+#dl_cap02, /*bbfc*/
+#dl_cap03 /*cob*/ { text-align:center; font-size:25px;}
+#dl_cap01 p { text-align: left; }
+#legal08_01bbfc h2, 
+#legal08_01usk h2, 
+#legal08_01usk h2, 
+#legal08_01usk h2 { margin:0 0 22px 0; padding: 0; font-size:25px;color:#323333;}
+
+
+/*-- 08_01bbfc --*/
+
+#rate_dl02, 
+#rate_dl03_02 /*cob*/ { margin:0 0 30px 0; border-bottom:2px #656565 dashed; }
+#rate_dl02 dt { width:184px; text-align:center; border-top:2px #656565 dashed; font-size:30px; clear:both; float:left; }
+#rate_dl02 img { margin:25px 0 22px 0; }
+#rate_dl02 dd { width:808px; padding:25px 0 22px 0; border-top:2px #656565 dashed; float:left; }
+.radl_01 { margin:0 0 15px 0; }
+.radl_02 { font-size:25px; color:#787878; }
+
+
+/*-- 08_01cob --*/
+
+#cob_header { margin:0 0 65px 0; padding:0 0 28px 0; border-bottom:#969696 2px solid; }
+#cob_header h1 { width:640px; line-height:1.5; text-align:center; margin:85px auto 0 auto; font-size:30px; color:#787878; float:left; }
+#cob_header_r { text-align:center; margin:auto; font-size:22px; color:#787878; float:right; }
+#cob_header_r p { line-height:1.6; margin:0; padding:0; }
+#cob_header_r span { border-top:2px #787878 solid; }
+#cob_contents { clear:both; }
+#rate_dl03_01, 
+#rate_dl05_01 /*oflc*/ { margin:0 0 30px 0; border-bottom:2px #969696 solid; }
+#rate_dl03_01 dt { width:350px; text-align:center; margin:0; padding:35px auto 35px auto; border-top:2px #656565 dashed; font-size:30px; clear:both; float:left; }
+#rate_dl03_01 dd { width:626px; padding:35px 0 35px 16px; border-top:2px #656565 dashed; float:left; }
+#rate_dl03_01 img, 
+#rate_dl03_02 img { margin:35px 0 22px 0; }
+#rate_dl03_02 dt { width:350px; text-align:center; margin:0; padding:35px auto 35px auto; font-size:30px; clear:both; float:left; }
+#rate_dl03_02 dd { width:626px; padding:35px 0 35px 16px; float:left; }
+.rd_bb { border-top:#969696 2px solid; }
+
+
+/*-- 08_01usk --*/
+
+#rate_dl04 { margin:0 0 60px 0; border-top:2px #656565 dashed; }
+#rate_dl04 dt { width:144px; min-height:130px; line-height:120px; text-align:center; border-bottom:2px #656565 dashed; font-size:30px; clear:both; float:left; }
+#rate_dl04 dt img { vertical-align:middle; }
+#rate_dl04 dd { width:848px; min-height:130px; line-height:130px; margin:0; border-bottom:2px #656565 dashed; font-size:25px; color:#787878; float:left; }
+.ichigo { margin-bottom:0; }
+
+
+/*-- 08_01oflc --*/
+
+#rate_dl05_01 dt { width:255px; margin:0; padding:0 15px 0 0; font-size:30px; clear:both; float:left; }
+#rate_dl05_01 dd { width:720px; padding:0; font-size:25px; float:left; }
+#rate_dl05_01 img { margin:4px 0 18px 0; }
+#dl_cap05 { text-align:center; padding:25px 0 0 0; border-top:2px #323232 dashed; font-size:25px; color:#787878; }
+
+
+/*-- rar --*/
+#sb_cont_rar { text-align:center; padding:auto; position:relative; }
+.fox_0801_rar { text-align: left; padding: 34px; line-height: 1.5; background: #ffffff; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 15px; margin: 34px 30px 36px 15px; font-size:27px; }
+.foxp_rar { margin:0 0 26px 0; }
+#ac_img_rar { overflow: hidden; }
+#ac_img_rar img { margin:0 34px 0 0; float: left; }

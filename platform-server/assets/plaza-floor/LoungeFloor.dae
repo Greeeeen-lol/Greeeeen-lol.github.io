@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset />
+  <library_images>
+    <image id="Floor_Alb">
+      <init_from>Floor_Alb.png</init_from>
+    </image>
+    <image id="Floor_Nom">
+      <init_from>Floor_Nom.png</init_from>
+    </image>
+    <image id="Floor_Emm">
+      <init_from>Floor_Emm.png</init_from>
+    </image>
+    <image id="Floor_Spm">
+      <init_from>Floor_Spm.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="m_floor">
+      <instance_effect url="#Effect_m_floor" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Effect_m_floor">
+      <profile_COMMON>
+        <newparam sid="surface_m_floor-diffuse">
+          <surface type="2D">
+            <init_from>Floor_Alb</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_m_floor-diffuse">
+          <sampler2D>
+            <source>surface_m_floor-diffuse</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_m_floor-bump">
+          <surface type="2D">
+            <init_from>Floor_Nom</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_m_floor-bump">
+          <sampler2D>
+            <source>surface_m_floor-bump</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_m_floor-emission">
+          <surface type="2D">
+            <init_from>Floor_Emm</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_m_floor-emission">
+          <sampler2D>
+            <source>surface_m_floor-emission</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_m_floor-specular">
+          <surface type="2D">
+            <init_from>Floor_Spm</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_m_floor-specular">
+          <sampler2D>
+            <source>surface_m_floor-specular</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="sampler_m_floor-diffuse" texcoord="CHANNEL0" />
+            </diffuse>
+            <bump>
+              <texture texture="sampler_m_floor-bump" texcoord="CHANNEL0" />
+            </bump>
+            <emission>
+              <texture texture="sampler_m_floor-emission" texcoord="CHANNEL0" />
+            </emission>
+            <specular>
+              <texture texture="sampler_m_floor-specular" texcoord="CHANNEL0" />
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="floor__m_floor-mesh" name="floor__m_floor">
+      <mesh>
+        <source id="floor__m_floor-position">
+          <float_array id="floor__m_floor-position-array" count="63">250 0 -500 0 0 -500 250 0 -250 500 0 -250 500 0 0 250 0 250 500 0 250 250 0 0 0 0 -250 250 0 500 0 0 500 0 0 250 0 0 0 -250 0 0 -250 0 -250 -250 0 -500 -250 0 250 -250 0 500 -500 0 0 -500 0 -250 -500 0 250</float_array>
+          <technique_common>
+            <accessor source="#floor__m_floor-position-array" count="21" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="floor__m_floor-normal">
+          <float_array id="floor__m_floor-normal-array" count="63">0.4774951 0.3483366 -0.8062623 0 0.3972603 -0.9178082 0.704501 0.5146771 -0.4872798 0.8923679 0.3268102 -0.3091977 0.9295499 0.3405088 0.1428571 0.555773 0.407045 0.7260274 0.8003914 0.2935421 0.5225049 0.7827789 0.5733855 0.2407045 0 0.7260274 -0.6868885 0.3816047 0.2798434 0.8806262 0 0.3033268 0.9530333 0 0.4892368 0.8727984 0 0.9217221 0.3855186 -0.7827789 0.5733855 0.2407045 -0.704501 0.5146771 -0.4872798 -0.4774951 0.3483366 -0.8062623 -0.555773 0.407045 0.7260274 -0.3816047 0.2798434 0.8806262 -0.9295499 0.3405088 0.1428571 -0.8923679 0.3268102 -0.3091977 -0.8003914 0.2935421 0.5225049</float_array>
+          <technique_common>
+            <accessor source="#floor__m_floor-normal-array" count="21" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="floor__m_floor-texcoord">
+          <float_array id="floor__m_floor-texcoord-array" count="42">3.6 7.2 0 7.2 3.6 3.6 7.2 3.6 7.2 0 3.6 -3.6 7.2 -3.6 3.6 0 0 3.6 3.6 -7.2 0 -7.2 0 -3.6 0 0 -3.6 0 -3.6 3.6 -3.6 7.2 -3.6 -3.6 -3.6 -7.2 -7.2 0 -7.2 3.6 -7.2 -3.6</float_array>
+          <technique_common>
+            <accessor source="#floor__m_floor-texcoord-array" count="21" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="floor__m_floor-vertex">
+          <input semantic="POSITION" source="#floor__m_floor-position" />
+        </vertices>
+        <triangles material="m_floor" count="28">
+          <input semantic="VERTEX" source="#floor__m_floor-vertex" offset="0" />
+          <input semantic="NORMAL" source="#floor__m_floor-normal" offset="1" />
+          <input semantic="TEXCOORD" source="#floor__m_floor-texcoord" offset="2" set="0" />
+          <p>0 0 0 1 1 1 2 2 2 0 0 0 2 2 2 3 3 3 3 3 3 2 2 2 4 4 4 4 4 4 5 5 5 6 6 6 4 4 4 7 7 7 5 5 5 4 4 4 2 2 2 7 7 7 2 2 2 8 8 8 7 7 7 2 2 2 1 1 1 8 8 8 6 6 6 5 5 5 9 9 9 5 5 5 10 10 10 9 9 9 5 5 5 11 11 11 10 10 10 5 5 5 7 7 7 11 11 11 7 7 7 12 12 12 11 11 11 7 7 7 8 8 8 12 12 12 8 8 8 13 13 13 12 12 12 8 8 8 14 14 14 13 13 13 8 8 8 1 1 1 14 14 14 1 1 1 15 15 15 14 14 14 10 10 10 11 11 11 16 16 16 10 10 10 16 16 16 17 17 17 11 11 11 12 12 12 13 13 13 11 11 11 13 13 13 16 16 16 13 13 13 18 18 18 16 16 16 13 13 13 14 14 14 18 18 18 14 14 14 19 19 19 18 18 18 14 14 14 15 15 15 19 19 19 16 16 16 20 20 20 17 17 17 16 16 16 18 18 18 20 20 20 </p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Armature_floor__m_floor-mesh">
+      <skin source="#floor__m_floor-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="floor__m_floor-mesh-joint">
+          <Name_array id="floor__m_floor-mesh-joint-array" count="1">floor</Name_array>
+          <technique_common>
+            <accessor source="#floor__m_floor-mesh-joint-array" count="1" stride="1">
+              <param name="JOINT" type="name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="floor__m_floor-mesh-inv_bind_matrix">
+          <float_array id="floor__m_floor-mesh-inv_bind_matrix-array" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#floor__m_floor-mesh-inv_bind_matrix-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="floor__m_floor-mesh-weight">
+          <float_array id="floor__m_floor-mesh-weight-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#floor__m_floor-mesh-weight-array" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#floor__m_floor-mesh-joint" />
+          <input semantic="INV_BIND_MATRIX" source="#floor__m_floor-mesh-inv_bind_matrix" />
+        </joints>
+        <vertex_weights count="21">
+          <input semantic="JOINT" source="#floor__m_floor-mesh-joint" offset="0" />
+          <input semantic="WEIGHT" source="#floor__m_floor-mesh-weight" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Armature" name="Armature" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Armature_floor" name="floor" sid="floor" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="floor__m_floor" name="floor__m_floor" type="NODE">
+        <instance_controller url="#Armature_floor__m_floor-mesh">
+          <skeleton>#Armature_floor</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="m_floor" target="#m_floor" />
+              <bind_vertex_input semantic="CHANNEL0" input_semantic="TEXCOORD" input_set="0" />
+              <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1" />
+              <bind_vertex_input semantic="CHANNEL2" input_semantic="TEXCOORD" input_set="2" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene" />
+  </scene>
+</COLLADA>

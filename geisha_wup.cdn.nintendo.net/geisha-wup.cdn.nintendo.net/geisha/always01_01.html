@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>My Menu</title>
+    <link rel="stylesheet" href="css/minified/mymenu.css">
+    <link rel="stylesheet" href="css/minified/index.css">
+</head>
+<body>
+<div id="wrapper" class="js-top" style="display: block;">
+    <div id="mymenu">
+        <div id="header-menu">
+            <h1 data-message="common01_01_002">My Menu</h1>
+            <div class="help"><a href="#" id="js-help" class="se" data-se-label="SE_WAVE_OK_SUB"><span data-message="always01_01_008">Help</span></a></div>
+        </div>
+        <div id="main-menu">
+            <div class="profile">
+                <div class="profile-info">
+                    <div class="mii">
+                        <img src="image/img_unknown_MiiIcon.png" width="96" height="96">
+                    </div>
+                    <div class="balance">
+                        <span class="name">Player</span>
+                        <div class="current">
+                            <span data-message="common01_01_020">Balance:</span><span class="amount">¥0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-relation">
+                    <div class="add">
+                        <a href="money01_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                            <span data-message="common01_01_004">Add Funds</span>
+                        </a>
+                    </div>
+                    <div class="ccard" style="display: none;">
+                        <a href="set04_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                            <span data-message="set01_01_005">Confirm Credit Card Info</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="owned-coupon">
+                <h2 data-message="common01_01_084">Just for You Offer</h2>
+                <a href="coupon02_01.html" class="show-owned-coupon-list se" data-se-label="SE_WAVE_OK">
+                    <span data-message="coupon03_01_001">Just for You Offers</span>
+                </a>
+            </div>
+            
+            <div class="wishlist">
+                <h2 data-message="always01_01_003">Wish List</h2> 
+                <p data-message="wish01_01_006">There are no titles on your Wish List.</p>
+            </div>
+            <div class="recommend">
+                <h2 data-message="always01_01_005">User Recommendations</h2>
+                <a href="reco01_01.html" id="evt_show_recommend" class="show-votable-titles se" data-se-label="SE_WAVE_OK">
+                    <span data-message="always01_01_005_02">Recommendations are here</span>
+                </a>
+            </div>
+            <div class="history">
+                <h2 data-message="always01_01_009">Account Activity</h2>
+                <ul>
+                    <li>
+                        <a href="history03_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                            <span data-message="history01_01_004">Redownloadable Software</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="history04_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                            <span data-message="history01_01_003">Account Activity</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="setting">
+                <h2 data-message="set01_01_002">Settings</h2>
+                <ul>
+                    <li>
+                        <a href="set03_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                            <span data-message="set01_01_003">Notification Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="sel_menu_bar">
+            <ul id="ft_navi">
+                <li id="top_link_01" class="top"><div data-href="index.html" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Home</span></div></li>
+                <li id="top_link_02" class="menu on"><div><img src="image/img_unknown_MiiIcon.png" width="70" height="70"><br><span>My Menu</span></div></li>
+                <li id="top_link_03" class="balance"><div data-href="money01_01.html" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Balance:</span><span id="balance">¥0</span></div></li>
+                <li id="top_link_04" class="search"><div data-href="always02_01.html" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Search</span></div></li>
+                <li id="top_link_05" class="back"><div data-href=""><span>Back</span></div></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/environment.js"></script>
+<script type="text/javascript" src="js/always01_01.js"></script>
+</body>
+</html>

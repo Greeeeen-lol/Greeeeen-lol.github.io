@@ -1,0 +1,110 @@
+<script id="wrapper" type="text/template">
+    <div id="header">
+    </div>
+    <div id="main">
+        <div class="pagenation">
+        </div>
+        <div class="item">
+            <ul>
+            </ul>
+        </div>
+        <div class="pagenation">
+        </div>
+    </div>
+    <!-- ↓結果0件時の表示 -->
+    <div id="main-disable" style="display: none">
+        <div class="text">
+            <p data-message="shelf01_01_005">No titles found matching your search criteria.<br>Please try different settings.</p>
+        </div>
+    </div>
+    <div id="footer" style="display: none">
+        {{ if (is_aoc_purchase) { }}
+        <div class="checklist">
+        </div>
+        {{ } }}
+        {{if (legal_message_required) { }}
+        <div class="specific-trade-law">
+        <a href="legal03_01.html?type=aoc&title={{- title_id }}" class="se" data-se-label="SE_WAVE_OK"><span data-message="common01_01_030">Legal Notices</span></a>
+        </div>
+        {{ } }}
+    </div>
+</script>
+
+<script id="header" type="text/template">
+        <div class="banner">
+            <img src="image/placeholder/place_banner.png" data-original="{{- aocs_banner_url }}" id="sel_banner" class="lazy" width="1100" height="220"/>
+            <h1>{{- name }}</h1>
+        </div>
+        <div class="description">
+            <p data-message="data03_01_010"><span class="orange">この追加コンテンツは、%{title}のソフトがないと利用できません。</span><br>購入前に必ずご確認ください。</p>
+            <p>
+                {{= aocs_description }}
+            </p>
+            {{ if (is_aoc_purchase) { }}
+            <div class="checklist">
+            </div>
+            <hr>
+            <div class="search">
+                <a href="#" id="header_search" class="se" data-se-label="SE_WAVE_OK"><span data-message="data03_04_002">コンテンツをさがす</span></a>
+                <div class="sort">
+                <span data-message="common01_01_059">Sort By:</span>
+                <select id="sort_select" name="sort">
+                    <option id="so00" value="new" data-message="shelf02_01_011">Release Date</option>
+                    <option id="so03" value="name" data-message="shelf02_01_012">Title Name</option>
+                    <option id="so01" value="popular" data-message="shelf02_01_013">Popularity</option>
+                </select>
+                </div>
+            </div>
+            {{ } }}
+
+        </div>
+</script>
+
+<script id="item" type="text/template">
+    <a href="#" class="outline se" data-se-label="SE_WAVE_OK"
+        data-aoc-id="{{- id }}" data-variation="{{- variation }}" data-content-index="{{- content_index }}" data-allow-over-lap="{{- allow_overlap }}">
+        <div class="icon">
+            <div class="image"><img src="image/placeholder/place_icon_add_c.png" data-original="{{- icon_url }}" width="100" height="100"/></div>
+            {{if (is_discount) { }}
+            <div class="status"><span data-message="common01_01_047">SALE</span></div>
+            {{ } }}
+        </div>
+        <div class="title">
+            <div class="name">{{- name }}</div>
+            {{if (is_discount) { }}
+            <span class="strike-through"><span class="ordinary-price">{{= regular_price }}</span></span>
+            <span class="price sale">{{= discount_price }}</span>
+            {{ } else { }}
+            <span class="strike-through"><span class="ordinary-price"></span></span>
+            <span class="price">{{= regular_price }}</span>
+            {{ } }}
+            {{if (mov_disp) { }}
+            <span class="movie"></span>
+            {{ } }}
+        </div>
+    </a>
+    {{if (downloadable) { }}
+    <a href="#" class="{{- context }} {{- checked }} {{= is_aoc_purchase ? '"' : 'se" data-se-label="SE_WAVE_OK"'}}>
+        <span>{{= purchase_status_str }}</span>
+    </a>
+    {{ } else { }}
+    <div class="disable">
+        <span>{{= purchase_status_str }}</span>
+    </div>
+    {{ } }}
+</script>
+
+<script id="checklist" type="text/template">
+        <div class="number">
+            <span><!-- 〓表示件数: --> {{= str_aocs_total }}</span>
+            <span><!-- 〓チェックしたものの数: -->{{= str_checked_num }}</span>
+        </div>
+        <a href="#" class="se evt_confirm_checklist" data-se-label="SE_WAVE_DECIDE"><span data-message="data03_05_001">選んだものを確認</span></a>
+</script>
+
+<script id="update_notice" type="text/template">
+    <p class="text" data-message="data03_03_001_02">以前購入した追加コンテンツで更新が必要なものがあります。<br>追加コンテンツの引換時に更新分もダウンロードされます。</p>
+    <a href="#" id="evt_ok" class="se" data-se-label="SE_WAVE_OK"><span data-message="common01_01_006">OK</span></a>
+</script>
+
+

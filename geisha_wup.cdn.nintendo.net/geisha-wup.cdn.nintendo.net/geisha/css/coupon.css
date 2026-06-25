@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*-- クーポンの使用 coupon01_01 --*/
+.coupon_input_wrap { margin:42px auto 0; }
+.coupon_use a { display:block; width:300px; height:80px; line-height:80px; margin:30px auto 44px auto; font-size:32px; }
+#coupon01_02 .frame_white { margin:0 auto 35px; text-align:left; overflow:hidden; }
+#coupon01_02 .frame_white_title { padding:2px 20px; margin:0; /*上書き*/}
+#coupon01_02 .frame_white_contents { overflow:hidden; font-size:25px; line-height:1.5; }
+.ordinary_price { margin: 0 16px 0 0; font-size:22px; }
+.sale_price { font-size:25px; }
+
+
+/*-- 購入シーケンス あな割選択画面（ぷらぷら） --*/
+.coupon { color: #ff9600; }
+.coupon_title { display:table; width:1000px; min-height:234px; margin:0 64px 0 40px; }
+.coupon_title_img { display:table-cell; width:156px; vertical-align:middle; text-align:center; }
+.coupon_title_img img { height:112px; width:112px; border-radius:12px; }
+.coupon_title_info { display:table-cell; box-sizing:border-box; width:844px; padding: 44px 24px 12px; }
+.coupon_title_summary { display:table-cell; width:844px; height:150px; vertical-align:middle; }
+.title_summary_content { font-size:27px; text-align:left; }
+#coupon03_01 .title_summary_content h2 { font-size:27px; margin:0 0 40px; padding:0;/*上書き*/}
+.enable_coupon_num { font-size:24px; text-align:right; }
+.enable_coupon_list { width:1000px; margin:0 auto 36px 40px; border-top:2px #bcbcbc solid; }
+.enable_coupon_list li { display:table; box-sizing:border-box; width:1000px; min-height:328px; padding:26px 0; border-top:2px #ffffff solid; border-bottom:2px #bcbcbc solid; }
+.enable_coupon_list li:last-child { border-bottom: none; }
+#coupon03_01 .enable_coupon_list h3 { min-height:30px; margin:0 0 0 2px; padding:0 0 0 18px; font-size:27px; line-height:1.2; }
+.coupon_item { display:table; }
+.coupon_price { display:table-cell; box-sizing:border-box; width:360px; padding:0 20px; vertical-align:top; }
+.coupon_price_content { margin: 96px 0 0;}
+.coupon_price_content label { font-size:27px; text-align:left; line-height:1.5; }
+.coupon_info dl { box-sizing:border-box; width:640px; padding:20px 20px 20px 0; font-size:22px; color:#646464; text-align:left; }
+.coupon_info dt { display:inline-block; width:170px; margin:22px 0 0; vertical-align:top; }
+.coupon_info dd { display:inline-block; width:440px; margin:22px 0 0; }
+.coupon_info dt:first-child, .coupon_info dd:first-of-type { margin:0; }
+.coupon_info .overflow-description { height:28px; overflow: hidden; }
+.coupon_info .show-detail { display:table; }
+
+
+/*-- あな割選択画面（正常シーケンス） coupon02_01 --*/
+#coupon02_01 .enable_coupon_num { width:1026px; margin:20px auto 10px 36px;}
+#coupon02_01 .enable_coupon_list { width:1026px; margin:0 auto 36px 36px; }
+#coupon02_01 .enable_coupon_list li { width:1026px; padding:14px 0 20px; }
+#coupon02_01 .enable_coupon_list h2 { margin:14px 0 0 2px; padding:0 0 0 18px; font-size:27px; }
+#coupon02_01 .enable_coupon_list h2 span { display:block; }
+#coupon02_01 .enable_coupon_list h2 .coupon { margin:14px 0 0; font-size:24px; }
+#coupon02_01 .coupon_item { width:1026px; margin:14px 0 0;}
+#coupon02_01 .coupon_info { width:552px; display:table-cell; vertical-align:top; }
+#coupon02_01 .coupon_info dl { width:552px; padding:12px 12px 6px 26px; font-size: 22px; line-height:1.5; }
+#coupon02_01 .coupon_info dt { width:514px; margin:6px 0 0; color:#323232; }
+#coupon02_01 .coupon_info dt:first-child { margin:0;/*上書き*/ }
+#coupon02_01 .coupon_info dd { width:514px; margin:6px 0 0; color:#787878; }
+.target_title_wrap { box-sizing:border-box; width:416px; margin:0 0 20px 44px; }
+.target_title { border-radius: 24px; box-shadow:0 3px 10px 0 rgba(0,0,0,0.6); }
+.target_title a { display:block; }
+.target_title img { width:416px; height:234px; border-radius:24px 24px 0 0; vertical-align:bottom; }
+.target_title img + span { display:block; box-sizing:border-box; width:416px; padding:6px 20px; color:#fff; background-color:#ff9600; border-radius:0 0 24px 24px; }
+.target_title span { font-size:24px; text-align:center; vertical-align:middle; }
+.target_title_wrap.no_image { vertical-align:top; }
+.target_title_wrap.no_image .target_title { border-radius:0;/*上書き*/ box-shadow:none; }
+.target_title_wrap.no_image a { display:table-cell; box-sizing:border-box; width:430px; height:90px; padding:10px 20px; vertical-align:middle; }
+#coupon02_01 .show-detail { margin:10px auto; float:none; }
+
+/*-- あな割無い時（正常シーケンス） coupon02_02 --*/
+#coupon02_02 { display:none; }
+#coupon02_02 #simple_box { box-sizing:border-box; height:550px; }
+#coupon02_02 #simple_box h2 { font-size:33px; }

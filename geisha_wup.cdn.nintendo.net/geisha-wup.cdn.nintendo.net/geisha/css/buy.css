@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+//div { border:1px #000000 solid !important; }
+
+.scroll_escape{ height:720px; overflow:hidden; }
+
+.header_common { width:1280px; height:86px; text-align:left; overflow:hidden; }
+.header_common h1 { width:1090px; height:35px; line-height:35px; padding:10px 0 0 190px;
+    background:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
+    box-shadow:0 3px 0 #dcdcdc, 0 3px 10px 0 rgba(0,0,0,0.6); font-size:24px; color:#808080; text-shadow:0 2px 0 #ffffff; }
+.buy_body { width:1105px; min-height:634px; padding:0 0 0 175px; }
+.hero { height:160px !important; margin:0 0 20px 0; }
+
+
+/*-- ラジオボタン --*/
+
+input[type="radio"] { opacity:0; position:absolute; }
+input[type="radio"]+label { position:relative; display:block; padding:0 0 0 64px; -webkit-user-select:none; }
+input[type="radio"]+label:before { content:''; position:absolute; background:url(../image/icon_lamp_s.png) no-repeat; width:36px; height:36px; top:4px; left:4px; }
+input[type="radio"]:checked+label:before { background: url(../image/icon_lamp_blue_on.png) no-repeat }
+
+/*-- 購入前の確認 buy01_01 --*/
+
+#buy_confirm_h2 { margin:0 50px 25px 10px; font-size:30px; clear:both; }
+#buy_about_this { line-height:1.5; margin:0 50px 5px 45px; padding:0 0 0 28px; border-left:2px #cccccc solid; font-size:24px; }
+#buy_about_this p { margin:18px 0 0; padding: 0 0 18px; border-bottom: 2px solid #D7D7D7; }
+#buy_about_this p:last-child { padding: 0; border: none; }
+#buy01_01 .buy_body { min-height:340px; }
+
+.btn_b0201 { clear:both; float:right; }
+.btn_b0201 a { display:block; width:556px; height:80px; line-height:80px; margin:20px 25px 10px 0; font-size:32px; }
+.btn_b0201 img { margin:0 0 0 80px; vertical-align:-19px; }
+.coupon_type_select { width:1000px; box-sizing:border-box; padding:26px 46px 26px 40px; margin:38px auto 40px 38px; }
+.coupon_type_select li { margin:46px 0 0; }
+.coupon_type_select li:first-child { margin:0; }/*上書き*/
+.coupon_type_select li.disuse_coupon { display:table; margin:24px 0 0; padding:20px 0 0; border-top:2px #cccccc solid; }
+.disuse_coupon_option { display:table-cell; width:700px; }
+.disuse_coupon_price { display:table-cell; width:300px; text-align:right }
+.disuse_coupon_price .price { margin:0 0 0 20px;}
+
+
+/*-- 支払方法の選択 buy01_02 --*/
+
+#buy01_02 .fox { width:1000px; margin:25px 50px 35px 50px; padding:25px 0; font-size:28px; }
+#buy01_02 .btn_c { padding-bottom:35px !important; }
+#buy01_02 .btn_c a { width:1000px; }
+#buy01_02 .lf { line-height:1.6; margin:0 40px 0 40px; }
+#bb_media {margin:0 40px; }
+#bb_capa { border-bottom:2px #cccccc solid; margin:0 40px 20px 40px; padding:0 0 20px 0; }
+
+
+/*-- 支払方法の選択 buy01_03 --*/
+
+#buy01_03 .buy_body h2 { margin-bottom: 14px; font-size: 27px; line-height: 40px; text-align: center;}
+.amount_indicator { width:772px; height: 82px; background:#ffffff; margin:0 auto 56px auto; padding:34px; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:15px; font-size:27px;}
+.amount_indicator dt { width:476px; text-align:left; float:left;}
+.amount_indicator dd { width:296px; text-align:right; float:right;}
+.balance_line { padding-bottom: 8px;}
+.required_amount { padding-top: 8px;}
+.pay_iccard { position: relative;}
+#buy01_03 .add_balance_text { padding: 118px 8px 12px;}
+#buy01_03 .pay_iccard_text {padding: 100px 8px 30px;}
+.add_balance_text:before { content: ''; position: absolute; top: 24px; left: 98px; background: url('../image/buy/ico_buy01_addmoney.png') 0 0 no-repeat; width: 104px; height: 94px;}
+.pay_ccard_text:before { content: ''; position: absolute; top: 30px; left: 100px; background: url('../image/buy/ico_money06_credit.png') 0 0 no-repeat; width: 100px; height: 70px;}
+#buy01_03 .gamepad_text { position: absolute; bottom: 14px; left: 14px; padding: 0;/*padding上書き*/ font-size: 20px; color: #787878; line-height: 1.2;}
+
+
+/*-- 最終確認 buy02_01 --*/
+.buy_confirm { display: table; min-height: 96px;}
+.buy_confirm_text { width: 638px; display: table-cell; vertical-align: middle; }
+#bfr_release_date, #bfr_message, #bfr_not_cancelable_message, #bfr_pre_order_message { margin:0 0 14px 10px; font-size:25px; }
+#specific_trade_law { margin:0 0 20px 0; display: table-cell; vertical-align: middle; }
+#specific_trade_law .btn_r { margin: 0 40px 16px 26px;}
+#buy_final_reminder { width:980px; background:#f5f5f5; margin:0 auto 0 30px; padding:30px 25px 0 25px;
+    border:3px #ffffff solid; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:15px; font-size:30px; clear:both; }
+
+#bfr_top { width:980px; margin:0 0 20px 0; overflow:hidden; }
+#bfr_top img { border-radius:12px; margin:0; float:left; }
+#bfr_top h2 { width:875px; max-width:875px; margin:22px 0 0 22px; font-size:30px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; float:left; }
+.confirm_scroll { margin-bottom:15px; }
+
+#buy_final_reminder dl { font-size:25px; line-height:1.5; }
+#buy_final_reminder dt { float:left; clear:both; }
+#buy_final_reminder dd { text-align:right; float:right; }
+
+.buy_2pane_l { width:480px; margin:10px 0 10px 35px; border-right:2px #cccccc solid; float:left; display: table-cell; vertical-align: middle; }
+.buy_2pane_l dt { margin:10px 45px 10px 0; }
+.buy_2pane_l dd { margin:10px 75px 10px 0; color:#ff7d00; }
+.buy_2pane_r { width:420px; margin:10px 35px 10px 0; float:left; }
+.buy_2pane_r dt { width:190px; margin:10px 0 10px 40px; }
+.buy_2pane_r dd { text-align:right; margin:10px 0 10px 0; }
+.buy_dl_total { margin:13px 0; font-size:28px; }
+
+.riyo_h3 { width:940px; max-width:940px; margin:0 0 10px 5px; font-size:28px; }
+.riyo { width:490px; }
+.riyo .buy_2pane_l { border-right:none; }
+
+.add_con_h3 { width:910px; max-width:940px; margin:0 0 10px 35px; font-size:28px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.add_con { max-width:950px; margin:0 0 35px 30px; }
+.add_con .buy_2pane_l { width:450px; margin:10px 0 10px 35px; border-right:2px #cccccc solid; float:left; }
+.add_con .buy_2pane_l dt { margin:10px 75px 10px 0; }
+.add_con .buy_2pane_l dd { margin:10px 75px 10px 0; color:#ff7d00; }
+.add_con .buy_2pane_r { width:420px; margin:10px 35px 10px 0; float:left; }
+.add_con .buy_2pane_r dt { margin:10px 0 10px 40px; }
+.add_con .buy_2pane_r dd { margin:10px 0 10px 0; }
+.add_con_hr { margin:45px 0 35px 0; color:#b0b0b0; }
+
+.frame_white_contents .bdr { margin:7px 0 7px 0; }
+.frame_white_contents .bdb { margin:15px 0 15px 0; }
+.frame_white_contents dd.bdr { color:#ff7d00; }
+
+.buy_submit { margin:40px 0 0 0; padding:5px 0 15px 175px; }
+.aoc_contain { float:left !important;text-align:left !important; margin:0 0 0 40px !important; font-size:24px; color:#646464; }
+.apply_coupon { margin:0 0 26px 0; font-size:24px; color:#ff7d00; }
+
+#jp_legal_description > p { margin:0 0 20px 0; font-size:25px; }
+
+/*-- 購入処理中 buy02_02 --*/
+
+#buy_loading_wrap { line-height:1.5; margin:200px 0 0 0; font-size:30px; }
+#buy_loading { display:table-cell; vertical-align:middle; width:950px; height:300px; background:#ffffff; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:12px;
+    text-align:center; margin:0 auto; }
+
+
+/*-- 購入完了 buy02_03 --*/
+
+#buy02_03 { padding:45px 0 0 0; }
+.buy_completed { width:980px; background:#f5f5f5; margin:0 45px 35px 45px; padding:15px 18px 10px 18px;
+    border:3px #ffffff solid; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:15px; font-size:30px; clear:both; }
+.buy_completed h2 { margin:0; font-size:30px; }
+#thanks_message, #receipt_message, #auto_billing_message { line-height:1.6; margin:20px 25px 15px 55px; font-size:25px; color:#646464; }
+
+.privilege_message {
+    background: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+}
+.privilege_message h3 {
+    background: #c8c8c8;
+    height: 50px;
+    border-radius: 15px 15px 0 0;
+    font-size: 28px;
+    line-height: 50px;
+    text-indent: 20px;
+}
+.code_content {
+    margin: 18px 35px;
+}
+.privilege_info {
+    margin-bottom: 54px;
+}
+.privilege_info a {
+    display: block;
+    width: 440px;
+    padding: 10px 20px;
+    font-size: 27px;
+}
+.code_content p{
+    margin: 18px 0;
+}
+.code_note {
+    line-height:1.6;
+    margin: 0 35px;
+    font-size:25px;
+    color:#646464;
+}
+
+
+#olive { margin:0 0 35px 0; clear:both; }
+#olive a { display:block; width:1000px; min-height:30px; text-align:center; margin:auto; padding:12px 0 12px 0; font-size:27px; }
+#olive img { vertical-align:-16px; margin:0 12px 0 0; }
+
+#p1_related_soft { margin:25px 0 0 0; font-size:23px; }
+#p1_related_soft li { width:325px; height:150px; margin:0 0 35px 0; border-left:1px #323232 solid; float:left; position:relative; }
+#p1_related_soft .rs_ico { float:left; margin:7px 0 0 24px; border-radius:10px; box-shadow:0 3px 10px 0 rgba(0,0,0,0.6); }
+#p1_related_soft .rs_tit { width:290px; max-width:290px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; position:absolute; top:120px; left:22px; }
+#p1_related_soft .rs_pri { min-width:174px; margin:30px 0 0 0; float:right; text-align:left; }
+#p1_related_soft .rs_rel { margin:8px 39px 0 0; float:right; }
+.cv_related a { width:117px; height:117px; position:absolute; top:1px; left:15px; text-indent:-9999px; }
+
+#continue_shopping { margin:0 60px 0 45px; padding:15px 0 35px 0; }
+#flow_p { display:table-cell; vertical-align:middle; width:1000px; height:60px; padding:10px 0 10px 0; font-size:27px; clear:both; }
+
+
+/*-- 最終確F認 buy03_01 --*/
+.buy_body_confirm { width: 1104px; padding: 0 0 0 176px;}
+.buy_body_confirm #card_country { margin-top: 20px; margin-right: 40px; }
+.buy_confirm_message { margin:0 0 14px 10px; font-size:25px; line-height: 1.5;}
+.buy_comfirm_attention { margin: 10px 40px 30px 10px; font-size: 25px; line-height: 1.5; }
+.buy_comfirm_attention + #buy_final_reminder { padding: 30px 25px; }
+.buy_comfirm_attention + #buy_final_reminder .frame_white { margin: 0; }/*上書き*/

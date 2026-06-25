@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+/*-- 残高の追加 money --*/
+
+#sb_cont { text-align:center; position:relative; }
+
+#money01_01 #sb_cont { height:720px; overflow:hidden; }
+#sb_cont #money02_04 { height:634px; overflow:hidden; }
+#money02_05 #sb_cont { height:720px; overflow:hidden; }
+#money03_01 #sb_cont { height:720px; overflow:hidden; }
+#sb_cont #money03_02 { height:634px; overflow:hidden; }
+#sb_cont #money03_03 { height:634px; overflow:hidden; }
+#sb_cont #money03_04 { height:634px; overflow:hidden; }
+#sb_cont #money03_05 { height:634px; overflow:hidden; }
+#sb_cont #money04_01 { height:634px; overflow:hidden; }
+#sb_cont #money04_04 { height:634px; overflow:hidden; }
+#sb_cont #money04_05 { height:634px; overflow:hidden; }
+#sb_cont #money04_06 { height:634px; overflow:hidden; }
+#sb_cont #money06_05 { height:742px; overflow:hidden; }
+#money06_05 #sb_cont { height:828px; overflow:hidden; }
+#money06_01 #sb_cont { height:720px; overflow:hidden; }
+#money06_03 { height:720px; overflow:hidden; }
+
+.scroll_escape{ height:720px; overflow:hidden; }
+
+.cmt{ margin-top:50px !important; }
+
+/*-- 01_01 --*/
+#money01_01 h2 { margin: 0 0 10px 0; font-size: 27px; line-height: 40px;}
+#money01_01 .alert_box { display: table; width : 885px; height: 70px; margin : 0 auto 36px auto; padding : 20px 50px; background : #ffffff; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+#money01_01 .alert_box span { display: table-cell; text-align: center; vertical-align:middle; font-size : 25px; color : #ff7d00; line-height: 37px;}
+#money01_01 .select_ul { margin:0 auto 36px auto;}
+.select_ul .use_ccard { height: 162px; border-bottom: 2px #bebebe solid;}
+.select_ul .info_ccard { height: 54px; border-top: 2px #ffffff solid;}
+.select_ul .info_ccard_text { padding: 0 8px 12px; font-size: 19px; color: #787878; line-height: 1.2;}
+#money01_01 .use_iccard { position: relative;}
+#money01_01 .use_ccard_text { padding: 100px 8px 0;}
+.use_pcard_text:before { content: ''; position: absolute; top: 30px; left: 98px; background: url('../image/money/ico_money06_prepaid.png') 0 0 no-repeat; width: 100px; height: 70px;}
+.use_ccard_text:before { content: ''; position: absolute; top: 30px; left: 100px; background: url('../image/buy/ico_money06_credit.png') 0 0 no-repeat; width: 100px; height: 70px;}
+#money01_01 .pay_iccard_text { padding: 120px 8px 60px;}
+#money01_01 .gamepad_text { position: absolute; bottom: 34px; left: 14px; padding: 0;/*padding上書き*/ font-size: 20px; color: #787878; line-height: 1.2;}
+#money01_01 .btn_r { margin:0 40px 30px 0;}
+
+
+/*-- 02_01 --*/
+
+#money02_01 h2 { line-height:1.6; padding:0 0 15px 0; font-size:25px; }
+#m02_card_img { margin:0 90px; }
+#m02_card_img p { display:table-cell; vertical-align:middle; width:925px; height:350px; }
+#money02_01 input { width:875px; height:80px; text-align:center; margin:25px auto 35px auto; padding:0 25px; font-size:30px; }
+
+
+/*-- 02_02 --*/
+
+#money02_02 #simple_box { display:table-cell; width:1100px; height:485px; text-align:center; margin:auto; vertical-align:middle; }
+#money02_02 h2 { line-height:1.5; padding:0 50px 30px 95px !important; text-align:left; }
+#money02_02 .lf {  margin:0 80px 40px 95px !important; }
+#money02_02 .btn_c { margin:35px auto 0 auto !important; }
+
+
+/*-- 02_03 --*/
+
+#money02_03 h2 { padding:0 0 35px 0; }
+#money02_03 .btn_c { padding:35px 0 0 0; }
+
+
+/*-- 02_04 --*/
+
+#money02_04 h2 { line-height:1.5; text-align:left; margin:55px 40px 80px 95px; font-size:27px; }
+#money02_04 input { width:875px; height:80px; text-align:center; margin:auto; padding:0 25px; font-size:30px; }
+#money02_04 .btn_c { padding-top:80px; }
+#money02_04 .btn_c a { width:800px; }
+
+
+/*-- 02_05 --*/
+#money02_05 .flow_ul { margin:90px 50px 15px 35px; }
+#money02_05 .flow_ul li { margin:30px 15px; }
+#money02_05 .flow_ul a {
+    width:1000px; height:30px; padding:12px 0 25px 0; font-size:27px;
+    background:-webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.4, #ffffff), color-stop(0.8, #ffffff), color-stop(0.96, #ffffff), to(#bbbbbb)); }
+#money02_05 .flow_ul img { margin:12px 0 0 0; }
+#money02_05 #contents_common { height:634px; display:table-cell;vertical-align:middle; }
+
+/*-- 02_06 --*/
+
+#money02_06 #contents_common { padding-bottom:40px; }
+#money02_06 .fox hr { margin:0 30px; padding:0; }
+#bg_money02_06_02 { margin:10px 10px 0 150px; float:left; }
+#money02_06 .fox p { text-align:left; margin:25px 35px 0 35px; }
+#money02_06 .g_note { text-align:left; margin:35px 35px 0 30px; padding:0 0 0 15px; border-left:2px #cccccc solid; }
+#money02_06 .g_note p { margin-bottom:25px; }
+
+
+/*-- 02_07 --*/
+
+#money02_07 #contents_common { padding-bottom:40px; }
+#money02_07 .fox .lf { margin:0 0 0 40px; padding:0; }
+#money02_07 .fox hr { width:980px; }
+#money02_07 .fox .prepaid_description { margin-top:30px; }
+#money02_07 p.g_note { text-align:left; margin:0 0 0 45px; padding:0; }
+#bg_money02_07_02 { float:right; margin:30px 20px 0 5px; }
+#money02_07 div.g_note { text-align:left; margin:35px 30px 35px 30px; padding:0 0 0 15px; border-left:2px #cccccc solid; }
+#money02_07 div.g_note p { margin:0 50px 10px 0; }
+
+
+/*-- 02_08 --*/
+
+#money02_08 #contents_common { padding-bottom:40px; }
+#money02_08 .fox { min-height:220px; position:relative; }
+#bg_money02_08_01 { position:absolute; top:48px; left:107px; }
+#money02_08 h3 { height:32px; line-height:32px; text-align:left; margin:0 0 0 20px; padding:0 0 0 10px; border-left:8px #323232 solid; font-size:28px; color:#323232; }
+#money02_08 .lf span { font-size:24px; }
+
+
+/*-- 03_01 --*/
+
+#money03_01 h2 { margin:95px 0 0 0; }
+#money03_01 .g_note { margin:15px auto 25px auto; }
+
+
+/*-- 03_02 --*/
+
+#money03_02 .btn_2p a { height:110px; line-height:110px; }
+#money03_02 h2 { margin:50px auto; }
+
+
+/*-- 03_03 --*/
+
+#money03_03 h2 { line-height:1.5; padding:10px 50px 40px 95px !important; text-align:left; }
+#money03_03 .lf {  margin:0 80px 40px 95px !important; }
+#money03_03 input { width:875px; height:80px; text-align:center; margin:0 auto 0 auto; padding:0 25px; font-size:30px; }
+
+
+/*-- 03_04 --*/
+
+#money03_04 h2 { text-align:left; line-height:1.5; }
+#money03_04 .g_note { text-align:left; margin:35px 0 0 75px; padding:0 0 0 15px; border-left:2px #cccccc solid; }
+#money03_04 .g_note p { margin-bottom:25px; }
+#money03_04  #result_dl { padding:0px 25px 5px 25px; margin-bottom: 15px; }
+#money03_04  .notice { padding:0 45px; text-align: left; font-size: 30px; line-height: 1.5; }
+#money03_04 #card_country { margin-bottom: 15px; margin-right: 40px; }
+
+
+/*-- 03_05, 06_05 --*/
+
+#money03_05 h2,
+#money06_05 h2 { margin:20px 0 15px 0; }
+#money03_05 .btn_r,
+#money06_05 .btn_r { display:table-cell; vertical-align:middle; width:400px; height:55px; margin:0 40px 30px 0; }
+#money03_05 .btn_r a,
+#money06_05 .btn_r a { width:800px; margin:0; }
+#money03_05 .btn_c,
+#money06_05 .btn_c { margin-top:40px !important; }
+.cc { border-top:2px #cccccc solid; padding:35px 0 15px 0 !important; }
+
+
+/*-- 04_01 --*/
+
+#money04_01 h2 { padding:25px 0 15px 0; }
+#money04_ul { display:table; width:680px; text-align:center; margin:35px auto 0 auto; padding:auto; }
+#money04_ul li { display:table-cell; width:auto; text-align:center; margin:10px auto 10px auto; font-size:27px; }
+#money04_ul a { display:block; width:300px; min-height:320px; text-align:center; padding:0 auto 40px auto; }
+#money04_01 .btn_003 a {
+    background:-webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.4, #ffffff), color-stop(0.8, #ffffff), color-stop(0.96, #ffffff), to(#bbbbbb)); }
+
+
+/*-- 04_02 --*/
+
+#money04_02_h2 { margin:0 0 0 80px; }
+#money04_02_h2 img { float:left; }
+#money04_02_h2 h2 { width:820px; text-align:left; margin:0 0 15px 35px; padding:0 0 0 0; clear:none; float:left; }
+#money04_02_h2 .g_note { width:820px; text-align:left; margin:0 0 20px 35px; padding:0; float:left; }
+#money04_02_dl { width:1010px; min-height:35px; margin:0 25px 25px 25px; padding:12px 20px; background:#ffffff; border-radius:20px; clear:both; position: relative;}
+#money04_02_dl dl { font-size:28px; }
+#money04_02_dl dt { width:480px; height:50px; line-height:50px; margin:0 !important; padding:10px 0; float:left; clear:both; text-align:left; }
+#money04_02_dl dd { width:530px; height:50px; line-height:50px; margin:0 !important; padding:10px 0; float:right; text-align:right; }
+#money04_02_dl input { text-align:right; font-size:28px; border:2px #747474 solid; }
+#card_num { width:350px; height:45px; text-align:center; padding:0 15px; }
+#expiration_date_01 { width:50px; height:45px; text-align:center; padding:0 15px; }
+#expiration_date_02 { width:50px; height:45px; text-align:center; padding:0 15px; }
+#sec_cord { width:70px; height:45px; text-align:center; padding:0 15px; }
+#money04_02 .btn_2p { margin:0; }
+#money04_02 .btn_2p li { margin:12px 0 0; text-align: center; display: inline-block; }
+#money04_02 .btn_2p a { width:485px; min-height:30px; line-height:30px; }
+#money04_02 .btn_wrapper{margin: 22px 0;text-align: right;}
+#money04_02 .btn_wrapper a{display: inline-block;padding: 15px 20px;
+  margin: 0;border-radius:10px;font-size:22px;}
+#money04_02 .btn_wrapper a+a{margin-left: 20px;}
+#money04_02 #card_country { margin-bottom: 25px; margin-right: 40px; }
+#card_info_frame { position: absolute; top: 20px; right: 20px; }
+
+/*-- 04_03 --*/
+
+#money04_03 { padding-bottom:40px; }
+
+
+/*-- 04_04 --*/
+
+#money04_04 .fox { min-height:540px; }
+
+
+/*-- 04_05 --*/
+
+#money04_05 h2 { margin:80px 0 0 0; }
+#money04_05 .ctr { margin:70px 0 50px 0; }
+#money04_05 .btn_2p { margin-top:45px !important; }
+#money04_05 .btn_2p a { min-height:30px; line-height:30px; padding:55px 0; }
+
+
+/*-- 04_06 --*/
+
+#money04_06 h2 { padding:10px 50px 40px 95px !important; text-align:left; }
+#money04_06 .lf {  margin:0 80px 40px 95px !important; }
+#money04_06 input { width:875px; height:80px; text-align:center; margin:0 auto 0 auto; padding:0 25px; font-size:30px; }
+
+
+/*-- 05_01 --*/
+
+#money05_01 .fox { min-height:430px; margin:0 25px 20px 25px; }
+#money05_01 h2 { font-size:32px; }
+#money05_01 p.lf { font-size:26px; }
+
+
+/*-- 06_01 --*/
+#money06_01 h2 { margin: 95px 0 0 0;}
+
+
+/*-- 06_02 --*/
+#money06_02 dl { margin: 0 70px 16px 70px; padding-bottom: 14px; font-size: 27px; line-height: 1.2; text-align: left; overflow: hidden;}
+#money06_02 dt { width: 594px; float: left;}
+#money06_02 dd { width: 370px; text-align: right; float: right;}
+#money06_02 h2 { font-size: 27px; line-height: 1.2; padding: 0;}/*padding上書き*/
+.ic_balance_attention { width: 964px; box-sizing: border-box; margin: 0 70px 20px 70px; padding-left: 6px; font-size: 22px; color: #646464; line-height: 1.5; text-align: left;}
+.ic_balance_touch { position: relative; width: 934px; height: 224px; margin: 0 95px 40px 70px;}
+.ic_balance_balloon { position: absolute; display: table; box-sizing: border-box; width: 580px; height: 240px; padding: 58px 160px 70px 82px; background: url(../image/money/img_money06_popup_wide.png) no-repeat; text-align: left; float: left; z-index: 10;}
+.ic_balance_balloon img { position: relative; margin: 0 10px; top: 6px;}
+.ic_balance_balloon span { font-size: 25px; line-height: 38px;}
+.ic_balance_drc { position: absolute; top: 14px; right: 0; z-index: 1;}
+.ic_balance_info { width: 964px; height: 190px; margin: 0 70px 30px 70px; border-radius: 15px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+.kind_card { width: 964px; height: 120px; box-sizing: border-box; padding: 14px 30px 16px;}
+#money06_02 .kind_card h3 { margin: 0 0 8px 0; padding: 0; font-size: 22px; color: #787878; line-height: 1.5; text-align: left;}/*padding上書き*/
+.ic_balance_suica { width: 964px; height: 70px; box-sizing: border-box; padding: 12px 30px; border-radius: 0 0 15px 15px; background: #ffe100;}
+.ic_balance_suica img { display: block; float: left;}
+.ic_balance_suica span { display: block; float: left; font-size: 19px; line-height: 1; text-align: left;}
+.ic_balance_suica .ic_balance_suica_note { margin-top: 8px;}
+
+
+/*-- 06_03 --*/
+.retry_touch { width: 1140px; padding: 0 0 0 140px; text-align: center;}
+#money06_03 .retry_touch h1 { position: relative; display: inline-block; margin: 134px auto 94px; padding-left: 90px; font-size: 33px; line-height: 40px; text-align: left;}
+#money06_03 .retry_touch h1:before { position: absolute; content: ''; display:inline-block; width: 60px; height: 60px; top: 10px; left: 0px; background: url('../image/money/ico_money06_error.png') 0 0 no-repeat;}
+.retry_touch_contents { position: relative; width: 1000px; height: 296px; margin: 0 140px 140px 0;}
+.retry_touch_balloon { position: absolute; display: table; width: 540px; height: 220px; background: url(../image/money/img_money06_popup.png); float: left; z-index: 10;}
+.retry_touch_balloon p,
+#money07_02 .retry_touch_balloon p
+ { display: table-cell; padding: 0 186px 0 84px; font-size: 27px; line-height: 1.5; text-align: left; vertical-align: middle;}
+.ic_balance_drc_card { position: absolute; top: 20px; left: 450px; z-index: 1;}
+
+
+/*-- 07_01-02 --*/
+#money07_01_01 h1 {font-size: 33px; margin-bottom: 80px; line-height: 1.5;}
+#money07_01_02 h1 {font-size: 27px; margin-bottom: 20px}
+#money07_01_01 #simple_box {height: 720px;}
+#money07_01_01 #flow_dl {width: auto; display: inline-block; padding: 30px 40px; font-size: 27px;}/*width上書き*/
+#money07_01_01 #flow_dl dt,
+#money07_01_02 #flow_dl dt {padding: 0; width: auto; margin: 0 10px 16px 0;}/*padding, width上書き*/
+#money07_01_01 #flow_dl dd,
+#money07_01_02 #flow_dl dd {padding: 0; width: auto; float: left;}/*padding, width上書き*/
+#money07_01_01 #flow_dl .recover_error_date,
+#money07_01_02 #flow_dl .recover_error_date {margin-bottom: 0; font-size: 24px; color: #787878;}/*margin上書き*/
+#money07_01_01 #flow_dl dd.recover_error_date,
+#money07_01_02 #flow_dl dd.recover_error_date {float: left;}
+.recover_error {width: 1104px; text-align: center; margin-top: 60px; padding: 0 0 0 176px;}
+#money07_01_02 .btn_c {margin-bottom: 50px;}
+#money07_01_02 .btn_c a {width: 400px;}
+#money07_01_02 #flow_dl {width: 820px; padding: 30px 40px; margin: 0 110px 30px 94px; font-size: 27px; text-align: left;}
+#money07_01_02 #flow_dl p {padding-bottom: 24px; margin-bottom: 24px;font-size: 24px; line-height: 1.5;}
+.recover_error_info {text-align: left; line-height: 1.5;}
+.recover_error_attention {display: block; width: 820px; margin: 0 auto; font-size: 25px; color: #ff7d00; }
+.recover_error_info p {margin-top: 20px; font-size: 22px; color : #787878;}
+#money07_02 {height: 720px; overflow: hidden;}
+#money07_02 h1 {line-height: 1.5;}
+#money07_02 .retry_touch h1 { position: relative; display: inline-block; margin: 94px auto; font-size: 33px; line-height: 40px;}
+#money07_02 .retry_touch_balloon p { padding: 0 150px 0 64px;}

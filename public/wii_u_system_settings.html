@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wii U System Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+        :root {
+            --wiiu-blue: #0088ff;
+            --wiiu-teal: #18b8c2;
+            --wiiu-green: #3ab54a;
+            --wiiu-lime: #8cc63f;
+            --wiiu-yellow: #d9e021;
+            --wiiu-orange: #f7931e;
+            --wiiu-red: #ed1c24;
+            --wiiu-crimson: #c1272d;
+            --wiiu-magenta: #ed1e79;
+            --wiiu-dark: #333333;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: radial-gradient(ellipse at center, #e6ecf2 0%, #c1c8d4 100%);
+            user-select: none;
+            -webkit-user-select: none;
+            overflow: hidden;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ambient floating dust particles */
+        .particle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.4;
+            filter: blur(1px);
+            pointer-events: none;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(1); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+        /* Screen Management */
+        .screen {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 10;
+            transform: scale(0.98);
+        }
+        
+        .screen.active {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 20;
+            transform: scale(1);
+        }
+
+        /* --- Main Menu Panel Styles --- */
+        .frosted-panel {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(240,245,250,0.5) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.8);
+            border-radius: 20px;
+            box-shadow: 
+                0 15px 35px rgba(0,0,0,0.05),
+                inset 0 0 0 1px rgba(255,255,255,0.5);
+            width: 800px;
+            max-width: 90vw;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            transform: scale(0.95);
+            opacity: 0.5;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .carousel-item.active .frosted-panel {
+            transform: scale(1);
+            opacity: 1;
+            z-index: 10;
+        }
+
+        .glossy-icon-btn {
+            position: relative;
+            background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+            border-radius: 36px;
+            box-shadow: 
+                0 10px 20px rgba(0,0,0,0.15),
+                0 4px 6px rgba(0,0,0,0.1),
+                inset 0 4px 0 rgba(255,255,255,1),
+                inset 0 -2px 0 rgba(0,0,0,0.1);
+            width: 240px;
+            height: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 40px;
+            flex-shrink: 0;
+            overflow: hidden;
+            border: 1px solid #d1d5db;
+        }
+
+        .glossy-icon-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 45%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.1) 100%);
+            border-radius: 30px 30px 100px 100px / 30px 30px 15px 15px;
+            pointer-events: none;
+        }
+
+        .list-option {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .list-option:hover { background: rgba(255,255,255,0.6); }
+        .list-option:active {
+            background: rgba(200,220,240,0.6);
+            transform: scale(0.98);
+        }
+
+        .bullet-triangle {
+            width: 0; height: 0; 
+            border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 10px solid white;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+            margin-right: 16px;
+        }
+
+        .nav-wedge {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 50px; height: auto;
+            cursor: pointer; z-index: 20;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+            transition: all 0.2s; color: #cbd5e1;
+        }
+        
+        .nav-wedge:hover {
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.8)) drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+            transform: translateY(-50%) scale(1.05);
+        }
+        .nav-wedge:active { transform: translateY(-50%) scale(0.95); }
+        .nav-wedge-left { left: 15px; }
+        .nav-wedge-right { right: 15px; }
+
+        .scrubber-icon {
+            font-size: 24px; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer; opacity: 0.6;
+            filter: drop-shadow(0 2px 2px rgba(255,255,255,0.8));
+        }
+        .scrubber-icon:hover { opacity: 0.8; transform: translateY(-5px) scale(1.1); }
+        .scrubber-icon.active {
+            opacity: 1; transform: translateY(-10px) scale(1.3);
+            filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2)) drop-shadow(0 0 10px currentColor);
+        }
+
+        .corner-btn {
+            position: fixed; bottom: -20px; left: -20px;
+            width: 220px; height: 180px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding-bottom: 20px; padding-right: 20px;
+            cursor: pointer; z-index: 50; transition: all 0.2s;
+            border-top-right-radius: 120px; box-shadow: 10px -10px 20px rgba(0,0,0,0.15);
+        }
+
+        .quit-corner {
+            background: radial-gradient(circle at bottom left, #2a2a2a 0%, #111111 100%);
+            border-top: 4px solid #444; border-right: 4px solid #444;
+            box-shadow: 10px -10px 20px rgba(0,0,0,0.2), inset 2px 2px 5px rgba(255,255,255,0.1);
+        }
+        .quit-corner:hover { border-color: #666; background: radial-gradient(circle at bottom left, #333 0%, #1a1a1a 100%); }
+
+        .back-corner {
+            background: linear-gradient(135deg, #f3f6fa 0%, #e1e7f0 100%);
+            border-top: 4px solid #fff; border-right: 4px solid #fff;
+            width: 200px; height: 160px;
+            box-shadow: 10px -10px 20px rgba(0,0,0,0.1), inset -2px -2px 5px rgba(0,0,0,0.05);
+        }
+        .back-corner:hover { background: linear-gradient(135deg, #ffffff 0%, #e6ebf2 100%); }
+
+        .corner-btn:active { transform: scale(0.95); bottom: -25px; left: -25px; }
+
+        .b-button {
+            background: linear-gradient(to bottom, #ffffff 0%, #dcdcdc 100%);
+            color: #333; width: 24px; height: 24px; border-radius: 50%;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); margin-left: 8px;
+        }
+
+        /* --- Generic Sub-Menu UI Components --- */
+        .wiiu-btn {
+            background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+            border-radius: 100px;
+            box-shadow: 
+                0 4px 10px rgba(0,0,0,0.1),
+                inset 0 4px 0 rgba(255,255,255,1),
+                inset 0 -2px 0 rgba(0,0,0,0.1);
+            border: 1px solid #d1d5db;
+            padding: 16px 36px;
+            font-size: 20px;
+            font-weight: 800;
+            color: #4b5563;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            display: inline-block;
+        }
+        .wiiu-btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.05);
+        }
+        .wiiu-btn:active {
+            transform: scale(0.95);
+        }
+        .wiiu-btn.opt-selected {
+            box-shadow: 0 0 0 4px var(--wiiu-blue), 0 4px 10px rgba(0,0,0,0.12);
+            color: var(--wiiu-blue);
+        }
+        .perf-card {
+            display: flex; flex-direction: column; align-items: center;
+            min-width: 160px; padding: 22px 26px; border-radius: 24px;
+        }
+
+        /* --- Data Management Specific Styles --- */
+        .storage-card {
+            width: 280px; height: 300px;
+            background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+            border-radius: 36px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05), inset 0 4px 0 rgba(255,255,255,1), inset 0 -2px 0 rgba(0,0,0,0.05);
+            position: relative; display: flex; flex-direction: column; align-items: center;
+            padding: 30px 24px 20px 24px; cursor: pointer; border: 1px solid #d1d5db;
+            transition: transform 0.2s, filter 0.2s; overflow: hidden;
+        }
+        .storage-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 45%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.05) 100%);
+            border-radius: 30px 30px 100px 100px / 30px 30px 15px 15px; pointer-events: none;
+        }
+        .storage-card:hover { transform: scale(1.02); filter: drop-shadow(0 0 10px rgba(255,255,255,0.6)); }
+        .storage-card:active { transform: scale(0.98); }
+
+        .progress-track {
+            width: 100%; height: 18px; background: #555; border-radius: 4px;
+            margin-top: 16px; margin-bottom: 8px; position: relative;
+            box-shadow: inset 0 3px 6px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.8);
+            display: flex; overflow: hidden; border: 2px solid #333;
+        }
+        .progress-fill {
+            height: 100%; background: linear-gradient(to bottom, #4fc3f7 0%, #0288d1 100%);
+            border-right: 1px solid #005bb5; box-shadow: inset 0 2px 2px rgba(255,255,255,0.4); position: relative; z-index: 1;
+        }
+        .progress-segments {
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            display: flex; pointer-events: none; z-index: 2;
+        }
+        .segment { flex: 1; border-right: 2px solid rgba(0,0,0,0.5); }
+        .segment:last-child { border-right: none; }
+
+        /* --- Data Management: game grid (reference layout) --- */
+        .dm-tab {
+            position: absolute; top: 0; background: #f6f8fb; z-index: 32;
+            display: flex; align-items: center; gap: 12px; padding: 14px 26px 20px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+        }
+        .dm-tab-left  { left: 0;  border-bottom-right-radius: 30px; }
+        .dm-tab-right { right: 0; border-bottom-left-radius: 30px; flex-direction: row-reverse; }
+        .dm-tab-label { font-size: 17px; font-weight: 700; color: #4b5563; line-height: 1.15; }
+        .face-btn {
+            background: linear-gradient(to bottom, #ffffff 0%, #dcdcdc 100%); color: #333;
+            width: 38px; height: 38px; border-radius: 50%;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); flex: 0 0 auto;
+        }
+
+        .dm-stage { position: absolute; top: 96px; bottom: 150px; left: 46px; right: 46px; z-index: 10; overflow-x: auto; overflow-y: hidden; }
+        .dm-grid {
+            display: flex; flex-direction: column; flex-wrap: wrap;
+            height: 100%; gap: 16px 22px; align-content: flex-start;
+        }
+        .dm-card {
+            width: 300px; height: calc((100% - 32px) / 3); min-height: 86px;
+            background: linear-gradient(to bottom, #fbfcfd 0%, #cfd4da 100%);
+            border-radius: 14px; border: 1px solid #b8bdc4;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.9);
+            display: flex; align-items: center; gap: 16px; padding: 12px 16px;
+            cursor: pointer; transition: transform 0.12s, filter 0.12s; flex: 0 0 auto;
+        }
+        .dm-card:hover { filter: brightness(1.04); transform: scale(1.015); }
+        .dm-card:active { transform: scale(0.985); }
+        .dm-tile {
+            width: 64px; height: 64px; border-radius: 10px; flex: 0 0 auto;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 34px; font-weight: 800;
+            box-shadow: inset 0 -3px 6px rgba(0,0,0,0.25), inset 0 2px 2px rgba(255,255,255,0.4);
+            text-shadow: 0 2px 2px rgba(0,0,0,0.25);
+        }
+        .dm-tile-icon { padding: 0; overflow: hidden; background: #fff; }
+        .dm-tile-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .dm-info { flex: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 4px 0; min-width: 0; }
+        .dm-name { font-size: 18px; font-weight: 600; color: #3f4650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .dm-size { align-self: flex-end; display: flex; align-items: baseline; gap: 5px; }
+        .dm-num { font-size: 22px; font-weight: 800; color: #8a9098; letter-spacing: -0.5px; }
+        .dm-unit { font-size: 16px; font-weight: 800; }
+        .dm-unit.mb { color: var(--wiiu-lime); }
+        .dm-unit.kb { color: var(--wiiu-blue); }
+        .dm-empty { color: #6b7280; font-size: 20px; font-weight: 700; display: flex; align-items: center; height: 100%; }
+
+        .dm-membar {
+            position: absolute; bottom: 0; left: 0; right: 0; height: 120px; z-index: 10;
+            background: linear-gradient(to bottom, #6b7280 0%, #4b5563 100%);
+            display: flex; align-items: center; gap: 28px; padding: 0 40px 0 250px;
+            box-shadow: inset 0 3px 8px rgba(0,0,0,0.3);
+        }
+        .dm-mem-label { color: #fff; font-size: 24px; font-weight: 600; flex: 0 0 auto; }
+        .dm-mem-right { margin-left: auto; display: flex; align-items: baseline; gap: 8px; }
+        .dm-mem-free { color: #d1d5db; font-size: 18px; font-weight: 600; }
+        .dm-mem-val { color: #cbd1d8; font-size: 26px; font-weight: 800; }
+
+        /* First-Boot-Setup curved banner (shared top bar for sub-screens) */
+        .fbs-banner {
+            width: 100%; height: 64px; background: var(--wiiu-blue);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-weight: 600;
+            border-bottom-left-radius: 50% 12px; border-bottom-right-radius: 50% 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+            position: relative; z-index: 30; flex-shrink: 0;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in { animation: fadeIn 0.4s ease both; }
+
+        /* Modal specific styling */
+        .modal-overlay {
+            backdrop-filter: blur(8px); background: rgba(255,255,255,0.5);
+            opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 100;
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Ambient background particles -->
+    <div id="particle-container" class="absolute inset-0 pointer-events-none overflow-hidden z-0"></div>
+
+    <!-- Top Right Version Number (Global) -->
+    <div class="absolute top-6 right-8 text-2xl font-bold text-gray-500/60 tracking-widest z-30 mix-blend-multiply pointer-events-none">
+        3.0.0 U
+    </div>
+
+    <!-- SCREEN 1: MAIN MENU -->
+    <div id="view-main" class="screen active">
+        <!-- Quit Button Corner -->
+        <div class="corner-btn quit-corner" onmouseenter="playHoverSound()" onclick="quitSystemSettings()">
+            <div class="flex items-end mb-1">
+                <i class="fa-solid fa-xmark text-gray-400 text-5xl"></i>
+                <div class="b-button -mb-2 z-10">B</div>
+            </div>
+            <span class="text-white font-semibold text-lg ml-2">Quit</span>
+        </div>
+
+        <main class="flex-1 flex items-center justify-center relative z-10 w-full mt-8">
+            <svg class="nav-wedge nav-wedge-left" viewBox="0 0 115 200" onclick="navigate(-1)" onmouseenter="playHoverSound()">
+                <defs><linearGradient id="arrowGradL" x1="100%" y1="0%" x2="0%" y2="0%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e2e8f0"/></linearGradient></defs>
+                <path d="M 95 10 Q 45 100 95 190 L 20 100 Z" fill="url(#arrowGradL)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path>
+            </svg>
+
+            <!-- Carousel Track -->
+            <div class="w-full max-w-[1000px] h-[450px] relative flex items-center justify-center overflow-visible perspective-[1000px]">
+                <div id="carousel-track" class="flex items-center absolute left-1/2 transition-transform duration-500 ease-out" style="transform: translateX(0px);">
+                    <!-- Dynamic Content Will Be Injected Here -->
+                </div>
+            </div>
+
+            <svg class="nav-wedge nav-wedge-right" viewBox="0 0 115 200" onclick="navigate(1)" onmouseenter="playHoverSound()">
+                <defs><linearGradient id="arrowGradR" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e2e8f0"/></linearGradient></defs>
+                <path d="M 20 10 Q 70 100 20 190 L 95 100 Z" fill="url(#arrowGradR)" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path>
+            </svg>
+        </main>
+
+        <footer class="h-32 w-full flex justify-center items-center gap-6 z-20 pb-8 pr-12">
+            <div id="scrubber-track" class="flex gap-4 md:gap-8 items-end h-full"></div>
+        </footer>
+    </div>
+
+
+    <!-- SCREEN 2: DATA MANAGEMENT (Custom Layout) -->
+    <div id="view-data" class="screen">
+        <div class="fbs-banner" style="background: var(--wiiu-teal);">
+            <h1 class="text-white text-[22px] font-semibold tracking-wide drop-shadow-sm">Data Management</h1>
+        </div>
+        <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[150%] h-48 bg-gradient-to-b from-white/70 to-transparent rounded-b-[100%] z-20 pointer-events-none"></div>
+
+        <div class="flex-1 flex items-center justify-center gap-6 relative z-30 pb-12 w-full max-w-[1000px] mx-auto">
+            <!-- System Memory -->
+            <div class="storage-card" onclick="openDataDetail('system')" onmouseenter="playHoverSound()">
+                <div class="h-[80px] flex items-center justify-center mt-2">
+                    <svg width="90" height="50" viewBox="0 0 100 50">
+                        <rect x="5" y="10" width="90" height="30" rx="10" ry="10" fill="none" stroke="#4b5563" stroke-width="6"/>
+                        <rect x="25" y="23" width="40" height="4" rx="2" fill="#4b5563"/>
+                        <circle cx="78" cy="25" r="3.5" fill="#4b5563"/><circle cx="15" cy="25" r="2.5" fill="#4b5563"/>
+                    </svg>
+                </div>
+                <div class="text-[22px] font-medium text-gray-700 text-center mb-1 mt-6">System Memory</div>
+                <div class="progress-track"><div id="sysmem-fill" class="progress-fill" style="width: 0%;"></div><div class="progress-segments"><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div></div></div>
+                <div class="flex justify-between items-baseline w-full px-1 mt-1">
+                    <span class="text-gray-500 font-semibold text-[15px]">Free Space</span><span id="sysmem-val" class="text-[22px] font-bold text-gray-400 tracking-tight ml-auto mr-1">—</span><span id="sysmem-unit" class="text-[#8cc63f] font-bold text-lg">MB</span>
+                </div>
+            </div>
+
+            <!-- USB 1 -->
+            <div class="storage-card" onclick="openDataDetail('usb1')" onmouseenter="playHoverSound()">
+                <div class="h-[80px] flex items-center justify-center mt-2">
+                    <svg width="70" height="60" viewBox="0 0 100 90">
+                        <path d="M 25 15 C 25 5, 75 5, 75 15 L 90 80 C 90 90, 10 90, 10 80 Z" fill="#4b5563"/><path d="M 35 20 C 35 15, 65 15, 65 20 L 72 50 C 72 55, 28 55, 28 50 Z" fill="white"/>
+                        <text x="50" y="44" font-size="28" font-family="sans-serif" font-weight="900" fill="#4b5563" text-anchor="middle">1</text>
+                        <rect x="40" y="62" width="20" height="2" fill="white"/><polygon points="50,58 45,62 55,62" fill="white"/><circle cx="40" cy="63" r="2.5" fill="white"/><circle cx="60" cy="63" r="2.5" fill="white"/><rect x="49" y="64" width="2" height="12" fill="white"/>
+                    </svg>
+                </div>
+                <div class="text-[22px] font-medium text-gray-700 text-center mb-1 mt-6">USB Storage Device 1</div>
+                <div class="progress-track"><div class="progress-fill" style="width: 12%;"></div><div class="progress-segments"><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div></div></div>
+                <div class="flex justify-between items-baseline w-full px-1 mt-1">
+                    <span class="text-gray-500 font-semibold text-[15px]">Free Space</span><span class="text-[22px] font-bold text-gray-400 tracking-tight ml-auto mr-1">1863</span><span class="text-[#c1272d] font-bold text-lg">GB</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="corner-btn back-corner" onmouseenter="playHoverSound()" onclick="goBack()">
+            <div class="flex items-end relative ml-8 mb-1">
+                <svg width="60" height="50" viewBox="0 0 100 80" class="fill-[#666]"><path d="M45,20 C70,20 85,35 85,55 C85,65 75,75 65,80 C75,70 70,55 50,55 C60,55 60,40 45,40 L45,55 L15,30 L45,5 Z" /></svg>
+                <div class="b-button absolute -bottom-2 -right-4 shadow-sm z-10 border border-gray-200">B</div>
+            </div>
+            <span class="text-gray-700 font-semibold text-lg ml-6 mt-1">Back</span>
+        </div>
+    </div>
+
+
+    <!-- SCREEN 2b: DATA MANAGEMENT — GAME LIST (per storage device) -->
+    <div id="view-data-detail" class="screen">
+        <div class="fbs-banner" style="background: var(--wiiu-teal);">
+            <h1 class="text-white text-[22px] font-semibold tracking-wide drop-shadow-sm">Data Management</h1>
+        </div>
+        <div class="dm-tab dm-tab-left" onmouseenter="playHoverSound()">
+            <div class="face-btn">Y</div>
+            <div class="dm-tab-label">Select Items<br>(Delete)</div>
+        </div>
+        <div class="dm-tab dm-tab-right" onmouseenter="playHoverSound()">
+            <div class="face-btn">X</div>
+            <div class="dm-tab-label" style="text-align:right;">Select Items<br>(Copy/Move)</div>
+        </div>
+
+        <div class="dm-stage"><div id="dm-grid" class="dm-grid"></div></div>
+
+        <div class="dm-membar">
+            <span id="dm-mem-label" class="dm-mem-label">System Memory</span>
+            <div class="progress-track" style="max-width:420px;margin:0;flex:1;"><div id="dm-mem-fill" class="progress-fill" style="width:0%;"></div><div class="progress-segments"><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div></div></div>
+            <div class="dm-mem-right"><span class="dm-mem-free">Free Space</span><span id="dm-mem-val" class="dm-mem-val">0</span><span id="dm-mem-unit" class="dm-unit mb">MB</span></div>
+        </div>
+
+        <div class="corner-btn back-corner" onmouseenter="playHoverSound()" onclick="showScreen('view-data'); playClickSound();">
+            <div class="flex items-end relative ml-8 mb-1">
+                <svg width="60" height="50" viewBox="0 0 100 80" class="fill-[#666]"><path d="M45,20 C70,20 85,35 85,55 C85,65 75,75 65,80 C75,70 70,55 50,55 C60,55 60,40 45,40 L45,55 L15,30 L45,5 Z" /></svg>
+                <div class="b-button absolute -bottom-2 -right-4 shadow-sm z-10 border border-gray-200">B</div>
+            </div>
+            <span class="text-gray-700 font-semibold text-lg ml-6 mt-1">Back</span>
+        </div>
+    </div>
+
+
+    <!-- SCREEN 3: GENERIC DYNAMIC SUBMENU (For all other options) -->
+    <div id="view-generic" class="screen">
+        <!-- Dynamic Header (First-Boot-Setup curved teal banner) -->
+        <div id="generic-header" class="fbs-banner">
+            <h1 id="generic-title" class="text-white text-[22px] font-semibold tracking-wide drop-shadow-sm">Dynamic Title</h1>
+        </div>
+        
+        <!-- Curved Depth Background -->
+        <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[150%] h-48 bg-gradient-to-b from-white/70 to-transparent rounded-b-[100%] z-20 pointer-events-none"></div>
+
+        <!-- Dynamic Content Area -->
+        <div id="generic-content" class="flex-1 flex flex-col items-center justify-center relative z-30 pb-12 w-full max-w-[1000px] mx-auto">
+            <!-- Content Injected via JS -->
+        </div>
+
+        <!-- Back Button (Shared Style) -->
+        <div class="corner-btn back-corner" onmouseenter="playHoverSound()" onclick="goBack()">
+            <div class="flex items-end relative ml-8 mb-1">
+                <svg width="60" height="50" viewBox="0 0 100 80" class="fill-[#666]"><path d="M45,20 C70,20 85,35 85,55 C85,65 75,75 65,80 C75,70 70,55 50,55 C60,55 60,40 45,40 L45,55 L15,30 L45,5 Z" /></svg>
+                <div class="b-button absolute -bottom-2 -right-4 shadow-sm z-10 border border-gray-200">B</div>
+            </div>
+            <span class="text-gray-700 font-semibold text-lg ml-6 mt-1">Back</span>
+        </div>
+    </div>
+
+
+    <!-- Feedback Modal (Global) -->
+    <div id="customModal" class="modal-overlay fixed inset-0 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-3xl shadow-2xl border-2 border-gray-200 max-w-sm text-center relative overflow-hidden transform transition-all">
+            <div class="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-600 text-3xl">
+                <i class="fa-solid fa-circle-notch fa-spin"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-700 mb-2">Processing...</h2>
+            <p id="modalMessage" class="text-gray-500 font-semibold mb-6">Action initiated</p>
+            <button onclick="closeModal()" onmouseenter="playHoverSound()" class="px-8 py-3 bg-gray-100 hover:bg-gray-200 rounded-xl text-lg font-bold text-gray-600 transition-colors shadow-inner">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const settingsData = [
+            { id: 'internet', icon: 'fa-globe', color: 'var(--wiiu-blue)', title: 'Internet', options: ['Connection Test', 'Automatic Software Downloads'] },
+            { id: 'data', icon: 'fa-layer-group', color: 'var(--wiiu-teal)', title: 'Data Management', options: ['Copy/Move/Delete Data', 'Format USB Storage Device'] },
+            { id: 'time', icon: 'fa-clock', color: 'var(--wiiu-green)', title: 'Date and Time', options: ['Set Date/Time', 'Time Zone'] },
+            { id: 'tv', icon: 'fa-tv', color: 'var(--wiiu-lime)', title: 'TV', options: ['TV Resolution', 'Screen Size', 'TV Audio Output'] },
+            { id: 'performance', icon: 'fa-gauge-high', color: '#9b59b6', title: 'Performance', options: ['Graphics Quality'] },
+            { id: 'controller', icon: 'fa-gamepad', color: 'var(--wiiu-yellow)', title: 'General Controller Settings', options: ['Pair Controller', 'Button Mapping', 'Rumble Settings'] },
+            { id: 'screen', icon: 'fa-tablet-screen-button', color: 'var(--wiiu-orange)', title: 'Screen', options: ['Screen Burn-in Reduction'] },
+            { id: 'info', icon: 'fa-circle-info', color: 'var(--wiiu-crimson)', title: 'Console Information', options: ['Console MAC Address', 'End-User License Agreement', 'Reset Console (First Boot Setup)'] },
+            { id: 'update', icon: 'fa-cloud-arrow-up', color: 'var(--wiiu-magenta)', title: 'System Update', options: ['Update System', 'Auto-Download'] },
+        ];
+
+        let currentIndex = 0; // Start on Internet initially
+        let systemDate = new Date(2012, 10, 18, 10, 0); // Wii U Launch date as default!
+
+        // Time zones (from the first-boot-setup menu).
+        const TIMEZONES = [
+            { label: 'UTC−12 : Baker Island', offset: -12 },
+            { label: 'UTC−11 : Samoa', offset: -11 },
+            { label: 'UTC−10 : Hawaii', offset: -10 },
+            { label: 'UTC−09 : Alaska', offset: -9 },
+            { label: 'UTC−08 : Pacific Time', offset: -8 },
+            { label: 'UTC−07 : Mountain Time', offset: -7 },
+            { label: 'UTC−06 : Central Time', offset: -6 },
+            { label: 'UTC−05 : Eastern Time', offset: -5 },
+            { label: 'UTC−04 : Atlantic Time', offset: -4 },
+            { label: 'UTC−03 : Buenos Aires', offset: -3 },
+            { label: 'UTC−02 : Mid-Atlantic', offset: -2 },
+            { label: 'UTC−01 : Azores', offset: -1 },
+            { label: 'UTC±00 : London / Dublin', offset: 0 },
+            { label: 'UTC+01 : Paris / Berlin', offset: 1 },
+            { label: 'UTC+02 : Helsinki / Athens', offset: 2 },
+            { label: 'UTC+03 : Moscow / Istanbul', offset: 3 },
+            { label: 'UTC+04 : Dubai', offset: 4 },
+            { label: 'UTC+05 : Karachi', offset: 5 },
+            { label: 'UTC+05:30 : Mumbai', offset: 5.5 },
+            { label: 'UTC+06 : Dhaka', offset: 6 },
+            { label: 'UTC+07 : Bangkok', offset: 7 },
+            { label: 'UTC+08 : Singapore / HK', offset: 8 },
+            { label: 'UTC+09 : Tokyo / Seoul', offset: 9 },
+            { label: 'UTC+10 : Sydney', offset: 10 },
+            { label: 'UTC+11 : Solomon Islands', offset: 11 },
+            { label: 'UTC+12 : Auckland', offset: 12 },
+        ];
+        let currentTz = (() => {
+            const auto = -(new Date().getTimezoneOffset() / 60);
+            return TIMEZONES.reduce((p, c) => Math.abs(c.offset - auto) < Math.abs(p.offset - auto) ? c : p).offset;
+        })();
+        let tzClockId = null;
+
+        const carouselTrack = document.getElementById('carousel-track');
+        const scrubberTrack = document.getElementById('scrubber-track');
+        const panelWidth = 840;
+
+        // ── System Settings SFX ──
+        const SFX = {
+            hover:  new Audio('/sfx/settings-hover.wav'),
+            select: new Audio('/sfx/settings-select.wav'),
+            arrow:  new Audio('/sfx/settings-arrow.wav'),
+        };
+        function playSfx(base, vol) {
+            try { const a = base.cloneNode(); a.volume = vol; a.play().catch(() => {}); } catch (e) {}
+        }
+        function initAudio() {}
+        function playHoverSound() { playSfx(SFX.hover, 0.4); }
+        function playClickSound() { playSfx(SFX.select, 0.6); }
+        function playArrowSound() { playSfx(SFX.arrow, 0.6); }
+
+        function renderUI() {
+            carouselTrack.innerHTML = '';
+            settingsData.forEach((data, index) => {
+                const item = document.createElement('div');
+                item.className = `carousel-item flex-shrink-0 flex items-center justify-center transition-all duration-500 absolute`;
+                item.style.left = `${index * panelWidth}px`;
+                item.style.width = `${panelWidth}px`;
+
+                const optionsHtml = data.options.map(opt => `
+                    <div class="list-option" onclick="handleOptionClick('${data.id}', '${opt}')" onmouseenter="playHoverSound()">
+                        <div class="bullet-triangle"></div>
+                        <span class="text-xl text-gray-700 font-semibold tracking-wide">${opt}</span>
+                    </div>
+                `).join('');
+
+                item.innerHTML = `
+                    <div class="frosted-panel">
+                        <div class="glossy-icon-btn">
+                            <i class="fa-solid ${data.icon} text-7xl mb-4" style="color: ${data.color}"></i>
+                            <span class="text-lg font-bold text-gray-600 px-4 text-center leading-tight">${data.title}</span>
+                        </div>
+                        <div class="flex-1 px-12 py-8 flex flex-col justify-center">${optionsHtml}</div>
+                    </div>
+                `;
+                carouselTrack.appendChild(item);
+            });
+
+            scrubberTrack.innerHTML = '';
+            settingsData.forEach((data, index) => {
+                const iconWrap = document.createElement('div');
+                iconWrap.className = `scrubber-icon`;
+                iconWrap.style.color = data.color;
+                iconWrap.innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+                iconWrap.onclick = () => jumpTo(index);
+                iconWrap.onmouseenter = playHoverSound;
+                scrubberTrack.appendChild(iconWrap);
+            });
+
+            updateView();
+        }
+
+        function updateView() {
+            const offset = -(currentIndex * panelWidth) - (panelWidth / 2);
+            carouselTrack.style.transform = `translateX(${offset}px)`;
+            
+            document.querySelectorAll('.carousel-item').forEach((item, index) => {
+                item.classList.toggle('active', index === currentIndex);
+            });
+            document.querySelectorAll('.scrubber-icon').forEach((icon, index) => {
+                icon.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function navigate(direction) {
+            let newIndex = currentIndex + direction;
+            if (newIndex >= 0 && newIndex < settingsData.length) {
+                playArrowSound();
+                currentIndex = newIndex; updateView();
+            }
+        }
+
+        function jumpTo(index) {
+            if (index !== currentIndex) {
+                playArrowSound(); currentIndex = index; updateView();
+            }
+        }
+
+        function showScreen(screenId) {
+            stopTzClock(); // leaving any sub-view stops the time-zone clock
+            stopConnectionTest(); // and cancels any running connection-test animation
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        function goBack() {
+            playClickSound();
+            showScreen('view-main');
+        }
+
+        // Glossy up/down arrow button (first-boot-setup style).
+        function glossArrow(dir, onclick) {
+            const up = dir === 'up';
+            const path = up
+                ? 'M 50 12 L 82 44 A 4 4 0 0 1 78 50 L 22 50 A 4 4 0 0 1 18 44 Z'
+                : 'M 50 48 L 82 16 A 4 4 0 0 0 78 10 L 22 10 A 4 4 0 0 0 18 16 Z';
+            return `
+                <button onmouseenter="playHoverSound()" onclick="${onclick}"
+                    class="w-20 h-12 flex items-center justify-center hover:scale-110 active:scale-90 transition-transform duration-100 cursor-pointer"
+                    style="background:none;border:none;padding:0;">
+                    <svg viewBox="0 0 100 60" class="w-full h-full" style="filter:drop-shadow(0 2px 3px rgba(0,0,0,0.18));">
+                        <defs><linearGradient id="glossArrow" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#ffffff"/><stop offset="30%" stop-color="#fcfdfe"/>
+                            <stop offset="70%" stop-color="#f0f3f6"/><stop offset="100%" stop-color="#d5dbe1"/>
+                        </linearGradient></defs>
+                        <path d="${path}" fill="url(#glossArrow)" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+                    </svg>
+                </button>`;
+        }
+
+        // A single first-boot-setup number column (up arrow / value / label / down arrow).
+        function numCol(type, part, value, label, wide) {
+            return `
+                <div class="flex flex-col items-center">
+                    ${glossArrow('up', `adjustDateTime('${type}','${part}',1)`)}
+                    <span class="text-6xl font-semibold text-gray-800 my-4 tabular-nums ${wide ? 'w-40' : 'w-24'} text-center">${value}</span>
+                    <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">${label}</span>
+                    ${glossArrow('down', `adjustDateTime('${type}','${part}',-1)`)}
+                </div>`;
+        }
+
+        function getDateTimeViewHtml() {
+            const m = systemDate.getMonth() + 1;
+            const d = systemDate.getDate();
+            const y = systemDate.getFullYear();
+
+            let h = systemDate.getHours();
+            const min = systemDate.getMinutes();
+            const ampm = h >= 12 ? 'p.m.' : 'a.m.';
+            h = h % 12; h = h ? h : 12; // 0 hour shows as 12
+
+            const pad = (n) => n < 10 ? '0' + n : n;
+
+            return `
+                <div class="flex flex-col items-center gap-8 animate-fade-in">
+                    <div class="flex items-center justify-center gap-6 select-none">
+                        ${numCol('date', 'month', pad(m), 'Month')}
+                        <span class="text-6xl font-light text-gray-300 mb-16">/</span>
+                        ${numCol('date', 'day', pad(d), 'Day')}
+                        <span class="text-6xl font-light text-gray-300 mb-16">/</span>
+                        ${numCol('date', 'year', y, 'Year', true)}
+                    </div>
+                    <div class="flex items-center justify-center gap-6 select-none">
+                        ${numCol('time', 'hour', pad(h), 'Hour')}
+                        <span class="text-6xl font-light text-gray-300 mb-16">:</span>
+                        ${numCol('time', 'minute', pad(min), 'Minute')}
+                        <div class="flex flex-col items-center justify-center pl-2 mb-10">
+                            <button onmouseenter="playHoverSound()" onclick="adjustDateTime('time','ampm',1)"
+                                class="text-4xl font-semibold text-gray-700 px-3 py-2 rounded-2xl hover:bg-white/40 border border-transparent hover:border-gray-200 transition-all duration-100 cursor-pointer">${ampm}</button>
+                        </div>
+                    </div>
+                    <div class="wiiu-btn" onclick="showModal('Date and Time saved!')">Save</div>
+                </div>
+            `;
+        }
+
+        // --- Time Zone view (first-boot-setup style: dropdown + live clock) ---
+        function getTimeZoneViewHtml() {
+            const opts = TIMEZONES.map(t =>
+                `<option value="${t.offset}" ${t.offset === currentTz ? 'selected' : ''}>${t.label}</option>`).join('');
+            return `
+                <div class="flex flex-col items-center gap-4 w-full max-w-md animate-fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 tracking-tight">Set Your Time Zone</h2>
+                    <p class="text-gray-400 text-sm -mt-2">Choose the time zone for your area</p>
+                    <select onchange="setTz(this.value)"
+                        class="w-full bg-white border border-gray-200 rounded-2xl px-4 py-3.5 text-gray-700 text-sm font-semibold focus:outline-none shadow-sm cursor-pointer mt-2">${opts}</select>
+                    <div class="flex flex-col items-center gap-2 mt-4 p-6 rounded-3xl bg-white/60 border border-gray-200 w-full shadow-sm">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Current Time</span>
+                        <span id="tz-clock" class="text-4xl font-extrabold tracking-tight text-[#0088cc] tabular-nums" style="font-family:monospace;">--:--:--</span>
+                    </div>
+                </div>
+            `;
+        }
+        function setTz(v) { playClickSound(); currentTz = Number(v); }
+        function startTzClock() {
+            stopTzClock();
+            const upd = () => {
+                const el = document.getElementById('tz-clock');
+                if (!el) { stopTzClock(); return; }
+                const d = new Date();
+                const utc = d.getTime() + d.getTimezoneOffset() * 60000;
+                const local = new Date(utc + currentTz * 3600000);
+                el.textContent = local.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            };
+            upd();
+            tzClockId = setInterval(upd, 1000);
+        }
+        function stopTzClock() { if (tzClockId) { clearInterval(tzClockId); tzClockId = null; } }
+
+        function adjustDateTime(type, part, delta) {
+            playClickSound();
+            if (type === 'date') {
+                if (part === 'month') systemDate.setMonth(systemDate.getMonth() + delta);
+                if (part === 'day') systemDate.setDate(systemDate.getDate() + delta);
+                if (part === 'year') systemDate.setFullYear(systemDate.getFullYear() + delta);
+            } else if (type === 'time') {
+                if (part === 'hour') systemDate.setHours(systemDate.getHours() + delta);
+                if (part === 'minute') systemDate.setMinutes(systemDate.getMinutes() + delta);
+                if (part === 'ampm') systemDate.setHours(systemDate.getHours() + 12); // Toggles AM/PM by adding 12 hours
+            }
+
+            // Re-render only the generic content container with the new state
+            document.getElementById('generic-content').innerHTML = getDateTimeViewHtml();
+        }
+
+        function handleOptionClick(categoryId, optName) {
+            playClickSound();
+            
+            // Route Data Management to its specific hardcoded layout
+            if (categoryId === 'data') {
+                showScreen('view-data');
+                return;
+            }
+
+            // Route all others to the Dynamic Generic View. Banner keeps the
+            // first-boot-setup curved shape but takes the section's colour.
+            const category = settingsData.find(c => c.id === categoryId);
+            document.getElementById('generic-header').style.backgroundColor = category.color;
+            document.getElementById('generic-title').innerText = optName;
+
+            let contentHtml = '';
+
+            // Generate Bespoke UI mockups for specific options
+            switch (optName) {
+                case 'Connection Test':
+                    contentHtml = getConnectionTestHtml();
+                    break;
+                case 'Graphics Quality':
+                    contentHtml = getGraphicsQualityHtml();
+                    break;
+                case 'Automatic Software Downloads':
+                    contentHtml = `
+                        <div class="flex flex-col items-center text-center max-w-lg">
+                            <p class="text-xl font-bold text-gray-700 mb-10">Automatically download software updates and data while the console is in standby?</p>
+                            <div class="flex gap-8">
+                                <div class="wiiu-btn opt-choice" onclick="selectOpt(this)">Yes</div>
+                                <div class="wiiu-btn opt-choice" onclick="selectOpt(this)">No</div>
+                            </div>
+                        </div>`;
+                    break;
+                case 'Set Date/Time':
+                    contentHtml = getDateTimeViewHtml();
+                    break;
+                case 'Time Zone':
+                    contentHtml = getTimeZoneViewHtml();
+                    break;
+                case 'TV Resolution':
+                    contentHtml = getChoiceHtml('wiiuResolution', [
+                        { value: '1080p', label: '1080p' },
+                        { value: '1080i', label: '1080i' },
+                        { value: '720p',  label: '720p' },
+                        { value: '480p',  label: '480p' },
+                    ], '1080p', 'Lower resolutions reduce the rendering quality of the Wara Wara Plaza.');
+                    break;
+                case 'TV Audio Output':
+                    contentHtml = getChoiceHtml('wiiuAudioOutput', [
+                        { value: 'surround', label: 'Surround' },
+                        { value: 'stereo',   label: 'Stereo' },
+                        { value: 'mono',     label: 'Mono' },
+                    ], 'stereo', null);
+                    break;
+                case 'Pair Controller':
+                    contentHtml = `
+                        <div class="flex flex-col items-center text-center max-w-xl">
+                             <i class="fa-solid fa-gamepad text-8xl text-[var(--wiiu-yellow)] mb-6 drop-shadow-md"></i>
+                             <p class="text-xl font-bold text-gray-700 mb-8">Press the SYNC Button on the console, and then press the SYNC Button on the controller you want to pair.</p>
+                             <div class="wiiu-btn" onclick="goBack()">Cancel</div>
+                        </div>`;
+                    break;
+                case 'Screen Burn-in Reduction':
+                    contentHtml = `
+                        <div class="flex flex-col items-center">
+                            <p class="text-lg text-gray-600 mb-8 text-center max-w-md font-semibold">Dims the screen after 5 minutes of inactivity to prevent image retention on plasma and OLED screens.</p>
+                            <div class="flex items-center gap-6 bg-white/60 p-6 rounded-[2rem] border border-white shadow-sm">
+                                <span class="text-2xl font-bold text-gray-700">Enable</span>
+                                <div class="w-24 h-12 bg-[#8cc63f] rounded-full relative cursor-pointer shadow-inner transition-colors border-2 border-gray-300" onclick="this.classList.toggle('bg-gray-300'); this.classList.toggle('bg-[#8cc63f]'); this.children[0].classList.toggle('translate-x-12'); playClickSound();">
+                                    <div class="w-10 h-10 bg-white rounded-full absolute top-[2px] left-[2px] transition-transform translate-x-12 shadow-md"></div>
+                                </div>
+                            </div>
+                        </div>`;
+                    break;
+                case 'Console MAC Address':
+                    contentHtml = `
+                        <div class="bg-white/80 border-2 border-gray-200 rounded-3xl p-8 shadow-md text-center max-w-md w-full">
+                            <h3 class="text-xl font-bold text-gray-500 mb-4">Wi-Fi MAC Address</h3>
+                            <div class="text-3xl font-mono font-bold text-gray-800 bg-gray-100 py-4 px-6 rounded-xl border border-gray-300 inline-block shadow-inner w-full">
+                                E0:0C:7F:A1:B2:C3
+                            </div>
+                        </div>`;
+                    break;
+                case 'Reset Console (First Boot Setup)':
+                    contentHtml = `
+                        <div class="flex flex-col items-center text-center max-w-lg">
+                             <i class="fa-solid fa-triangle-exclamation text-7xl text-[var(--wiiu-red)] mb-4 drop-shadow"></i>
+                             <h2 class="text-2xl font-bold text-[var(--wiiu-red)] mb-4">Warning</h2>
+                             <p class="text-lg font-bold text-gray-700 mb-8">This will delete all save data, software, and user information from the console. This cannot be undone.</p>
+                             <div class="wiiu-btn" style="border-color: var(--wiiu-red); color: var(--wiiu-red);" onclick="showModal('Factory Reset Cancelled.')">Reset Console</div>
+                        </div>`;
+                    break;
+                case 'Update System':
+                    contentHtml = `
+                        <div class="flex flex-col items-center">
+                            <i class="fa-solid fa-cloud-arrow-down text-7xl text-[var(--wiiu-magenta)] mb-6 drop-shadow-sm"></i>
+                            <h2 class="text-2xl font-bold text-gray-700 mb-8">Checking for updates...</h2>
+                            <div class="w-80 h-6 bg-gray-300 rounded-full overflow-hidden shadow-inner border border-gray-400 mb-8">
+                                <div class="h-full bg-[var(--wiiu-magenta)] w-1/3 animate-pulse"></div>
+                            </div>
+                            <div class="wiiu-btn" onclick="goBack()">Cancel</div>
+                        </div>`;
+                    break;
+                default:
+                    // Fallback for options not explicitly mocked out above
+                    contentHtml = `
+                        <div class="flex flex-col items-center text-center">
+                             <i class="fa-solid fa-screwdriver-wrench text-6xl text-gray-400 mb-6 drop-shadow-sm"></i>
+                             <p class="text-xl font-bold text-gray-700 mb-8">Change settings for <br/><span style="color: ${category.color}">${optName}</span></p>
+                             <div class="wiiu-btn" onclick="showModal('${optName} action executed!')">Execute Action</div>
+                        </div>`;
+            }
+
+            document.getElementById('generic-content').innerHTML = contentHtml;
+            showScreen('view-generic');
+            if (optName === 'Time Zone') startTzClock();
+            if (optName === 'Connection Test') startConnectionTest();
+        }
+
+        /* ─────── Internet Connection Test ─────── */
+        const CT = { raf: null, frame: 0, phase: 0, gen: 0, failed: false };
+        let ctLoadingSfx = null;
+        function ctStartLoadingSfx() {
+            try {
+                ctStopLoadingSfx();
+                ctLoadingSfx = new Audio('/local-assets/audio/' + encodeURIComponent('Loading Circle SFX.wav'));
+                ctLoadingSfx.loop = true; ctLoadingSfx.volume = 0.5;
+                ctLoadingSfx.play().catch(() => {});
+            } catch (e) {}
+        }
+        function ctStopLoadingSfx() {
+            if (ctLoadingSfx) { try { ctLoadingSfx.pause(); } catch (e) {} ctLoadingSfx = null; }
+        }
+        const CT_BLUE_A = 'rgb(54,181,244)';
+        const CT_BLUE_B = 'rgb(84,198,255)';
+        const CT_GRAY   = 'rgb(158,158,158)';
+
+        function getConnectionTestHtml() {
+            return `
+            <style>
+                .ct-card {
+                    width: 640px; height: 482px;
+                    background: url('/internet-connection/popup-bg.png') center/100% 100% no-repeat;
+                    display: flex; flex-direction: column; align-items: center;
+                    padding: 54px 56px 40px; box-sizing: border-box;
+                    filter: drop-shadow(0 10px 24px rgba(0,0,0,0.18));
+                }
+                .ct-title { font-size: 26px; font-weight: 800; color: #4b5563; letter-spacing: .3px; margin-bottom: 8px; }
+                .ct-row { display: flex; align-items: flex-start; justify-content: center; gap: 4px; margin-top: 30px; width: 100%; }
+                .ct-sym-col { display: flex; flex-direction: column; align-items: center; width: 110px; flex: 0 0 auto; }
+                .ct-sym {
+                    width: 84px; height: 84px;
+                    -webkit-mask-size: contain; mask-size: contain;
+                    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+                    -webkit-mask-position: center; mask-position: center;
+                    background-color: ${CT_GRAY};
+                    transition: background-color .08s linear;
+                }
+                #ct-console { -webkit-mask-image: url('/internet-connection/console.png'); mask-image: url('/internet-connection/console.png'); }
+                #ct-wifi    { -webkit-mask-image: url('/internet-connection/wifi.png');    mask-image: url('/internet-connection/wifi.png'); }
+                #ct-internet{ -webkit-mask-image: url('/internet-connection/internet.png');mask-image: url('/internet-connection/internet.png'); }
+                .ct-label { margin-top: 12px; font-size: 16px; font-weight: 700; color: #6b7280; text-align: center; }
+                .ct-gap { width: 86px; height: 84px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; }
+                .ct-dots { display: flex; gap: 9px; }
+                .ct-dot { width: 16px; height: 16px; opacity: .15; }
+                .ct-result { width: 46px; height: 46px; display: none; }
+                .ct-status { margin-top: 42px; font-size: 22px; font-weight: 700; color: #4b5563; text-align: center; min-height: 30px; padding: 0 10px; }
+                .ct-status.ct-error { color: #c1272d; }
+                .ct-status.ct-success { color: #4ba82e; }
+                .ct-code { margin-top: 8px; font-size: 15px; font-weight: 600; color: #9ca3af; }
+            </style>
+            <div class="ct-card">
+                <div class="ct-title">Internet-Connection Setup</div>
+                <div class="ct-row">
+                    <div class="ct-sym-col"><div class="ct-sym" id="ct-console"></div><div class="ct-label">Wii U</div></div>
+                    <div class="ct-gap" id="ct-gap0">
+                        <div class="ct-dots"><img class="ct-dot" src="/internet-connection/dot.png"><img class="ct-dot" src="/internet-connection/dot.png"><img class="ct-dot" src="/internet-connection/dot.png"></div>
+                        <img class="ct-result ct-check" src="/internet-connection/check.png">
+                        <img class="ct-result ct-x" src="/internet-connection/x.png">
+                    </div>
+                    <div class="ct-sym-col"><div class="ct-sym" id="ct-wifi"></div><div class="ct-label">Network Device</div></div>
+                    <div class="ct-gap" id="ct-gap1">
+                        <div class="ct-dots"><img class="ct-dot" src="/internet-connection/dot.png"><img class="ct-dot" src="/internet-connection/dot.png"><img class="ct-dot" src="/internet-connection/dot.png"></div>
+                        <img class="ct-result ct-check" src="/internet-connection/check.png">
+                        <img class="ct-result ct-x" src="/internet-connection/x.png">
+                    </div>
+                    <div class="ct-sym-col"><div class="ct-sym" id="ct-internet"></div><div class="ct-label">Internet</div></div>
+                </div>
+                <div class="ct-status" id="ct-status">Testing connection...</div>
+            </div>`;
+        }
+
+        function selectOpt(el) {
+            playClickSound();
+            el.parentElement.querySelectorAll('.opt-choice').forEach(b => b.classList.remove('opt-selected'));
+            el.classList.add('opt-selected');
+        }
+
+        /* ─────── Performance: graphics quality (plaza Mii count) ─────── */
+        const PERF_OPTS = [
+            { id: 'ultra',  name: 'Ultra',  n: 100 },
+            { id: 'high',   name: 'High',   n: 70 },
+            { id: 'medium', name: 'Medium', n: 45 },
+            { id: 'low',    name: 'Low',    n: 20 },
+        ];
+
+        function getGraphicsQualityHtml() {
+            let cur = 'medium';
+            try { cur = localStorage.getItem('wiiuPerformance') || 'medium'; } catch (e) {}
+            const cards = PERF_OPTS.map(o => `
+                <div class="wiiu-btn opt-choice perf-card${o.id === cur ? ' opt-selected' : ''}" data-perf="${o.id}" onclick="setPerformance('${o.id}', this)" onmouseenter="playHoverSound()">
+                    <div style="font-size:24px;font-weight:800;">${o.name}</div>
+                    <div style="font-size:14px;font-weight:700;color:#9ca3af;margin-top:4px;">${o.n} Miis in Plaza</div>
+                </div>`).join('');
+            return `
+                <div class="flex flex-col items-center text-center max-w-3xl">
+                    <p class="text-lg text-gray-600 mb-8 font-semibold">Adjust system performance. Higher settings show more Mii characters in the Wara Wara Plaza, but may run slower.</p>
+                    <div class="flex gap-6 flex-wrap justify-center">${cards}</div>
+                    <p class="text-sm text-gray-400 mt-8">Changes take effect the next time the Wara Wara Plaza loads.</p>
+                </div>`;
+        }
+
+        function setPerformance(level, el) {
+            playClickSound();
+            try { localStorage.setItem('wiiuPerformance', level); } catch (e) {}
+            el.parentElement.querySelectorAll('.opt-choice').forEach(b => b.classList.remove('opt-selected'));
+            el.classList.add('opt-selected');
+        }
+
+        /* Generic saved-and-applied choice picker (highlight-selected, no modal). */
+        function getChoiceHtml(key, options, defVal, note) {
+            let cur = defVal;
+            try { cur = localStorage.getItem(key) || defVal; } catch (e) {}
+            const btns = options.map(o =>
+                `<div class="wiiu-btn opt-choice${o.value === cur ? ' opt-selected' : ''}" onclick="setSysOption('${key}','${o.value}', this)" onmouseenter="playHoverSound()">${o.label}</div>`
+            ).join('');
+            return `
+                <div class="flex flex-col items-center text-center max-w-2xl">
+                    <div class="flex gap-6 flex-wrap justify-center">${btns}</div>
+                    ${note ? `<p class="text-sm text-gray-400 mt-8">${note}</p>` : ''}
+                </div>`;
+        }
+
+        function setSysOption(key, value, el) {
+            playClickSound();
+            try { localStorage.setItem(key, value); } catch (e) {}
+            el.parentElement.querySelectorAll('.opt-choice').forEach(b => b.classList.remove('opt-selected'));
+            el.classList.add('opt-selected');
+            // Tell the host app to apply the change immediately.
+            window.parent.postMessage({ type: 'APPLY_SYSTEM_SETTING', key: key, value: value }, '*');
+        }
+
+        /* ─────── Data Management: installed-game list ─────── */
+        const DM_PALETTE = ['#e8731f','#f4d03f','#8cc63f','#8a9bc4','#5ec5e8','#f2a6c0','#9b59b6','#1ab79e','#e85f8a','#5b7fd4'];
+        const SYS_TOTAL_MB = 8192; // System Memory capacity
+        const DM_USB = { label: 'USB Storage Device 1', free: '1863', unit: 'GB', unitColor: '#c1272d', fill: 12 };
+        // System Memory free space is computed live from the installed games.
+        let sysFreeInfo = { label: 'System Memory', free: '—', unit: 'MB', unitColor: 'var(--wiiu-lime)', fill: 0 };
+        let dmStorage = 'system';
+        let dmPending = false;
+
+        function dmComputeFree(games) {
+            const usedMB = games.reduce((a, g) => a + (g.size || 0), 0) / 1048576;
+            const freeMB = Math.max(0, SYS_TOTAL_MB - usedMB);
+            const fill = Math.min(100, (usedMB / SYS_TOTAL_MB) * 100);
+            if (freeMB >= 1024) return { label: 'System Memory', free: (freeMB / 1024).toFixed(1), unit: 'GB', unitColor: '#c1272d', fill };
+            return { label: 'System Memory', free: String(Math.round(freeMB)), unit: 'MB', unitColor: 'var(--wiiu-lime)', fill };
+        }
+
+        // Push free-space figures to a card-style "Free Space" row (storage card or detail bar).
+        function setFreeRow(fillEl, valEl, unitEl, info) {
+            if (fillEl) fillEl.style.width = info.fill + '%';
+            if (valEl) valEl.textContent = info.free;
+            if (unitEl) { unitEl.textContent = info.unit; unitEl.style.color = info.unitColor; }
+        }
+
+        function applySystemMemory(games) {
+            sysFreeInfo = dmComputeFree(games);
+            setFreeRow(document.getElementById('sysmem-fill'), document.getElementById('sysmem-val'), document.getElementById('sysmem-unit'), sysFreeInfo);
+            if (dmStorage === 'system') setMembar(sysFreeInfo);
+        }
+
+        function setMembar(info) {
+            document.getElementById('dm-mem-label').textContent = info.label;
+            setFreeRow(document.getElementById('dm-mem-fill'), document.getElementById('dm-mem-val'), document.getElementById('dm-mem-unit'), info);
+        }
+
+        function requestInstalledGames() {
+            window.parent.postMessage({ type: 'REQUEST_INSTALLED_GAMES' }, '*');
+        }
+
+        function openDataDetail(storage) {
+            playClickSound();
+            dmStorage = storage;
+            setMembar(storage === 'usb1' ? DM_USB : sysFreeInfo);
+            document.getElementById('dm-grid').innerHTML = '<div class="dm-empty">Loading…</div>';
+            showScreen('view-data-detail');
+            if (storage === 'usb1') { renderDataGames([]); return; } // games install to System Memory
+            dmPending = true;
+            requestInstalledGames();
+            setTimeout(() => { if (dmPending) { dmPending = false; renderDataGames([]); } }, 2500);
+        }
+
+        window.addEventListener('message', (e) => {
+            if (e.data && e.data.type === 'INSTALLED_GAMES') {
+                dmPending = false;
+                const games = e.data.games || [];
+                applySystemMemory(games);
+                renderDataGames(games);
+            }
+        });
+
+        function dmFmtSize(bytes) {
+            if (bytes >= 1048576) return { num: Math.round(bytes / 1048576), unit: 'MB', cls: 'mb' };
+            return { num: Math.max(1, Math.round(bytes / 1024)), unit: 'KB', cls: 'kb' };
+        }
+
+        function renderDataGames(games) {
+            const grid = document.getElementById('dm-grid');
+            if (!grid) return;
+            if (!games.length) {
+                grid.innerHTML = '<div class="dm-empty">No software is saved on this device.</div>';
+            } else {
+                grid.innerHTML = games.map((g, i) => {
+                    const s = dmFmtSize(g.size || 0);
+                    const color = DM_PALETTE[i % DM_PALETTE.length];
+                    const name = String(g.name || '').replace(/</g, '&lt;');
+                    const tile = g.icon
+                        ? `<div class="dm-tile dm-tile-icon"><img src="${g.icon}" alt=""></div>`
+                        : `<div class="dm-tile" style="background:${color}">${i + 1}</div>`;
+                    return `
+                        <div class="dm-card" onmouseenter="playHoverSound()" onclick="playClickSound()">
+                            ${tile}
+                            <div class="dm-info">
+                                <div class="dm-name">${name}</div>
+                                <div class="dm-size"><span class="dm-num">${s.num}</span><span class="dm-unit ${s.cls}">${s.unit}</span></div>
+                            </div>
+                        </div>`;
+                }).join('');
+            }
+        }
+
+        function ctPulse(f) { return (Math.floor(f / 10) % 2 === 0) ? CT_BLUE_A : CT_BLUE_B; }
+
+        function ctSetSym(id, color) {
+            const el = document.getElementById(id);
+            if (el) el.style.backgroundColor = color;
+        }
+
+        function ctUpdateDots(gapId, f) {
+            if (!gapId) return;
+            const dots = document.querySelectorAll('#' + gapId + ' .ct-dot');
+            const head = 1 + Math.sin(f * 0.16); // sweeps 0..2 and back
+            dots.forEach((d, i) => {
+                d.style.opacity = Math.max(0.15, 1 - Math.abs(i - head)).toFixed(3);
+            });
+        }
+
+        function ctLoop() {
+            const f = ++CT.frame;
+            // console: pulses only while testing the network device, then locks dark blue
+            ctSetSym('ct-console', (CT.phase === 0 && !CT.failed) ? ctPulse(f) : CT_BLUE_A);
+            // wifi: grey until network device passes, then pulses while testing internet, then locks dark blue
+            ctSetSym('ct-wifi', CT.phase >= 2 ? CT_BLUE_A : (CT.phase === 1 ? (CT.failed ? CT_BLUE_A : ctPulse(f)) : CT_GRAY));
+            // internet: grey until the whole test passes
+            ctSetSym('ct-internet', CT.phase >= 2 ? CT_BLUE_A : CT_GRAY);
+            ctUpdateDots(CT.failed ? null : (CT.phase === 0 ? 'ct-gap0' : (CT.phase === 1 ? 'ct-gap1' : null)), f);
+            CT.raf = requestAnimationFrame(ctLoop);
+        }
+
+        function ctSetStatus(text, type) {
+            const el = document.getElementById('ct-status');
+            if (!el) return;
+            el.className = 'ct-status' + (type ? ' ct-' + type : '');
+            el.textContent = text;
+        }
+
+        function ctShowResult(gapId, ok) {
+            const gap = document.getElementById(gapId);
+            if (!gap) return;
+            gap.querySelector('.ct-dots').style.display = 'none';
+            gap.querySelector(ok ? '.ct-check' : '.ct-x').style.display = 'block';
+        }
+
+        function ctFail(gapId, msg, code) {
+            CT.failed = true;
+            ctStopLoadingSfx();
+            ctShowResult(gapId, false);
+            ctSetStatus(msg, 'error');
+            const el = document.getElementById('ct-status');
+            if (el && code) {
+                const c = document.createElement('div');
+                c.className = 'ct-code'; c.textContent = code;
+                el.appendChild(c);
+            }
+        }
+
+        function startConnectionTest() {
+            stopConnectionTest();
+            const myGen = ++CT.gen;
+            CT.frame = 0; CT.phase = 0; CT.failed = false;
+            CT.raf = requestAnimationFrame(ctLoop);
+            ctStartLoadingSfx();
+
+            // Phase 1: connect to the network device.
+            ctSetStatus('Testing connection to the network device...');
+            const networkOk = navigator.onLine;
+            setTimeout(() => {
+                if (CT.gen !== myGen) return;
+                if (!networkOk) { ctFail('ct-gap0', 'Could not connect to the network device.', 'Error Code: 105-3102'); return; }
+                ctShowResult('ct-gap0', true);
+                CT.phase = 1;
+
+                // Phase 2: connect to the Internet.
+                ctSetStatus('Testing connection to the Internet...');
+                let settled = false;
+                const finish = (ok) => {
+                    if (settled || CT.gen !== myGen) return;
+                    settled = true;
+                    if (!ok) { ctFail('ct-gap1', 'Could not connect to the Internet.', 'Error Code: 105-3104'); return; }
+                    ctShowResult('ct-gap1', true);
+                    CT.phase = 2;
+                    ctStopLoadingSfx();
+                    ctSetStatus('Connection test successful!', 'success');
+                };
+                const ctrl = new AbortController();
+                const killer = setTimeout(() => { ctrl.abort(); finish(navigator.onLine); }, 6000);
+                setTimeout(() => {
+                    if (CT.gen !== myGen) { clearTimeout(killer); return; }
+                    fetch('https://www.gstatic.com/generate_204', { mode: 'no-cors', cache: 'no-store', signal: ctrl.signal })
+                        .then(() => { clearTimeout(killer); finish(true); })
+                        .catch(() => { clearTimeout(killer); finish(navigator.onLine); });
+                }, 2200);
+            }, 2400);
+        }
+
+        function stopConnectionTest() {
+            CT.gen++;            // invalidate any in-flight phase callbacks
+            CT.phase = 0; CT.failed = false;
+            ctStopLoadingSfx();
+            if (CT.raf) { cancelAnimationFrame(CT.raf); CT.raf = null; }
+        }
+
+        function generateParticles() {
+            const container = document.getElementById('particle-container');
+            for(let i=0; i<20; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                const size = Math.random() * 10 + 4;
+                p.style.width = `${size}px`; p.style.height = `${size}px`;
+                p.style.left = `${Math.random() * 100}%`;
+                p.style.animationDuration = `${Math.random() * 15 + 10}s`;
+                p.style.animationDelay = `-${Math.random() * 10}s`;
+                container.appendChild(p);
+            }
+        }
+
+        const modal = document.getElementById('customModal');
+        const modalMessage = document.getElementById('modalMessage');
+
+        function showModal(msg) {
+            modalMessage.innerText = msg;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            playClickSound();
+            modal.classList.remove('active');
+        }
+
+        function quitSystemSettings() {
+            playClickSound();
+            window.parent.postMessage({ type: 'CLOSE_SYSTEM_SETTINGS' }, '*');
+        }
+
+        // Initialize App
+        generateParticles();
+        renderUI();
+        requestInstalledGames(); // populate System Memory free-space from installed games
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Wii U Menu",
+  "description": "A nostalgic Wii U style menu and welcome screen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

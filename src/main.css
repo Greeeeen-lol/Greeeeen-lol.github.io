@@ -1,0 +1,3196 @@
+:root[data-theme=wii] body {
+  background-image: linear-gradient(to bottom, #feffff, #c0eee0) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+:root[data-theme=wii] {
+  height: 100% !important;
+}
+:root[data-theme=wii] html,
+:root[data-theme=wii] body {
+  background-color: transparent !important;
+  --root: #ffffff;
+  --root-solid: #ffffff;
+  --unfocused: #cccccc;
+  --button-fill: #ececec !important;
+  --text: #000000;
+  --text-selected: #000000;
+  --label: #666666;
+  --stroke: #b8b8b8;
+  --stroke-dim: #e8e8e8;
+  --stroke-rgb: 221, 221, 221;
+  --container: #eeeeee77;
+  --container-solid: #eeeeee;
+  --sub-container: #ececec77;
+  --hover: #dddddd;
+  --hover-transparent: #dddddd77;
+  --focus: #e7e7e7ee;
+  --icon-face-fill: #ffffff;
+  --icon-face-stroke: #000000;
+  --icon-face-detail: #8d8d8d;
+  --icon-face-makeup: #ffbaba;
+  --icon-face-wrinkles: #996d54;
+  --icon-head-fill: #ffffff;
+  --icon-head-stroke: #999999;
+  --icon-hair-fill: currentColor;
+  --icon-eyebrow-fill: currentColor;
+  --icon-facial-hair-fill: currentColor;
+  --icon-mouth-tooth: #ffffff;
+  --icon-glasses-fill: #000000;
+  --icon-glasses-shade: #606060;
+  --icon-lip-color-top: #712a04;
+  --icon-lip-color-bottom: #be4e26;
+  color: black !important;
+}
+:root[data-theme=wii] .modal .modal-content .modal-body,
+:root[data-theme=wii] .tab-content {
+  background: linear-gradient(180deg, #f8f8f8, #f8f8f8 50%, #e5e5e5);
+}
+:root[data-theme=wii] button {
+  border-radius: 10px;
+  min-width: 120px;
+  padding: 11px 14px;
+  font-size: 1.1rem;
+  transition: transform 0.1s ease-out;
+  transition-timing-function: ease-out;
+  border: 0;
+  box-shadow: inset 0px 2px 0px -1px #e9e9e9, inset 0px 0px 0px 2px #fff, 0px 1px 3px rgba(0, 0, 0, 0.45);
+  text-shadow: 0px 2px 0px #fff;
+  background: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 0.1%, #ffffff 50%, #f7f7f7 80%, #e2e2e2 95%, #e9e9e9 96%, #ffffff 100%);
+}
+:root[data-theme=wii] input::file-selector-button {
+  box-shadow: inset 0px 2px 0px -1px #e9e9e9, inset 0px 0px 0px 2px #fff;
+  text-shadow: 0px 2px 0px #fff;
+  background: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 0.1%, #ffffff 50%, #f7f7f7 80%, #e2e2e2 95%, #e9e9e9 96%, #ffffff 100%);
+  padding: 4px 7px;
+  border: 1px solid #878787;
+  border-radius: 4px;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-item.is-color::before {
+  top: 6px;
+  left: 6px;
+  border: none;
+}
+:root[data-theme=wii] .ui-base .bottom-right,
+:root[data-theme=wii] .ui-base .bottom-left {
+  min-width: auto;
+}
+:root[data-theme=wii] .ui-base .mii-holder {
+  background: none;
+}
+:root[data-theme=wii] .ui-base .mii-holder button:first-of-type {
+  background: none;
+  box-shadow: none;
+}
+:root[data-theme=wii] button.danger {
+  background: linear-gradient(to bottom, #ff6a6a 0%, #ff4c4c 50% 50%, #ff1818 50%, #ff4c4c 100%);
+  color: #fff;
+  text-shadow: 0px -2px #db0000;
+  box-shadow: inset 0px 0px 0px 2px #ff2525, 0px 1px 6px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme=wii] button.selected-setting {
+  background: linear-gradient(to bottom, #84b5ff 0%, #599cff 50% 50%, #2c80ff 50%, #64a2ff 90%, #7aafff 100%);
+  color: #fff !important;
+  text-shadow: 0px 2px 0px #0045ac;
+  box-shadow: inset 0px 0px 0px 2px #0066ff, 0px 1px 6px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme=wii] button.selected-setting > span > svg {
+  filter: drop-shadow(0px 2px 0px #0045ac);
+}
+:root[data-theme=wii] select {
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%22-20%20100%20800%20620%22%20fill%3D%22black%22%3E%3Cg%20transform%3D%22scale(1%20-1)%20translate(0%20-814)%22%3E%3Cpolygon%20points%3D%22696%2C703%2070%2C703%2020%2C703%20-11%2C644%2017%2C603%20317%2C153%20344%2C111%20422%2C111%20450%2C153%20750%2C603%20777%2C644%20745%2C703%22%20/%3E%3C/g%3E%3C/svg%3E") 95% 50% no-repeat, linear-gradient(to bottom, #f2f2f2 0%, #ffffff 0.1%, #ffffff 50%, #f7f7f7 80%, #e2e2e2 95%, #e9e9e9 96%, #ffffff 100%) !important;
+  background-size: 0.9em, auto !important;
+  transition: transform 0.05s ease-out;
+  transition-timing-function: ease-out;
+  border: 0;
+  box-shadow: inset 0px 2px 0px -1px #e9e9e9, inset 0px 0px 0px 2px #fff, 0px 1px 3px rgba(0, 0, 0, 0.45);
+  text-shadow: 0px 2px 0px #fff;
+}
+:root[data-theme=wii] select:hover {
+  transform: scale(1.06);
+}
+:root[data-theme=wii] input[type=text] {
+  box-shadow: inset 0px 2px 3px -1px #bebebe;
+}
+:root[data-theme=wii] {
+  *focus-box-shadow: 0 0 0 0.2rem #3287ff;
+}
+:root[data-theme=wii] input:not(input[type=range]):focus,
+:root[data-theme=wii] select:not(input[type=range]):focus {
+  box-shadow: 0 0 0 0.2rem #3287ff;
+}
+:root[data-theme=wii] .ui-base > .tab-list {
+  background: repeating-linear-gradient(to bottom, #c1cfcf, #c0cecd 3px, #c9d8d8 6px);
+  box-shadow: 0 0 0 4px #aabebe;
+  margin: -16px -8px 14px -8px;
+  padding: 0 16px;
+  gap: 10px;
+  border-radius: 0 0 16px 16px;
+  height: 64px;
+  align-items: flex-start;
+}
+:root[data-theme=wii] .ui-base > .tab-list::-webkit-scrollbar-thumb {
+  background-color: #088d00 !important;
+}
+:root[data-theme=wii] .ui-base > .tab-list::-webkit-scrollbar-track {
+  box-shadow: none !important;
+  background-color: #dbffc7 !important;
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab.tab-square:not(.tab-save) > svg {
+  min-width: auto;
+  width: 52px !important;
+  height: 52px !important;
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab.tab-square > svg {
+  color: #fff;
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab-save {
+  background-color: initial;
+  color: #fff;
+  min-width: auto;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-slider span,
+:root[data-theme=wii] .tab-content .feature-set-group .feature-range span {
+  background: linear-gradient(to bottom, #dbdbdb 0%, #ffffff 50%);
+  transition: transform 0.05s ease-out;
+  border: 0;
+  transition-timing-function: ease-out;
+  box-shadow: 0px -2px 0px 0px rgb(255, 255, 255), 0px 0px 3px 1px rgba(0, 0, 0, 0.44);
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-slider span:hover,
+:root[data-theme=wii] .tab-content .feature-set-group .feature-range span:hover {
+  transform: scale(1.06);
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-slider span:active,
+:root[data-theme=wii] .tab-content .feature-set-group .feature-range span:active {
+  transform: scale(1);
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-slider span > svg,
+:root[data-theme=wii] .tab-content .feature-set-group .feature-range span > svg {
+  filter: drop-shadow(0px -2px 0px #fff);
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab.tab-square.active > svg {
+  color: #ffffff;
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab.tab-square {
+  background: linear-gradient(to bottom, #91a1a1, #b3c1c1);
+  box-shadow: 0 0 0 4px #778b8b;
+  width: 54px;
+  height: 56px;
+  border-radius: 0 0 12px 12px;
+  align-items: flex-end;
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab.tab-square.active {
+  background: linear-gradient(to bottom, #00785a, #029872);
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab.tab-square:hover:not(.active) {
+  background: linear-gradient(to bottom, #00785a, #029872);
+}
+:root[data-theme=wii] .modal .modal-content .modal-header {
+  background: linear-gradient(180deg, #b2b2b2, #878787);
+  color: #fff;
+  text-shadow: 0px -2px #656565;
+  font-size: 1.2em;
+}
+:root[data-theme=wii] .modal .modal-content .modal-header .close-button {
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20800%22%3E%3Cpath%20d%3D%22M370%20237%20L183%2050%20L164%2030%20L107%2030%20L87%2050%20L20%20117%20L0%20136%20L0%20194%20L20%20214%20L206%20400%20L20%20587%20L0%20606%20L0%20664%20L20%20683%20L87%20750%20L106%20770%20L164%20770%20L183%20750%20L370%20564%20L556%20750%20L576%20770%20L634%20770%20L653%20750%20L720%20683%20L740%20664%20L740%20606%20L720%20587%20L534%20400%20L720%20214%20L740%20194%20L740%20136%20L720%20117%20L653%2050%20L634%2030%20L576%2030%20L556%2050%20Z%22%20fill%3D%22white%22%20transform%3D%22translate(0%2C2)%22/%3E%3Cpath%20d%3D%22M370%20237%20L183%2050%20L164%2030%20L107%2030%20L87%2050%20L20%20117%20L0%20136%20L0%20194%20L20%20214%20L206%20400%20L20%20587%20L0%20606%20L0%20664%20L20%20683%20L87%20750%20L106%20770%20L164%20770%20L183%20750%20L370%20564%20L556%20750%20L576%20770%20L634%20770%20L653%20750%20L720%20683%20L740%20664%20L740%20606%20L720%20587%20L534%20400%20L720%20214%20L740%20194%20L740%20136%20L720%20117%20L653%2050%20L634%2030%20L576%2030%20L556%2050%20Z%22%20fill%3D%22%23323232%22/%3E%3C/svg%3E");
+  background-size: 45%;
+  fill: #ff0000;
+  background-repeat: no-repeat;
+}
+:root[data-theme=wii] .ui-base > .tab-content {
+  border: 4px solid #aabebe !important;
+  border-width: 4px 4px 0 4px !important;
+  background: repeating-linear-gradient(to bottom, #c1cfcf, #c0cecd 3px, #c9d8d8 6px) !important;
+}
+:root[data-theme=wii] .ui-base > .tab-content,
+:root[data-theme=wii] .ui-base .tab-content .tab-content {
+  background: unset;
+  border: none;
+}
+:root[data-theme=wii] .ui-base > .tab-content .tab-content {
+  background: rgba(239, 248, 248, 0.5333333333) !important;
+  margin: 0 12px;
+  border-radius: 8px;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-item {
+  min-width: 72px;
+  min-width: 72px;
+  background: #fff;
+  transition: transform 0.05s ease-out;
+  transition-timing-function: ease-out;
+  box-shadow: 0px 0px 0px 4px #627676;
+  position: relative;
+}
+:root[data-theme=wii] .feature-item.is-color {
+  width: 64px !important;
+  height: 64px !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  background-image: radial-gradient(84.69% 84.69% at 1.02% 0%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%) !important;
+  background-color: var(--color) !important;
+}
+:root[data-theme=wii] .feature-item.is-color::before {
+  display: none !important;
+  content: unset !important;
+}
+:root[data-theme=wii] .feature-item.is-color {
+  box-shadow: 0 0 0 4px #647878 !important;
+}
+:root[data-theme=wii] .feature-item.is-color.active {
+  box-shadow: 0 0 0 4px #00c896 !important;
+}
+:root[data-theme=wii] .ui-base[data-tab-num="2"] .tab-content .feature-set-group .feature-item:not(.is-color),
+:root[data-theme=wii] .ui-base[data-tab-num="3"] .tab-content .feature-set-group .feature-item:not(.is-color) {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+:root[data-theme=wii] .ui-base[data-tab-num="2"] .tab-content .feature-set-group .feature-item:not(.is-color) svg #eyebrows-24,
+:root[data-theme=wii] .ui-base[data-tab-num="3"] .tab-content .feature-set-group .feature-item:not(.is-color) svg #eyebrows-24 {
+  display: none;
+}
+:root[data-theme=wii] .ui-base[data-tab-num="2"] .tab-content .feature-set-group .feature-item:not(.is-color) svg,
+:root[data-theme=wii] .ui-base[data-tab-num="3"] .tab-content .feature-set-group .feature-item:not(.is-color) svg {
+  transform: translateX(-2px) scale(1.1);
+}
+:root[data-theme=wii] .ui-base[data-tab-num="2"] .tab-content .feature-set-group .feature-item:not(.is-color),
+:root[data-theme=wii] .ui-base[data-tab-num="3"] .tab-content .feature-set-group .feature-item:not(.is-color) {
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2865_102)'%3E%3Ccircle cx='6' cy='32' r='55' fill='%23DDDDDD' stroke='%23BBBBBB' stroke-width='4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2865_102'%3E%3Crect width='64' height='64' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+:root[data-theme=wii] .ui-base[data-tab-num="2"] .tab-content .feature-set-group .feature-item:not(.is-color).active,
+:root[data-theme=wii] .ui-base[data-tab-num="3"] .tab-content .feature-set-group .feature-item:not(.is-color).active {
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2865_98)'%3E%3Ccircle cx='6' cy='32' r='55' fill='url(%23paint0_linear_2865_98)' stroke='%230B9F63' stroke-width='4'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2865_98' x1='6.49074' y1='-9.22222' x2='60.4722' y2='80.0926' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2385D4B4'/%3E%3Cstop offset='0.495192' stop-color='%2338D595'/%3E%3Cstop offset='1' stop-color='%230AA162'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_2865_98'%3E%3Crect width='64' height='64' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-color: #0eda87;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-item:hover:not(.active) {
+  transform: scale(1.06);
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-item.active {
+  background: linear-gradient(135deg, #6efbc2, #1cef98, #12ad6e);
+  box-shadow: 0px 0px 0px 4px #627676;
+}
+:root[data-theme=wii] .tab-content .feature-set-group {
+  gap: 16px;
+}
+:root[data-theme=wii] .ui-base > .tab-content {
+  margin: 0 0 -1rem 0;
+  border-radius: 8px 8px 0 0;
+}
+:root[data-theme=wii] .ui-base > .tab-content > .feature-set-container {
+  gap: 0;
+}
+:root[data-theme=wii] .ui-base > .tab-content > .feature-set-container > .tab-content {
+  padding: 8px 0;
+  border-radius: 8px 8px 0 0;
+}
+:root[data-theme=wii] .tab-content .feature-set-container .tab-list {
+  background: transparent;
+  border-radius: 8px;
+  border: transparent;
+  justify-content: center;
+}
+:root[data-theme=wii] .tab-content .feature-set-container .tab-list .tab {
+  border: 4px solid #647878;
+  background-image: linear-gradient(130deg, #c2d7d7, #bfd5d5, #9ebaba);
+  transition: transform 0.1s ease-out;
+}
+:root[data-theme=wii] .tab-content .feature-set-container .tab-list .tab:hover {
+  transform: scale(1.05);
+}
+:root[data-theme=wii] .tab-content .feature-set-container .tab-list .tab.active {
+  background-image: linear-gradient(130deg, #00ab80, #00a77d, #00916d);
+  color: white;
+}
+:root[data-theme=wii] .tab-content .feature-set-container .tab-list .tab.active::after {
+  display: none;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-item svg {
+  width: 75px;
+  height: 75px;
+}
+:root[data-theme=wii] input[type=checkbox],
+:root[data-theme=wii] select[type=checkbox] {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20800%22%20fill%3D%22currentColor%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20style%3D%22fill:%20white;%20stroke:%20none;%22%3E%3Cpath%20d%3D%22M370%20237%20L183%2050%20L164%2030%20L107%2030%20L87%2050%20L20%20117%20L0%20136%20L0%20194%20L20%20214%20L206%20400%20L20%20587%20L0%20606%20L0%20664%20L20%20683%20L87%20750%20L106%20770%20L164%20770%20L183%20750%20L370%20564%20L556%20750%20L576%20770%20L634%20770%20L653%20750%20L720%20683%20L740%20664%20L740%20606%20L720%20587%20L534%20400%20L720%20214%20L740%20194%20L740%20136%20L720%20117%20L653%2050%20L634%2030%20L576%2030%20L556%2050%20Z%22/%3E%3C/svg%3E) !important;
+  background-size: 60% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ff4848;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+:root[data-theme=wii] input[type=checkbox]:checked,
+:root[data-theme=wii] select[type=checkbox]:checked {
+  background-color: #19cf00;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%22-10%20-60%20910%20900%22%20fill%3D%22white%22%3E%3Cg%20transform%3D%22scale(1%2C-1)%20translate(0%2C-840)%22%3E%3Cpath%20d%3D%22M373%20241%20L831%20808%20L838%20818%20L862%20822%20L882%20808%20L886%20785%20L879%20775%20L498%2095%20L433%2029%20L351%20-53%20L269%2039%20L10%20368%20L-1%20382%20L3%20418%20L17%20429%20L88%20485%20L102%20496%20L138%20492%20L148%20478%20L335%20242%20L342%20234%20L366%20234%20Z%22/%3E%3C/g%3E%3C/svg%3E") !important;
+  background-size: 70% !important;
+}
+:root[data-theme=wii] input.invalid,
+:root[data-theme=wii] select.invalid {
+  box-shadow: 0 0 0 0.2rem #ff4444 !important;
+}
+:root[data-theme=wii] button:hover {
+  transform: scale(1.04);
+  filter: none;
+}
+:root[data-theme=wii] .modal.random-mii-grid .modal-content .modal-body .random-mii-container button,
+:root[data-theme=wii] .style-select-btn {
+  background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 60%, #eeeeee 60%, #fafafa 100%);
+}
+:root[data-theme=wii] {
+  /*only a>button should be manual link*/
+}
+:root[data-theme=wii] .mii-library .library-sidebar .sidebar-buttons a > button {
+  padding: 9px 14px !important;
+  height: auto !important;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-switch .feature-switch-item {
+  min-height: 50px;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-switch .feature-switch-item.active {
+  background: linear-gradient(to bottom, #4eeb00 0%, #55ff00 50%);
+  color: #fff !important;
+  text-shadow: 0px 2px 0px #12aa00;
+  box-shadow: inset 0px 0px 0px 2px #12aa00, 0px 1px 6px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-switch .feature-switch-item.active:first-of-type {
+  border-radius: 8px 0 0 8px !important;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-switch .feature-switch-item.active:last-of-type {
+  border-radius: 0 8px 8px 0 !important;
+}
+:root[data-theme=wii] .mii-library .library-list .library-list-mii {
+  z-index: 1;
+  transition: transform 0.1s ease-out;
+  transition-timing-function: ease-out;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) !important;
+}
+:root[data-theme=wii] .mii-library .library-list .library-list-mii.highlight {
+  box-shadow: 0 0 0 0.3rem var(--selection-color), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
+}
+:root[data-theme=wii] .mii-library .library-list .library-list-mii span {
+  border-radius: 0 0 5px 5px;
+  background: #707070 !important;
+  color: #fff !important;
+  text-shadow: 0px -2px #373737 !important;
+  box-shadow: 0px 0px 5px 0px #2d2d2d inset !important;
+}
+:root[data-theme=wii] .tab-content .feature-set-group .feature-set-header {
+  background-image: url(/assets/images/bgdot.png) !important;
+  background-size: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+:root[data-theme=wii] .mii-library .library-list .library-list-mii:after {
+  content: "";
+  width: 100%;
+  display: block;
+  top: 46%;
+  left: 0;
+  position: absolute;
+  height: 35%;
+  background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(255, 255, 255, 0.14));
+  z-index: -1;
+}
+:root[data-theme=wii] .mii-library .library-list .library-list-mii:hover {
+  transform: scale(1.04);
+}
+:root[data-theme=wii] .mii-library .library-sidebar {
+  background: rgba(255, 255, 255, 0.7);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset -2px 0px 5px 0px #c9c9c9, 1px 0px 6px rgba(49, 49, 49, 0.35);
+}
+:root[data-theme=wii] .ui-base {
+  grid-gap: unset !important;
+  background: none !important;
+}
+:root[data-theme=wii] a:hover,
+:root[data-theme=wii] a:visited:hover {
+  filter: none;
+}
+:root[data-theme=wii] .ui-base > .tab-list .tab-save {
+  margin-top: unset;
+  align-items: center !important;
+}
+@media screen and (max-width: 959px) {
+  :root[data-theme=wii] .mii-library .library-sidebar button {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+  :root[data-theme=wii] .ui-base .tab-list .tab.tab-square {
+    padding: 0 8px;
+    min-height: 48px;
+  }
+  :root[data-theme=wii] .mii-library .library-sidebar .sidebar-buttons {
+    gap: 0.8rem;
+  }
+  :root[data-theme=wii] .mii-library .library-sidebar {
+    padding: 1.5rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: unset;
+    background: rgba(233, 233, 233, 0.48);
+  }
+}
+:root[data-theme=wii] .ui-base .mii-holder button.square {
+  background: rgba(157, 182, 179, 0.5333333333);
+  border: 4px solid #324646;
+  box-shadow: unset;
+  filter: unset;
+  --text: #ffffff;
+}
+:root[data-theme=wii] .ui-base .mii-holder button.square svg {
+  filter: url(#outline);
+}
+@media screen and (min-width: 960px) {
+  :root[data-theme=wii] .ui-base .mii-holder {
+    margin: -10px 0 -1rem -1rem;
+  }
+}
+@media screen and (max-width: 959px) {
+  :root[data-theme=wii] .ui-base {
+    grid-template-rows: 1fr auto 1fr;
+  }
+  :root[data-theme=wii] .ui-base > .tab-list {
+    margin: 0;
+    padding: 8px;
+    height: unset;
+    box-shadow: unset !important;
+  }
+  :root[data-theme=wii] .ui-base > .tab-list .tab.tab-square {
+    border-radius: 10px;
+  }
+  :root[data-theme=wii] .ui-base > .tab-list .tab-save {
+    height: 52px !important;
+    align-items: center !important;
+  }
+  :root[data-theme=wii] .ui-base .tab-content {
+    max-height: unset !important;
+  }
+}
+
+:root[data-theme=wiiu] body {
+  background-image: url(/assets/images/bg_qr_wiiu.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+:root[data-theme=wiiu] {
+  height: 100% !important;
+}
+:root[data-theme=wiiu] html,
+:root[data-theme=wiiu] body {
+  background-color: transparent !important;
+  --root: #ffffff;
+  --root-solid: #ffffff;
+  --unfocused: #cccccc;
+  --button-fill: #ececec !important;
+  --text: #000000;
+  --text-selected: #000000;
+  --label: #666666;
+  --stroke: #b8b8b8;
+  --stroke-dim: #e8e8e8;
+  --stroke-rgb: 221, 221, 221;
+  --container: #eeeeee77;
+  --container-solid: #eeeeee;
+  --sub-container: #ececec77;
+  --hover: #dddddd;
+  --hover-transparent: #dddddd77;
+  --focus: #e7e7e7ee;
+  --icon-face-fill: #ffffff;
+  --icon-face-stroke: #6f6f6f;
+  --icon-face-detail: #8d8d8d;
+  --icon-face-makeup: #ffbaba;
+  --icon-face-wrinkles: #996d54;
+  --icon-head-fill: #ffffff;
+  --icon-head-stroke: #999999;
+  --icon-hair-fill: currentColor;
+  --icon-eyebrow-fill: currentColor;
+  --icon-facial-hair-fill: currentColor;
+  --icon-mouth-tooth: #ffffff;
+  --icon-glasses-fill: #000000;
+  --icon-glasses-shade: #606060;
+  --icon-lip-color-top: #712a04;
+  --icon-lip-color-bottom: #be4e26;
+  color: black !important;
+}
+:root[data-theme=wiiu] .modal .modal-content .modal-body,
+:root[data-theme=wiiu] .tab-content {
+  background: linear-gradient(180deg, #f8f8f8, #f8f8f8 50%, #e5e5e5);
+}
+:root[data-theme=wiiu] button {
+  border-radius: 10px;
+  min-width: 120px;
+  padding: 11px 14px;
+  font-size: 1.1rem;
+  transition: transform 0.1s ease-out;
+  transition-timing-function: ease-out;
+  border: 0;
+  box-shadow: inset 0px 2px 0px -1px #e9e9e9, inset 0px 0px 0px 2px #fff, 0px 1px 3px rgba(0, 0, 0, 0.45);
+  text-shadow: 0px 2px 0px #fff;
+  background: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 0.1%, #ffffff 50%, #f7f7f7 80%, #e2e2e2 95%, #e9e9e9 96%, #ffffff 100%);
+}
+:root[data-theme=wiiu] input::file-selector-button {
+  box-shadow: inset 0px 2px 0px -1px #e9e9e9, inset 0px 0px 0px 2px #fff;
+  text-shadow: 0px 2px 0px #fff;
+  background: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 0.1%, #ffffff 50%, #f7f7f7 80%, #e2e2e2 95%, #e9e9e9 96%, #ffffff 100%);
+  padding: 4px 7px;
+  border: 1px solid #878787;
+  border-radius: 4px;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-item.is-color::before {
+  top: 6px;
+  left: 6px;
+  border: none;
+}
+:root[data-theme=wiiu] .ui-base .bottom-right,
+:root[data-theme=wiiu] .ui-base .bottom-left {
+  min-width: auto;
+}
+:root[data-theme=wiiu] .ui-base .mii-holder {
+  background: none;
+}
+:root[data-theme=wiiu] .ui-base .mii-holder button:first-of-type {
+  background: none;
+  box-shadow: none;
+}
+:root[data-theme=wiiu] button.danger {
+  background: linear-gradient(to bottom, #ff6a6a 0%, #ff4c4c 50% 50%, #ff1818 50%, #ff4c4c 100%);
+  color: #fff;
+  text-shadow: 0px -2px #db0000;
+  box-shadow: inset 0px 0px 0px 2px #ff2525, 0px 1px 6px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme=wiiu] button.selected-setting {
+  background: linear-gradient(to bottom, #84b5ff 0%, #599cff 50% 50%, #2c80ff 50%, #64a2ff 90%, #7aafff 100%);
+  color: #fff !important;
+  text-shadow: 0px 2px 0px #0045ac;
+  box-shadow: inset 0px 0px 0px 2px #0066ff, 0px 1px 6px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme=wiiu] button.selected-setting > span > svg {
+  filter: drop-shadow(0px 2px 0px #0045ac);
+}
+:root[data-theme=wiiu] select {
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%22-20%20100%20800%20620%22%20fill%3D%22black%22%3E%3Cg%20transform%3D%22scale(1%20-1)%20translate(0%20-814)%22%3E%3Cpolygon%20points%3D%22696%2C703%2070%2C703%2020%2C703%20-11%2C644%2017%2C603%20317%2C153%20344%2C111%20422%2C111%20450%2C153%20750%2C603%20777%2C644%20745%2C703%22%20/%3E%3C/g%3E%3C/svg%3E") 95% 50% no-repeat, linear-gradient(to bottom, #f2f2f2 0%, #ffffff 0.1%, #ffffff 50%, #f7f7f7 80%, #e2e2e2 95%, #e9e9e9 96%, #ffffff 100%) !important;
+  background-size: 0.9em, auto !important;
+  transition: transform 0.05s ease-out;
+  transition-timing-function: ease-out;
+  border: 0;
+  box-shadow: inset 0px 2px 0px -1px #e9e9e9, inset 0px 0px 0px 2px #fff, 0px 1px 3px rgba(0, 0, 0, 0.45);
+  text-shadow: 0px 2px 0px #fff;
+}
+:root[data-theme=wiiu] select:hover {
+  transform: scale(1.06);
+}
+:root[data-theme=wiiu] input[type=text] {
+  box-shadow: inset 0px 2px 3px -1px #bebebe;
+}
+:root[data-theme=wiiu] {
+  *focus-box-shadow: 0 0 0 0.2rem #3287ff;
+}
+:root[data-theme=wiiu] input:not(input[type=range]):focus,
+:root[data-theme=wiiu] select:not(input[type=range]):focus {
+  box-shadow: 0 0 0 0.2rem #3287ff;
+}
+:root[data-theme=wiiu] .ui-base > .tab-list {
+  background: linear-gradient(to bottom, #b6ff8c 0%, #5bfb00 49%, #51df00 52%, #51df00 82%, #dbffc7 100%);
+  box-shadow: 0px -2px 7px 1px #088d00 inset;
+}
+:root[data-theme=wiiu] .ui-base > .tab-list::-webkit-scrollbar-thumb {
+  background-color: #088d00 !important;
+}
+:root[data-theme=wiiu] .ui-base > .tab-list::-webkit-scrollbar-track {
+  box-shadow: none !important;
+  background-color: #dbffc7 !important;
+}
+:root[data-theme=wiiu] .ui-base > .tab-list .tab.tab-square:not(.tab-save) > svg {
+  min-width: auto;
+  width: 52px !important;
+  height: 52px !important;
+}
+:root[data-theme=wiiu] .ui-base > .tab-list .tab.tab-square > svg {
+  color: #fff;
+  filter: drop-shadow(0px -2px 0px #088d00);
+}
+:root[data-theme=wiiu] .ui-base > .tab-list .tab-save {
+  background-color: initial;
+  color: #fff;
+  min-width: auto;
+  text-shadow: 0px -2px #088d00;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-slider span,
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-range span {
+  background: linear-gradient(to bottom, #dbdbdb 0%, #ffffff 50%);
+  transition: transform 0.05s ease-out;
+  border: 0;
+  transition-timing-function: ease-out;
+  box-shadow: 0px -2px 0px 0px rgb(255, 255, 255), 0px 0px 3px 1px rgba(0, 0, 0, 0.44);
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-slider span:hover,
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-range span:hover {
+  transform: scale(1.06);
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-slider span:active,
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-range span:active {
+  transform: scale(1);
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-slider span > svg,
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-range span > svg {
+  filter: drop-shadow(0px -2px 0px #fff);
+}
+:root[data-theme=wiiu] .ui-base > .tab-list .tab.tab-square.active > svg {
+  color: #088d00;
+  filter: drop-shadow(0px -2px 0px #fff);
+}
+:root[data-theme=wiiu] .ui-base > .tab-list .tab.tab-square.active {
+  background: #ceff74;
+  box-shadow: unset !important;
+}
+:root[data-theme=wiiu] .ui-base > .tab-list .tab.tab-square:hover:not(.active) {
+  background: #088d00;
+}
+:root[data-theme=wiiu] .modal .modal-content .modal-header {
+  background: linear-gradient(180deg, #b2b2b2, #878787);
+  color: #fff;
+  text-shadow: 0px -2px #656565;
+  font-size: 1.2em;
+}
+:root[data-theme=wiiu] .modal .modal-content .modal-header .close-button {
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20800%22%3E%3Cpath%20d%3D%22M370%20237%20L183%2050%20L164%2030%20L107%2030%20L87%2050%20L20%20117%20L0%20136%20L0%20194%20L20%20214%20L206%20400%20L20%20587%20L0%20606%20L0%20664%20L20%20683%20L87%20750%20L106%20770%20L164%20770%20L183%20750%20L370%20564%20L556%20750%20L576%20770%20L634%20770%20L653%20750%20L720%20683%20L740%20664%20L740%20606%20L720%20587%20L534%20400%20L720%20214%20L740%20194%20L740%20136%20L720%20117%20L653%2050%20L634%2030%20L576%2030%20L556%2050%20Z%22%20fill%3D%22white%22%20transform%3D%22translate(0%2C2)%22/%3E%3Cpath%20d%3D%22M370%20237%20L183%2050%20L164%2030%20L107%2030%20L87%2050%20L20%20117%20L0%20136%20L0%20194%20L20%20214%20L206%20400%20L20%20587%20L0%20606%20L0%20664%20L20%20683%20L87%20750%20L106%20770%20L164%20770%20L183%20750%20L370%20564%20L556%20750%20L576%20770%20L634%20770%20L653%20750%20L720%20683%20L740%20664%20L740%20606%20L720%20587%20L534%20400%20L720%20214%20L740%20194%20L740%20136%20L720%20117%20L653%2050%20L634%2030%20L576%2030%20L556%2050%20Z%22%20fill%3D%22%23323232%22/%3E%3C/svg%3E");
+  background-size: 45%;
+  fill: #ff0000;
+  background-repeat: no-repeat;
+}
+:root[data-theme=wiiu] .ui-base .tab-content {
+  background: none;
+  border: none;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-item {
+  min-width: 72px;
+  min-width: 72px;
+  background: linear-gradient(to bottom, #dbdbdb 0%, #ffffff 50%);
+  transition: transform 0.05s ease-out;
+  transition-timing-function: ease-out;
+  box-shadow: 0px -2px 0px 0px rgb(255, 255, 255), 0px 0px 3px 1px rgba(0, 0, 0, 0.44);
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-item:hover:not(.active) {
+  transform: scale(1.06);
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-item.active {
+  background: linear-gradient(to bottom, #61ff13 0%, #93ff5d 50%);
+  box-shadow: 0px -2px 0px 0px #c8ffac, 0px 0px 3px 1px rgba(0, 0, 0, 0.44);
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group {
+  gap: 16px;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-container .tab-list {
+  background: linear-gradient(to bottom, #fcff8e 0%, #f9ff31 50%, #e9ef00 50%, #f2f551 100%);
+  border-radius: 8px;
+  border: 2.5px solid #dfb900;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-container .tab-list .tab:hover {
+  background-color: #f9ff31;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-container .tab-list .tab.active {
+  background-color: #ffd429;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-item svg {
+  width: 75px;
+  height: 75px;
+}
+:root[data-theme=wiiu] input[type=checkbox],
+:root[data-theme=wiiu] select[type=checkbox] {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20800%22%20fill%3D%22currentColor%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20style%3D%22fill:%20white;%20stroke:%20none;%22%3E%3Cpath%20d%3D%22M370%20237%20L183%2050%20L164%2030%20L107%2030%20L87%2050%20L20%20117%20L0%20136%20L0%20194%20L20%20214%20L206%20400%20L20%20587%20L0%20606%20L0%20664%20L20%20683%20L87%20750%20L106%20770%20L164%20770%20L183%20750%20L370%20564%20L556%20750%20L576%20770%20L634%20770%20L653%20750%20L720%20683%20L740%20664%20L740%20606%20L720%20587%20L534%20400%20L720%20214%20L740%20194%20L740%20136%20L720%20117%20L653%2050%20L634%2030%20L576%2030%20L556%2050%20Z%22/%3E%3C/svg%3E) !important;
+  background-size: 60% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ff4848;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+:root[data-theme=wiiu] input[type=checkbox]:checked,
+:root[data-theme=wiiu] select[type=checkbox]:checked {
+  background-color: #19cf00;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%22-10%20-60%20910%20900%22%20fill%3D%22white%22%3E%3Cg%20transform%3D%22scale(1%2C-1)%20translate(0%2C-840)%22%3E%3Cpath%20d%3D%22M373%20241%20L831%20808%20L838%20818%20L862%20822%20L882%20808%20L886%20785%20L879%20775%20L498%2095%20L433%2029%20L351%20-53%20L269%2039%20L10%20368%20L-1%20382%20L3%20418%20L17%20429%20L88%20485%20L102%20496%20L138%20492%20L148%20478%20L335%20242%20L342%20234%20L366%20234%20Z%22/%3E%3C/g%3E%3C/svg%3E") !important;
+  background-size: 70% !important;
+}
+:root[data-theme=wiiu] input.invalid,
+:root[data-theme=wiiu] select.invalid {
+  box-shadow: 0 0 0 0.2rem #ff4444 !important;
+}
+:root[data-theme=wiiu] button:hover {
+  transform: scale(1.04);
+  filter: none;
+}
+:root[data-theme=wiiu] .modal.random-mii-grid .modal-content .modal-body .random-mii-container button,
+:root[data-theme=wiiu] .style-select-btn {
+  background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 60%, #eeeeee 60%, #fafafa 100%);
+}
+:root[data-theme=wiiu] {
+  /*only a>button should be manual link*/
+}
+:root[data-theme=wiiu] .mii-library .library-sidebar .sidebar-buttons a > button {
+  padding: 9px 14px !important;
+  height: auto !important;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-switch .feature-switch-item {
+  min-height: 50px;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-switch .feature-switch-item.active {
+  background: linear-gradient(to bottom, #4eeb00 0%, #55ff00 50%);
+  color: #fff !important;
+  text-shadow: 0px 2px 0px #12aa00;
+  box-shadow: inset 0px 0px 0px 2px #12aa00, 0px 1px 6px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-switch .feature-switch-item.active:first-of-type {
+  border-radius: 8px 0 0 8px !important;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-switch .feature-switch-item.active:last-of-type {
+  border-radius: 0 8px 8px 0 !important;
+}
+:root[data-theme=wiiu] .mii-library .library-list .library-list-mii {
+  z-index: 1;
+  transition: transform 0.1s ease-out;
+  transition-timing-function: ease-out;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) !important;
+}
+:root[data-theme=wiiu] .mii-library .library-list .library-list-mii.highlight {
+  box-shadow: 0 0 0 0.3rem var(--selection-color), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
+}
+:root[data-theme=wiiu] .mii-library .library-list .library-list-mii span {
+  border-radius: 0 0 5px 5px;
+  background: #707070 !important;
+  color: #fff !important;
+  text-shadow: 0px -2px #373737 !important;
+  box-shadow: 0px 0px 5px 0px #2d2d2d inset !important;
+}
+:root[data-theme=wiiu] .tab-content .feature-set-group .feature-set-header {
+  background-image: url(/assets/images/bgdot.png) !important;
+  background-size: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+:root[data-theme=wiiu] .mii-library .library-list .library-list-mii:after {
+  content: "";
+  width: 100%;
+  display: block;
+  top: 46%;
+  left: 0;
+  position: absolute;
+  height: 35%;
+  background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(255, 255, 255, 0.14));
+  z-index: -1;
+}
+:root[data-theme=wiiu] .mii-library .library-list .library-list-mii:hover {
+  transform: scale(1.04);
+}
+:root[data-theme=wiiu] .mii-library .library-sidebar {
+  background: rgba(255, 255, 255, 0.7);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset -2px 0px 5px 0px #c9c9c9, 1px 0px 6px rgba(49, 49, 49, 0.35);
+}
+:root[data-theme=wiiu] .ui-base {
+  background: none !important;
+}
+:root[data-theme=wiiu] a:hover,
+:root[data-theme=wiiu] a:visited:hover {
+  filter: none;
+}
+@media screen and (max-width: 959px) {
+  :root[data-theme=wiiu] .mii-library .library-sidebar button {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+  :root[data-theme=wiiu] .ui-base .tab-list .tab.tab-square {
+    padding: 0 8px;
+    min-height: 48px;
+  }
+  :root[data-theme=wiiu] .mii-library .library-sidebar .sidebar-buttons {
+    gap: 0.8rem;
+  }
+  :root[data-theme=wiiu] .mii-library .library-sidebar {
+    padding: 1.5rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: unset;
+    background: rgba(233, 233, 233, 0.48);
+  }
+}
+@media screen and (min-width: 960px) {
+  :root[data-theme=wiiu] .ui-base .mii-holder {
+    margin: -1rem;
+  }
+}
+@media screen and (max-width: 959px) {
+  :root[data-theme=wiiu] .ui-base {
+    grid-template-rows: 1fr auto 1fr;
+  }
+  :root[data-theme=wiiu] .ui-base .tab-content {
+    max-height: unset !important;
+  }
+}
+
+:root[data-theme=miitomo] {
+  --eye-color: #6c7070;
+  --selection-color: rgb(1, 102, 215);
+  --primary-color: rgb(1, 102, 215);
+  --error-color: rgb(255, 96, 87);
+  --gold-color: rgb(255, 191, 0);
+  --root: #ffffff;
+  --root-solid: #ffffff;
+  --unfocused: #cccccc;
+  --button-fill: #ff9c1a !important;
+  --text: #0f0f0f;
+  --text-selected: #ffffff;
+  --label: #666666;
+  --stroke: #dddddd;
+  --stroke-dim: #e8e8e8;
+  --stroke-rgb: 221, 221, 221;
+  --container: #008fc1;
+  --container-solid: #008fc1;
+  --editor-tab-top: #008fc1 !important;
+  --editor-tab-top-light: #004e68 !important;
+  --editor-tab-top-dark: #77c7e0 !important;
+  --button-color: #ff9c1a !important;
+  --button-hover: #ca7a13 !important;
+  --button-fill-alt: #fc611b !important;
+  --button-press: #b34a00 !important;
+  --button-stroke: #8e4600 !important;
+  --setting-btn-color: #999999;
+  --setting-btn-active: #008cbd;
+  --container-alt: #ebebeb;
+  --sub-container: #ebebeb;
+  --hover: #54abcb;
+  --hover-transparent: #008fc1;
+  --focus: #036b91;
+  --library-mii-icon: #f9f6f999;
+  --library-mii-name: #fefcff99;
+  --icon-face-fill: #ffffff;
+  --icon-face-stroke: #6f6f6f;
+  --icon-face-detail: #8d8d8d;
+  --icon-face-makeup: #ffbaba;
+  --icon-face-wrinkles: #996d54;
+  --icon-head-fill: #ffffff;
+  --icon-head-stroke: #999999;
+  --icon-hair-fill: currentColor;
+  --icon-eyebrow-fill: currentColor;
+  --icon-facial-hair-fill: currentColor;
+  --icon-mouth-tooth: #ffffff;
+  --icon-glasses-fill: #000000;
+  --icon-glasses-shade: #606060;
+  --icon-lip-color-top: #712a04;
+  --icon-lip-color-bottom: #be4e26;
+  --mt-gradient-top: #6df3e7;
+  --mt-gradient-bottom: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme=miitomo][data-color-scheme=auto] {
+    --eye-color: #6c7070;
+    --selection-color: rgb(87, 199, 255) !important;
+    --primary-color: rgb(87, 199, 255) !important;
+    --error-color: rgb(255, 96, 87) !important;
+    --gold-color: rgb(255, 191, 0) !important;
+    --root: #2b2d3bee !important;
+    --root-solid: #1a1b1f !important;
+    --unfocused: #303030;
+    --button-fill: #424242 !important;
+    --text: #ffffff !important;
+    --text-selected: #000f1b;
+    --label: #cccccc !important;
+    --stroke: #5f5f5f !important;
+    --stroke-dim: #353535 !important;
+    --stroke-rgb: 95, 95, 95 !important;
+    --container: hsl(232, 19%, 23%) !important;
+    --container-alt: #393c4b55 !important;
+    --container-solid: #3a3c3d !important;
+    --editor-tab-top: #393c4b !important;
+    --editor-tab-top-light: #555970 !important;
+    --editor-tab-top-dark: #95a2d0 !important;
+    --button-color: hsl(232, 17%, 34%) !important;
+    --button-hover: hsl(232, 17%, 34%) !important;
+    --button-fill-alt: hsl(232, 17%, 34%) !important;
+    --button-press: hsl(233, 21%, 26%) !important;
+    --button-stroke: hsl(233, 16%, 20%) !important;
+    --setting-btn-color: #2a2b32 !important;
+    --setting-btn-active: #909df4 !important;
+    --sub-container: hsl(232, 9%, 18%) !important;
+    --hover: hsl(233, 16%, 20%) !important;
+    --hover-transparent: hsla(233, 16%, 20%, 0.656) !important;
+    --focus: #636363ee !important;
+    --library-mii-icon: #65656599;
+    --library-mii-name: #282828c9;
+  }
+  :root[data-theme=miitomo][data-color-scheme=auto] .tab-content {
+    --editor-tab-top: #909df4;
+  }
+  :root[data-theme=miitomo][data-color-scheme=auto] {
+    --icon-face-fill: #000000 !important;
+    --icon-face-stroke: #ffffff !important;
+    --icon-face-detail: #ffffff !important;
+    --icon-face-makeup: #ffbaba !important;
+    --icon-face-wrinkles: #996d54 !important;
+    --icon-head-fill: #333333 !important;
+    --icon-head-stroke: #474747 !important;
+    --icon-hair-fill: currentColor !important;
+    --icon-eyebrow-fill: currentColor !important;
+    --icon-facial-hair-fill: currentColor !important;
+    --icon-mouth-tooth: #000000 !important;
+    --icon-glasses-fill: #ffffff !important;
+    --icon-glasses-shade: #606060 !important;
+    --icon-lip-color-top: #712a04 !important;
+    --icon-lip-color-bottom: #be4e26 !important;
+    --mt-gradient-top: #33353c !important;
+    --mt-gradient-bottom: #484c6c !important;
+  }
+  :root[data-theme=miitomo][data-color-scheme=auto] html,
+  :root[data-theme=miitomo][data-color-scheme=auto] body {
+    background-color: #1a1a1a !important;
+    color: #dedede !important;
+  }
+}
+:root[data-theme=miitomo][data-color-scheme=light] {
+  --root: #ffffff !important;
+  --root-solid: #ffffff !important;
+  --unfocused: #cccccc !important;
+  --button-fill: #ff9c1a !important;
+  --text: #0f0f0f !important;
+  --text-selected: #ffffff !important;
+  --label: #666666 !important;
+  --stroke: #dddddd !important;
+  --stroke-dim: #e8e8e8 !important;
+  --stroke-rgb: 221, 221, 221 !important;
+  --container: #008fc1 !important;
+  --container-solid: #008fc1 !important;
+  --editor-tab-top: #008fc1 !important;
+  --editor-tab-top-light: #004e68 !important;
+  --editor-tab-top-dark: #77c7e0 !important;
+  --button-color: #ff9c1a !important;
+  --button-hover: #ca7a13 !important;
+  --button-fill-alt: #fc611b !important;
+  --button-press: #b34a00 !important;
+  --button-stroke: #8e4600 !important;
+  --setting-btn-color: #999999 !important;
+  --setting-btn-active: #008cbd !important;
+  --container-alt: #ebebeb !important;
+  --sub-container: #ebebeb !important;
+  --hover: #54abcb !important;
+  --hover-transparent: #008fc1 !important;
+  --focus: #036b91 !important;
+  --library-mii-icon: #f9f6f999 !important;
+  --library-mii-name: #fefcff99 !important;
+  --icon-face-fill: #ffffff !important;
+  --icon-face-stroke: #6f6f6f !important;
+  --icon-face-detail: #8d8d8d !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #ffffff !important;
+  --icon-head-stroke: #999999 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #ffffff !important;
+  --icon-glasses-fill: #000000 !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+  --mt-gradient-top: #78eaeb !important;
+  --mt-gradient-bottom: #f4f7f4 !important;
+}
+:root[data-theme=miitomo][data-color-scheme=light] html,
+:root[data-theme=miitomo][data-color-scheme=light] body {
+  background-color: #eaeaea !important;
+  color: #0f0f0f !important;
+}
+:root[data-theme=miitomo][data-color-scheme=dark] {
+  --eye-color: #6c7070;
+  --selection-color: rgb(87, 199, 255) !important;
+  --primary-color: rgb(87, 199, 255) !important;
+  --error-color: rgb(255, 96, 87) !important;
+  --gold-color: rgb(255, 191, 0) !important;
+  --root: #2b2d3bee !important;
+  --root-solid: #1a1b1f !important;
+  --unfocused: #303030;
+  --button-fill: #424242 !important;
+  --text: #ffffff !important;
+  --text-selected: #000f1b;
+  --label: #cccccc !important;
+  --stroke: #5f5f5f !important;
+  --stroke-dim: #353535 !important;
+  --stroke-rgb: 95, 95, 95 !important;
+  --container: hsl(232, 19%, 23%) !important;
+  --container-alt: #393c4b55 !important;
+  --container-solid: #3a3c3d !important;
+  --editor-tab-top: #393c4b !important;
+  --editor-tab-top-light: #555970 !important;
+  --editor-tab-top-dark: #95a2d0 !important;
+  --button-color: hsl(232, 17%, 34%) !important;
+  --button-hover: hsl(232, 17%, 34%) !important;
+  --button-fill-alt: hsl(232, 17%, 34%) !important;
+  --button-press: hsl(233, 21%, 26%) !important;
+  --button-stroke: hsl(233, 16%, 20%) !important;
+  --setting-btn-color: #2a2b32 !important;
+  --setting-btn-active: #909df4 !important;
+  --sub-container: hsl(232, 9%, 18%) !important;
+  --hover: hsl(233, 16%, 20%) !important;
+  --hover-transparent: hsla(233, 16%, 20%, 0.656) !important;
+  --focus: #636363ee !important;
+  --library-mii-icon: #65656599;
+  --library-mii-name: #282828c9;
+}
+:root[data-theme=miitomo][data-color-scheme=dark] .tab-content {
+  --editor-tab-top: #909df4;
+}
+:root[data-theme=miitomo][data-color-scheme=dark] {
+  --icon-face-fill: #000000 !important;
+  --icon-face-stroke: #ffffff !important;
+  --icon-face-detail: #ffffff !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #333333 !important;
+  --icon-head-stroke: #474747 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #000000 !important;
+  --icon-glasses-fill: #ffffff !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+  --mt-gradient-top: #33353c !important;
+  --mt-gradient-bottom: #484c6c !important;
+}
+:root[data-theme=miitomo][data-color-scheme=dark] html,
+:root[data-theme=miitomo][data-color-scheme=dark] body {
+  background-color: #1a1a1a !important;
+  color: #dedede !important;
+}
+:root[data-theme=miitomo] button,
+:root[data-theme=miitomo] .modal-content .modal-header,
+:root[data-theme=miitomo] .tab-list .tab {
+  color: #ffffff;
+}
+:root[data-theme=miitomo] button[data-setting] {
+  background-color: var(--setting-btn-color) !important;
+  border: 2px solid var(--stroke) !important;
+}
+:root[data-theme=miitomo] button.selected-setting {
+  background-color: var(--setting-btn-active) !important;
+  border: 2px solid var(--stroke) !important;
+}
+:root[data-theme=miitomo] button[data-setting], :root[data-theme=miitomo] button.selected-setting, :root[data-theme=miitomo] button.close-button {
+  box-shadow: unset !important;
+}
+:root[data-theme=miitomo] button {
+  background-color: var(--button-color);
+  border: 2px solid var(--button-stroke) !important;
+  box-shadow: 0 2px 0 0 var(--button-stroke) !important;
+  transition: box-shadow 0.1s linear, transform 0.1s linear;
+}
+:root[data-theme=miitomo] button:hover {
+  background-color: var(--button-hover);
+  filter: unset !important;
+}
+:root[data-theme=miitomo] button:active {
+  background-color: var(--button-press);
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 0 var(--button-stroke) !important;
+  filter: unset !important;
+}
+:root[data-theme=miitomo] .tab::after {
+  content: unset !important;
+  display: none !important;
+}
+:root[data-theme=miitomo] .tab-content .feature-set-group .feature-switch .feature-switch-item:first-of-type.active {
+  border-radius: 8px 0 0 8px;
+}
+:root[data-theme=miitomo] .tab-content .feature-set-group .feature-switch .feature-switch-item:last-of-type.active {
+  border-radius: 0 8px 8px 0;
+}
+:root[data-theme=miitomo] .tab-content .feature-set-group .feature-item.active {
+  border: unset !important;
+  box-shadow: unset !important;
+  background-color: var(--editor-tab-top) !important;
+}
+:root[data-theme=miitomo] .ui-base {
+  background-color: var(--container-alt);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+:root[data-theme=miitomo] .ui-base > .tab-list {
+  background-color: var(--editor-tab-top) !important;
+  color: #ffffff;
+  padding: 0;
+  gap: 0;
+}
+:root[data-theme=miitomo] .ui-base > .tab-list .tab {
+  border-radius: 0;
+  background-color: var(--editor-tab-top);
+  color: var(--editor-tab-top-dark);
+  width: unset;
+  padding: 4px 12px;
+  height: 100%;
+}
+:root[data-theme=miitomo] .ui-base > .tab-list .tab.tab-save {
+  background-color: var(--button-fill-alt);
+  color: #fff;
+  border: 2px solid var(--button-stroke) !important;
+  box-shadow: 0 2px 0 0 var(--button-stroke) !important;
+  margin: 8px;
+  margin-left: auto;
+  height: 48px;
+  border-radius: 8px;
+}
+:root[data-theme=miitomo] .ui-base > .tab-list .tab.tab-save:hover {
+  background-color: var(--button-fill-alt);
+  filter: unset !important;
+}
+:root[data-theme=miitomo] .ui-base > .tab-list .tab.tab-save:active {
+  background-color: var(--button-press);
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 0 var(--button-stroke) !important;
+  filter: unset !important;
+}
+:root[data-theme=miitomo] .ui-base > .tab-list .tab.active {
+  color: #fefefe;
+  background-color: var(--editor-tab-top-light);
+  border: 0 !important;
+  box-shadow: unset !important;
+}
+:root[data-theme=miitomo] .ui-base .mii-holder {
+  background: linear-gradient(to bottom, var(--mt-gradient-top), var(--mt-gradient-bottom));
+}
+:root[data-theme=miitomo] .mii-library .library-sidebar {
+  background-color: var(--editor-tab-top);
+}
+:root[data-theme=miitomo] .mii-library .library-list .library-list-mii span {
+  background: var(--library-mii-name) !important;
+  color: var(--text) !important;
+}
+:root[data-theme=miitomo] html,
+:root[data-theme=miitomo] body {
+  background-color: #eaeaea;
+  color: #0f0f0f;
+}
+:root[data-theme=miitomo], :root[data-theme=miitomo] > body {
+  background-image: linear-gradient(to bottom, var(--mt-gradient-top), var(--mt-gradient-bottom));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+:root[data-theme=sw2] {
+  --eye-color: #6c7070;
+  --selection-color: rgb(1, 102, 215);
+  --primary-color: rgb(1, 102, 215);
+  --error-color: rgb(255, 96, 87);
+  --gold-color: rgb(255, 191, 0);
+  --root: #eaeaeaee;
+  --root-solid: #eaeaea;
+  --unfocused: #cccccc;
+  --button-fill: #ffffff !important;
+  --text: #0f0f0f;
+  --text-selected: #ffffff;
+  --label: #666666;
+  --stroke: #dddddd;
+  --stroke-dim: #e8e8e8;
+  --stroke-rgb: 221, 221, 221;
+  --container: #dfdfdf77;
+  --container-solid: #eeeeee;
+  --sub-container: #ffffff77;
+  --hover: #dddddd;
+  --hover-transparent: #dddddd77;
+  --focus: #eeeeeeee;
+  --library-mii-icon: #f9f6f999;
+  --library-mii-name: #fefcff99;
+  --icon-face-fill: #ffffff;
+  --icon-face-stroke: #6f6f6f;
+  --icon-face-detail: #8d8d8d;
+  --icon-face-makeup: #ffbaba;
+  --icon-face-wrinkles: #996d54;
+  --icon-head-fill: #ffffff;
+  --icon-head-stroke: #999999;
+  --icon-hair-fill: currentColor;
+  --icon-eyebrow-fill: currentColor;
+  --icon-facial-hair-fill: currentColor;
+  --icon-mouth-tooth: #ffffff;
+  --icon-glasses-fill: #000000;
+  --icon-glasses-shade: #606060;
+  --icon-lip-color-top: #712a04;
+  --icon-lip-color-bottom: #be4e26;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme=sw2][data-color-scheme=auto] {
+    --eye-color: #6c7070;
+    --selection-color: rgb(87, 199, 255) !important;
+    --primary-color: rgb(87, 199, 255) !important;
+    --error-color: rgb(255, 96, 87) !important;
+    --gold-color: rgb(255, 191, 0) !important;
+    --root: #1a1a1aee !important;
+    --root-solid: #242424 !important;
+    --unfocused: #303030;
+    --button-fill: #424242 !important;
+    --text: #ffffff !important;
+    --text-selected: #000f1b;
+    --label: #cccccc !important;
+    --stroke: #5f5f5f !important;
+    --stroke-dim: #353535 !important;
+    --stroke-rgb: 95, 95, 95 !important;
+    --container: #2d2d2d77 !important;
+    --container-solid: #3a3c3d !important;
+    --sub-container: #1a1d1fd6 !important;
+    --hover: #343434 !important;
+    --hover-transparent: #393c3e91 !important;
+    --focus: #636363ee !important;
+    --library-mii-icon: #65656599;
+    --library-mii-name: #282828c9;
+    --icon-face-fill: #000000 !important;
+    --icon-face-stroke: #ffffff !important;
+    --icon-face-detail: #ffffff !important;
+    --icon-face-makeup: #ffbaba !important;
+    --icon-face-wrinkles: #996d54 !important;
+    --icon-head-fill: #333333 !important;
+    --icon-head-stroke: #474747 !important;
+    --icon-hair-fill: currentColor !important;
+    --icon-eyebrow-fill: currentColor !important;
+    --icon-facial-hair-fill: currentColor !important;
+    --icon-mouth-tooth: #000000 !important;
+    --icon-glasses-fill: #ffffff !important;
+    --icon-glasses-shade: #606060 !important;
+    --icon-lip-color-top: #712a04 !important;
+    --icon-lip-color-bottom: #be4e26 !important;
+  }
+  :root[data-theme=sw2][data-color-scheme=auto] html,
+  :root[data-theme=sw2][data-color-scheme=auto] body {
+    background-color: #1a1a1a !important;
+    color: #dedede !important;
+  }
+}
+:root[data-theme=sw2][data-color-scheme=light] {
+  --eye-color: #6c7070 !important;
+  --selection-color: rgb(1, 102, 215) !important;
+  --primary-color: rgb(1, 102, 215) !important;
+  --error-color: rgb(255, 96, 87) !important;
+  --gold-color: rgb(255, 191, 0) !important;
+  --root: #eaeaeaee !important;
+  --root-solid: #eaeaea !important;
+  --unfocused: #cccccc !important;
+  --button-fill: #ffffff !important;
+  --text: #0f0f0f !important;
+  --text-selected: #ffffff !important;
+  --label: #666666 !important;
+  --stroke: #dddddd !important;
+  --stroke-dim: #e8e8e8 !important;
+  --stroke-rgb: 221, 221, 221 !important;
+  --container: #dfdfdf77 !important;
+  --container-solid: #eeeeee !important;
+  --sub-container: #ffffff77 !important;
+  --hover: #dddddd !important;
+  --hover-transparent: #dddddd77 !important;
+  --focus: #eeeeeeee !important;
+  --library-mii-icon: #f9f6f999 !important;
+  --library-mii-name: #fefcff99 !important;
+  --icon-face-fill: #ffffff !important;
+  --icon-face-stroke: #6f6f6f !important;
+  --icon-face-detail: #8d8d8d !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #ffffff !important;
+  --icon-head-stroke: #999999 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #ffffff !important;
+  --icon-glasses-fill: #000000 !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+}
+:root[data-theme=sw2][data-color-scheme=light] html,
+:root[data-theme=sw2][data-color-scheme=light] body {
+  background-color: #eaeaea !important;
+  color: #0f0f0f !important;
+}
+:root[data-theme=sw2][data-color-scheme=dark] {
+  --eye-color: #6c7070;
+  --selection-color: rgb(87, 199, 255) !important;
+  --primary-color: rgb(87, 199, 255) !important;
+  --error-color: rgb(255, 96, 87) !important;
+  --gold-color: rgb(255, 191, 0) !important;
+  --root: #1a1a1aee !important;
+  --root-solid: #242424 !important;
+  --unfocused: #303030;
+  --button-fill: #424242 !important;
+  --text: #ffffff !important;
+  --text-selected: #000f1b;
+  --label: #cccccc !important;
+  --stroke: #5f5f5f !important;
+  --stroke-dim: #353535 !important;
+  --stroke-rgb: 95, 95, 95 !important;
+  --container: #2d2d2d77 !important;
+  --container-solid: #3a3c3d !important;
+  --sub-container: #1a1d1fd6 !important;
+  --hover: #343434 !important;
+  --hover-transparent: #393c3e91 !important;
+  --focus: #636363ee !important;
+  --library-mii-icon: #65656599;
+  --library-mii-name: #282828c9;
+  --icon-face-fill: #000000 !important;
+  --icon-face-stroke: #ffffff !important;
+  --icon-face-detail: #ffffff !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #333333 !important;
+  --icon-head-stroke: #474747 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #000000 !important;
+  --icon-glasses-fill: #ffffff !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+}
+:root[data-theme=sw2][data-color-scheme=dark] html,
+:root[data-theme=sw2][data-color-scheme=dark] body {
+  background-color: #1a1a1a !important;
+  color: #dedede !important;
+}
+:root[data-theme=sw2] .ui-base {
+  background-image: url("/assets/images/main_bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+:root[data-theme=sw2] .mii-library .library-list .library-list-mii span {
+  background: var(--library-mii-name) !important;
+  color: var(--text) !important;
+}
+:root[data-theme=sw2] html,
+:root[data-theme=sw2] body {
+  background-color: #eaeaea;
+  color: #0f0f0f;
+}
+:root[data-theme=sw2], :root[data-theme=sw2] > body {
+  background-image: url("/assets/images/main_bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] button:focus {
+  box-shadow: unset !important;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] button:focus:after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  width: 100%;
+  height: 100%;
+  --angle: 0deg;
+  border: 0.3rem solid;
+  border-image: conic-gradient(from var(--angle), #ccfcfe, #94d2ff, #947dff, #6281f4, #ffcbfc, #ffd3f7, #f0bfff, #147dfc, #a7e6ff) 1;
+  animation: 5s rotate linear infinite;
+  border-radius: 6px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] input:not([type=range]):focus,
+:root[data-theme=sw2][data-use-experimental-gradient=true] select:focus {
+  position: relative;
+  box-shadow: unset !important;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] input:not([type=range]):focus:after,
+:root[data-theme=sw2][data-use-experimental-gradient=true] select:focus:after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  width: 100%;
+  height: 100%;
+  --angle: 0deg;
+  border: 0.3rem solid;
+  border-image: conic-gradient(from var(--angle), #ccfcfe, #94d2ff, #947dff, #6281f4, #ffcbfc, #ffd3f7, #f0bfff, #147dfc, #a7e6ff) 1;
+  animation: 5s rotate linear infinite;
+  border-radius: 6px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] .tab-list .tab.tab-square.active {
+  position: relative;
+  box-shadow: unset !important;
+  border-radius: 0;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] .tab-list .tab.tab-square.active:after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  width: 100%;
+  height: 100%;
+  --angle: 0deg;
+  border: 0.3rem solid;
+  border-image: conic-gradient(from var(--angle), #ccfcfe, #94d2ff, #947dff, #6281f4, #ffcbfc, #ffd3f7, #f0bfff, #147dfc, #a7e6ff) 1;
+  animation: 5s rotate linear infinite;
+  border-radius: 6px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] .feature-set-group .feature-switch .feature-switch-item.active,
+:root[data-theme=sw2][data-use-experimental-gradient=true] .feature-set-group .feature-item.active {
+  position: relative;
+  box-shadow: unset !important;
+}
+:root[data-theme=sw2][data-use-experimental-gradient=true] .feature-set-group .feature-switch .feature-switch-item.active:after,
+:root[data-theme=sw2][data-use-experimental-gradient=true] .feature-set-group .feature-item.active:after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  width: 100%;
+  height: 100%;
+  --angle: 0deg;
+  border: 0.3rem solid;
+  border-image: conic-gradient(from var(--angle), #ccfcfe, #94d2ff, #947dff, #6281f4, #ffcbfc, #ffd3f7, #f0bfff, #147dfc, #a7e6ff) 1;
+  animation: 5s rotate linear infinite;
+  border-radius: 6px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+:root[data-theme=classic] {
+  background-color: white;
+  color: #000;
+  --eye-color: #6c7070;
+  --selection-color: rgb(0, 145, 255);
+  --primary-color: rgb(87, 199, 255);
+  --error-color: rgb(255, 96, 87);
+  --gold-color: rgb(255, 191, 0);
+  --root: #ffffffee;
+  --root-solid: #ffffff;
+  --unfocused: #cccccc;
+  --button-fill: #ffffff !important;
+  --text: #000000;
+  --text-selected: #000000;
+  --label: #666666;
+  --stroke: #dddddd;
+  --stroke-dim: #e8e8e8;
+  --stroke-rgb: 221, 221, 221;
+  --container: #eeeeee77;
+  --container-solid: #eeeeee;
+  --sub-container: #ececec77;
+  --hover: #dddddd;
+  --hover-transparent: #dddddd77;
+  --focus: #e7e7e7ee;
+  --icon-face-fill: #ffffff;
+  --icon-face-stroke: #6f6f6f;
+  --icon-face-detail: #8d8d8d;
+  --icon-face-makeup: #ffbaba;
+  --icon-face-wrinkles: #996d54;
+  --icon-head-fill: #ffffff;
+  --icon-head-stroke: #999999;
+  --icon-hair-fill: currentColor;
+  --icon-eyebrow-fill: currentColor;
+  --icon-facial-hair-fill: currentColor;
+  --icon-mouth-tooth: #ffffff;
+  --icon-glasses-fill: #000000;
+  --icon-glasses-shade: #606060;
+  --icon-lip-color-top: #712a04;
+  --icon-lip-color-bottom: #be4e26;
+}
+:root[data-theme=classic], :root[data-theme=classic] > body {
+  background-image: url("/assets/images/main_bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme=classic] {
+    color: white;
+    --eye-color: #6c7070;
+    --selection-color: rgb(0, 145, 255);
+    --primary-color: rgb(23, 96, 118);
+    --error-color: rgb(255, 96, 87);
+    --gold-color: rgb(255, 191, 0);
+    --root: #000000ee;
+    --root-solid: #000000;
+    --unfocused: #303030;
+    --button-fill: #424242 !important;
+    --text: #ffffff;
+    --text-selected: #ffffff;
+    --label: #cccccc;
+    --stroke: #484848;
+    --stroke-dim: #333333;
+    --stroke-rgb: 102, 102, 102;
+    --container: #2a2d2f77;
+    --container-solid: #2a2d2f;
+    --sub-container: #1d1f2077;
+    --hover: #2d3336;
+    --hover-transparent: #2d333677;
+    --focus: #2e363aee;
+    --icon-face-fill: #000000;
+    --icon-face-stroke: #ffffff;
+    --icon-face-detail: #ffffff;
+    --icon-face-makeup: #ffbaba;
+    --icon-face-wrinkles: #996d54;
+    --icon-head-fill: #333333;
+    --icon-head-stroke: #474747;
+    --icon-hair-fill: currentColor;
+    --icon-eyebrow-fill: currentColor;
+    --icon-facial-hair-fill: currentColor;
+    --icon-mouth-tooth: #000000;
+    --icon-glasses-fill: #ffffff;
+    --icon-glasses-shade: #606060;
+    --icon-lip-color-top: #712a04;
+    --icon-lip-color-bottom: #be4e26;
+    background: black !important;
+  }
+}
+:root[data-theme=classic][data-color-scheme=light] {
+  background-color: white !important;
+  color: #000 !important;
+  --eye-color: #6c7070 !important;
+  --selection-color: rgb(0, 145, 255) !important;
+  --primary-color: rgb(87, 199, 255) !important;
+  --error-color: rgb(255, 96, 87) !important;
+  --gold-color: rgb(255, 191, 0) !important;
+  --root: #ffffffee !important;
+  --root-solid: #ffffff !important;
+  --unfocused: #cccccc !important;
+  --button-fill: #ffffff !important;
+  --text: #000000 !important;
+  --text-selected: #000000 !important;
+  --label: #666666 !important;
+  --stroke: #dddddd !important;
+  --stroke-dim: #e8e8e8 !important;
+  --stroke-rgb: 221, 221, 221 !important;
+  --container: #eeeeee77 !important;
+  --container-solid: #eeeeee !important;
+  --sub-container: #ececec77 !important;
+  --hover: #dddddd !important;
+  --hover-transparent: #dddddd77 !important;
+  --focus: #e7e7e7ee !important;
+  --icon-face-fill: #ffffff !important;
+  --icon-face-stroke: #6f6f6f !important;
+  --icon-face-detail: #8d8d8d !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #ffffff !important;
+  --icon-head-stroke: #999999 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #ffffff !important;
+  --icon-glasses-fill: #000000 !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+}
+:root[data-theme=classic][data-color-scheme=light],
+:root[data-theme=classic][data-color-scheme=light] body {
+  background: white !important;
+}
+:root[data-theme=classic][data-color-scheme=dark] {
+  color: white !important;
+  --eye-color: #6c7070 !important;
+  --selection-color: rgb(0, 145, 255) !important;
+  --primary-color: rgb(23, 96, 118) !important;
+  --error-color: rgb(255, 96, 87) !important;
+  --gold-color: rgb(255, 191, 0) !important;
+  --root: #000000ee !important;
+  --root-solid: #000000 !important;
+  --unfocused: #303030 !important;
+  --button-fill: #424242 !important;
+  --text: #ffffff !important;
+  --text-selected: #ffffff !important;
+  --label: #cccccc !important;
+  --stroke: #484848 !important;
+  --stroke-dim: #333333 !important;
+  --stroke-rgb: 102, 102, 102 !important;
+  --container: #2a2d2f77 !important;
+  --container-solid: #2a2d2f !important;
+  --sub-container: #1d1f2077 !important;
+  --hover: #2d3336 !important;
+  --hover-transparent: #2d333677 !important;
+  --focus: #2e363aee !important;
+  --icon-face-fill: #000000 !important;
+  --icon-face-stroke: #ffffff !important;
+  --icon-face-detail: #ffffff !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #333333 !important;
+  --icon-head-stroke: #474747 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #000000 !important;
+  --icon-glasses-fill: #ffffff !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+}
+:root[data-theme=classic][data-color-scheme=dark],
+:root[data-theme=classic][data-color-scheme=dark] body {
+  background: black !important;
+}
+
+@font-face {
+  font-family: "NTLG";
+  src: url("/assets/fonts/NTLG.woff2");
+  font-display: swap;
+}
+[data-reduced-motion=yes] *,
+[data-reduced-motion=yes] ::before,
+[data-reduced-motion=yes] ::after {
+  animation-duration: 0.001s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001s !important;
+}
+
+:root {
+  color: white;
+  --eye-color: #6c7070;
+  --selection-color: rgb(0, 145, 255);
+  --primary-color: rgb(23, 96, 118);
+  --error-color: rgb(255, 96, 87);
+  --gold-color: rgb(255, 191, 0);
+  --root: #000000ee;
+  --root-solid: #000000;
+  --unfocused: #303030;
+  --button-fill: #424242;
+  --text: #ffffff;
+  --text-selected: #ffffff;
+  --label: #cccccc;
+  --stroke: #484848;
+  --stroke-dim: #333333;
+  --stroke-rgb: 102, 102, 102;
+  --container: #2a2d2f77;
+  --container-solid: #2a2d2f;
+  --sub-container: #1d1f2077;
+  --hover: #2d3336;
+  --hover-transparent: #2d333677;
+  --focus: #2e363aee;
+  --icon-face-fill: #000000;
+  --icon-face-stroke: #ffffff;
+  --icon-face-detail: #ffffff;
+  --icon-face-makeup: #ffbaba;
+  --icon-face-wrinkles: #996d54;
+  --icon-head-fill: #333333;
+  --icon-head-stroke: #474747;
+  --icon-hair-fill: currentColor;
+  --icon-eyebrow-fill: currentColor;
+  --icon-facial-hair-fill: currentColor;
+  --icon-mouth-tooth: #000000;
+  --icon-glasses-fill: #ffffff;
+  --icon-glasses-shade: #606060;
+  --icon-lip-color-top: #712a04;
+  --icon-lip-color-bottom: #be4e26;
+  --drop-shadow: transparent;
+  background: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-color-scheme=auto] {
+    --drop-shadow: #666;
+  }
+}
+[data-color-scheme=dark] {
+  --drop-shadow: #666;
+}
+
+html,
+body {
+  font-family: "NTLG", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+html :root[data-theme=classic],
+body :root[data-theme=classic] {
+  background-color: white;
+  color: #000;
+  --eye-color: #6c7070;
+  --selection-color: rgb(0, 145, 255);
+  --primary-color: rgb(87, 199, 255);
+  --error-color: rgb(255, 96, 87);
+  --gold-color: rgb(255, 191, 0);
+  --root: #ffffffee;
+  --root-solid: #ffffff;
+  --unfocused: #cccccc;
+  --button-fill: #ffffff !important;
+  --text: #000000;
+  --text-selected: #000000;
+  --label: #666666;
+  --stroke: #dddddd;
+  --stroke-dim: #e8e8e8;
+  --stroke-rgb: 221, 221, 221;
+  --container: #eeeeee77;
+  --container-solid: #eeeeee;
+  --sub-container: #ececec77;
+  --hover: #dddddd;
+  --hover-transparent: #dddddd77;
+  --focus: #e7e7e7ee;
+  --icon-face-fill: #ffffff;
+  --icon-face-stroke: #6f6f6f;
+  --icon-face-detail: #8d8d8d;
+  --icon-face-makeup: #ffbaba;
+  --icon-face-wrinkles: #996d54;
+  --icon-head-fill: #ffffff;
+  --icon-head-stroke: #999999;
+  --icon-hair-fill: currentColor;
+  --icon-eyebrow-fill: currentColor;
+  --icon-facial-hair-fill: currentColor;
+  --icon-mouth-tooth: #ffffff;
+  --icon-glasses-fill: #000000;
+  --icon-glasses-shade: #606060;
+  --icon-lip-color-top: #712a04;
+  --icon-lip-color-bottom: #be4e26;
+}
+html :root[data-theme=classic], html :root[data-theme=classic] > body,
+body :root[data-theme=classic],
+body :root[data-theme=classic] > body {
+  background-image: url("/assets/images/main_bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (prefers-color-scheme: dark) {
+  html :root[data-theme=classic],
+  body :root[data-theme=classic] {
+    color: white;
+    --eye-color: #6c7070;
+    --selection-color: rgb(0, 145, 255);
+    --primary-color: rgb(23, 96, 118);
+    --error-color: rgb(255, 96, 87);
+    --gold-color: rgb(255, 191, 0);
+    --root: #000000ee;
+    --root-solid: #000000;
+    --unfocused: #303030;
+    --button-fill: #424242 !important;
+    --text: #ffffff;
+    --text-selected: #ffffff;
+    --label: #cccccc;
+    --stroke: #484848;
+    --stroke-dim: #333333;
+    --stroke-rgb: 102, 102, 102;
+    --container: #2a2d2f77;
+    --container-solid: #2a2d2f;
+    --sub-container: #1d1f2077;
+    --hover: #2d3336;
+    --hover-transparent: #2d333677;
+    --focus: #2e363aee;
+    --icon-face-fill: #000000;
+    --icon-face-stroke: #ffffff;
+    --icon-face-detail: #ffffff;
+    --icon-face-makeup: #ffbaba;
+    --icon-face-wrinkles: #996d54;
+    --icon-head-fill: #333333;
+    --icon-head-stroke: #474747;
+    --icon-hair-fill: currentColor;
+    --icon-eyebrow-fill: currentColor;
+    --icon-facial-hair-fill: currentColor;
+    --icon-mouth-tooth: #000000;
+    --icon-glasses-fill: #ffffff;
+    --icon-glasses-shade: #606060;
+    --icon-lip-color-top: #712a04;
+    --icon-lip-color-bottom: #be4e26;
+    background: black !important;
+  }
+}
+html :root[data-theme=classic][data-color-scheme=light],
+body :root[data-theme=classic][data-color-scheme=light] {
+  background-color: white !important;
+  color: #000 !important;
+  --eye-color: #6c7070 !important;
+  --selection-color: rgb(0, 145, 255) !important;
+  --primary-color: rgb(87, 199, 255) !important;
+  --error-color: rgb(255, 96, 87) !important;
+  --gold-color: rgb(255, 191, 0) !important;
+  --root: #ffffffee !important;
+  --root-solid: #ffffff !important;
+  --unfocused: #cccccc !important;
+  --button-fill: #ffffff !important;
+  --text: #000000 !important;
+  --text-selected: #000000 !important;
+  --label: #666666 !important;
+  --stroke: #dddddd !important;
+  --stroke-dim: #e8e8e8 !important;
+  --stroke-rgb: 221, 221, 221 !important;
+  --container: #eeeeee77 !important;
+  --container-solid: #eeeeee !important;
+  --sub-container: #ececec77 !important;
+  --hover: #dddddd !important;
+  --hover-transparent: #dddddd77 !important;
+  --focus: #e7e7e7ee !important;
+  --icon-face-fill: #ffffff !important;
+  --icon-face-stroke: #6f6f6f !important;
+  --icon-face-detail: #8d8d8d !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #ffffff !important;
+  --icon-head-stroke: #999999 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #ffffff !important;
+  --icon-glasses-fill: #000000 !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+}
+html :root[data-theme=classic][data-color-scheme=light],
+html :root[data-theme=classic][data-color-scheme=light] body,
+body :root[data-theme=classic][data-color-scheme=light],
+body :root[data-theme=classic][data-color-scheme=light] body {
+  background: white !important;
+}
+html :root[data-theme=classic][data-color-scheme=dark],
+body :root[data-theme=classic][data-color-scheme=dark] {
+  color: white !important;
+  --eye-color: #6c7070 !important;
+  --selection-color: rgb(0, 145, 255) !important;
+  --primary-color: rgb(23, 96, 118) !important;
+  --error-color: rgb(255, 96, 87) !important;
+  --gold-color: rgb(255, 191, 0) !important;
+  --root: #000000ee !important;
+  --root-solid: #000000 !important;
+  --unfocused: #303030 !important;
+  --button-fill: #424242 !important;
+  --text: #ffffff !important;
+  --text-selected: #ffffff !important;
+  --label: #cccccc !important;
+  --stroke: #484848 !important;
+  --stroke-dim: #333333 !important;
+  --stroke-rgb: 102, 102, 102 !important;
+  --container: #2a2d2f77 !important;
+  --container-solid: #2a2d2f !important;
+  --sub-container: #1d1f2077 !important;
+  --hover: #2d3336 !important;
+  --hover-transparent: #2d333677 !important;
+  --focus: #2e363aee !important;
+  --icon-face-fill: #000000 !important;
+  --icon-face-stroke: #ffffff !important;
+  --icon-face-detail: #ffffff !important;
+  --icon-face-makeup: #ffbaba !important;
+  --icon-face-wrinkles: #996d54 !important;
+  --icon-head-fill: #333333 !important;
+  --icon-head-stroke: #474747 !important;
+  --icon-hair-fill: currentColor !important;
+  --icon-eyebrow-fill: currentColor !important;
+  --icon-facial-hair-fill: currentColor !important;
+  --icon-mouth-tooth: #000000 !important;
+  --icon-glasses-fill: #ffffff !important;
+  --icon-glasses-shade: #606060 !important;
+  --icon-lip-color-top: #712a04 !important;
+  --icon-lip-color-bottom: #be4e26 !important;
+}
+html :root[data-theme=classic][data-color-scheme=dark],
+html :root[data-theme=classic][data-color-scheme=dark] body,
+body :root[data-theme=classic][data-color-scheme=dark],
+body :root[data-theme=classic][data-color-scheme=dark] body {
+  background: black !important;
+}
+@supports not selector(::-webkit-scrollbar) {
+  html,
+  body {
+    scrollbar-color: var(--label) var(--container);
+    scrollbar-width: thin;
+  }
+}
+
+.modal-body small {
+  margin: -6px 0 0 0;
+}
+
+small {
+  color: var(--label);
+}
+
+.modal-selectable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-selectable .modal-body > span {
+  user-select: auto !important;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal.closing {
+  animation: fadeOut 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal.closing .modal-content {
+  animation: shortSlideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none !important;
+}
+.modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--stroke);
+  border-radius: 8px;
+  min-width: 200px;
+  max-height: 440px;
+  overflow: clip;
+  animation: shortSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal .modal-content .modal-header {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--hover);
+  flex-shrink: 0;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+.modal .modal-content .modal-header .close-button:hover {
+  filter: brightness(0.8);
+}
+.modal .modal-content .modal-header .close-button:active {
+  border: none !important;
+}
+.modal .modal-content .modal-header .close-button {
+  padding: 0;
+  min-width: 0;
+  position: absolute;
+  top: 50%;
+  right: 0rem;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg width='39' height='25' viewBox='0 0 39 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='39' height='25' fill='black' fill-opacity='0.01'/%3E%3Cpath d='M13 7L19 13M19 13L25 19M19 13L25 7M19 13L13 19' stroke='%23FF4E4E' stroke-width='1.5'/%3E%3C/svg%3E");
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  width: 3rem;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border: none !important;
+}
+.modal .modal-content .modal-body {
+  padding: 16px 18px;
+  background-color: var(--root-solid);
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 0 0 5px 5px;
+  overflow: auto;
+}
+.modal .modal-content .modal-body:not(.modal-scroll) > span {
+  display: block;
+  white-space: pre-wrap;
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+}
+.modal.random-mii-grid .modal-content {
+  height: 720px;
+  max-height: 100vh;
+  width: 1280px;
+}
+.modal.random-mii-grid .modal-content .modal-body .random-mii-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-auto-rows: min-content;
+  grid-auto-flow: row dense;
+  grid-gap: 1rem;
+  place-items: center;
+}
+.modal.random-mii-grid .modal-content .modal-body .random-mii-container button {
+  padding: 0;
+  display: flex;
+}
+.modal.random-mii-grid .modal-content .modal-body .random-mii-container button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: unset !important;
+  box-shadow: unset !important;
+  border: unset !important;
+  margin: 0 !important;
+}
+
+.modal-body.force-start .flex-group {
+  justify-content: flex-start !important;
+}
+
+.flex-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.flex-group span {
+  text-align: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.col input[type=range] {
+  padding: 0;
+  margin: -6px 0 0 0;
+}
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.spacing {
+  padding: 16px;
+}
+
+.spacing-md {
+  padding: 12px;
+}
+
+.spacing-sm {
+  padding: 8px;
+}
+
+button {
+  font: inherit;
+  background-color: var(--button-fill, --root);
+  color: var(--text);
+  border: 2px solid var(--stroke);
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 64px;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+button:hover {
+  background-color: var(--focus);
+}
+button, button:focus {
+  outline: none;
+}
+button:focus {
+  position: relative;
+}
+button.square {
+  min-width: 0;
+}
+
+button.danger {
+  background-color: var(--error-color);
+  border-color: var(--stroke-dim);
+}
+button.danger:hover {
+  background-color: var(--error-color);
+  filter: brightness(1.3);
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  border-color: var(--stroke-dim);
+  color: var(--text-selected);
+}
+button.primary:hover {
+  background-color: var(--primary-color);
+  filter: brightness(1.3);
+}
+
+button.selected {
+  border: 0.1rem solid var(--selection-color);
+}
+
+button.selected-setting {
+  border: 0.1rem solid var(--selection-color);
+  background-color: var(--selection-color);
+  color: var(--text-selected) !important;
+}
+button.selected-setting:hover {
+  background-color: var(--selection-color) !important;
+}
+
+.h4 {
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: var(--text);
+}
+
+.pre-wrap {
+  overflow: auto;
+  user-select: all;
+  -webkit-user-select: all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+[disabled] {
+  opacity: 0.35 !important;
+  cursor: not-allowed;
+}
+
+a,
+a:visited {
+  color: var(--selection-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+a:hover,
+a:visited:hover {
+  filter: brightness(1.3);
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+div::-webkit-scrollbar {
+  width: 12px !important;
+  background-color: transparent !important;
+  height: 6px !important;
+}
+
+div::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  background-color: var(--label) !important;
+}
+
+div::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 10px !important;
+  background-color: transparent !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 550;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+@keyframes slideInR {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutR {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+@keyframes shortSlideUp {
+  from {
+    transform: translateY(0) scale(0.95);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes shortSlideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(0) scale(0.95);
+  }
+}
+@keyframes spinTranslated {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinInPlaceAndCry {
+  from {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
+.rotateAndCry {
+  animation: spinInPlaceAndCry 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+button {
+  font: inherit;
+  background-color: var(--button-fill, --root);
+  color: var(--text);
+  border: 2px solid var(--stroke);
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 64px;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+button[data-setting] span {
+  pointer-events: none;
+}
+button:hover {
+  background-color: var(--focus);
+}
+button, button:focus {
+  outline: none;
+}
+button:focus {
+  position: relative;
+}
+button.square {
+  min-width: 0;
+}
+
+.disabled {
+  transition: opacity 0.5s linear;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.gender-select-btn {
+  flex-direction: column;
+  gap: 0;
+  font-size: 20px;
+}
+
+video {
+  background-color: var(--root);
+  border: 2px solid var(--stroke);
+}
+
+select {
+  background: url("data:image/svg+xml,%3Csvg width='50%' height='100%' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2225_281)'%3E%3Cpath d='M4.95 0H0V10H4.95V0Z' fill='white'/%3E%3Cpath d='M1.40991 4.66993L2.47991 3.17993L3.53991 4.66993H1.40991Z' fill='black'/%3E%3Cpath d='M3.53991 5.33008L2.47991 6.82008L1.40991 5.33008H3.53991Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2225_281'%3E%3Crect width='4.95' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 95% 50%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 4rem;
+  padding-right: 1.6rem !important;
+}
+@media screen and (prefers-color-scheme: dark) {
+  select {
+    background: url("data:image/svg+xml,%3Csvg width='50%' height='100%' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2225_281)'%3E%3Cpath d='M4.95 0H0V10H4.95V0Z' fill='black'/%3E%3Cpath d='M1.40991 4.66993L2.47991 3.17993L3.53991 4.66993H1.40991Z' fill='white'/%3E%3Cpath d='M3.53991 5.33008L2.47991 6.82008L1.40991 5.33008H3.53991Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2225_281'%3E%3Crect width='4.95' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 95% 50%;
+  }
+}
+html[data-color-scheme=dark] select {
+  background: url("data:image/svg+xml,%3Csvg width='50%' height='100%' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2225_281)'%3E%3Cpath d='M4.95 0H0V10H4.95V0Z' fill='black'/%3E%3Cpath d='M1.40991 4.66993L2.47991 3.17993L3.53991 4.66993H1.40991Z' fill='white'/%3E%3Cpath d='M3.53991 5.33008L2.47991 6.82008L1.40991 5.33008H3.53991Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2225_281'%3E%3Crect width='4.95' height='10' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 95% 50%;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  font: inherit;
+  background-color: var(--root);
+  color: var(--text);
+  padding: 8px;
+  border: 2px solid var(--stroke);
+  border-radius: 8px;
+  outline: 0;
+}
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: var(--container);
+  color: var(--label);
+  cursor: not-allowed;
+  user-select: none;
+}
+input:not(input[type=range]):focus,
+select:not(input[type=range]):focus,
+textarea:not(input[type=range]):focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem var(--selection-color);
+}
+input.invalid,
+select.invalid,
+textarea.invalid {
+  box-shadow: 0 0 0 0.2rem var(--error-color) !important;
+}
+input[type=range],
+select[type=range],
+textarea[type=range] {
+  width: 100%;
+  accent-color: var(--selection-color);
+  padding-left: 0;
+  padding-right: 0;
+}
+input[type=checkbox],
+select[type=checkbox],
+textarea[type=checkbox] {
+  width: 1.3rem;
+  height: 1.3rem;
+  appearance: none !important;
+  border-radius: 4px !important;
+  border: 0 !important;
+  background-size: cover !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='128' height='128' viewBox='0 0 128 128' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='128' height='128' rx='27' fill='%23FF5C4A'/%3E%3Cpath d='M88 40L40 88' stroke='white' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M40 40L88 88' stroke='white' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+input[type=checkbox]:checked,
+select[type=checkbox]:checked,
+textarea[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml,%3Csvg width='128' height='128' viewBox='0 0 128 128' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='128' height='128' rx='27' fill='%2300BF50'/%3E%3Cpath d='M100 38L50.5 88L28 65.2727' stroke='white' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-group label {
+  font-size: 1.2rem;
+  color: var(--label);
+}
+
+.fadeIn {
+  pointer-events: none;
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.fadeOut {
+  pointer-events: none;
+  animation: fadeOut 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.slideIn {
+  pointer-events: none;
+  animation: slideIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.slideInBackwards {
+  pointer-events: none;
+  animation: slideInR 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.slideOutBackwards {
+  pointer-events: none;
+  animation: slideInR 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.slideOut {
+  pointer-events: none;
+  animation: slideOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+.loader.active {
+  opacity: 1;
+}
+.loader.active svg {
+  animation: spinTranslated 0.5s linear infinite;
+}
+
+.separator {
+  background: var(--stroke);
+  width: 100%;
+  height: 0.1rem;
+  margin: 8px;
+}
+
+.separator-gap {
+  width: 100%;
+  height: 0;
+  margin: 8px;
+}
+
+.separator-gap-thin {
+  width: 100%;
+  height: 0;
+  margin: 0;
+}
+
+.separator-gap-thin-laptop {
+  display: none;
+}
+
+@media screen and (min-width: 1556px) {
+  .separator-gap-thin-laptop {
+    display: block !important;
+    width: 100%;
+    height: 0;
+    margin: 0;
+  }
+}
+.separator-gap-thin-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1875px) {
+  .separator-gap-thin-desktop {
+    display: block !important;
+    width: 100%;
+    height: 0;
+    margin: 0;
+  }
+}
+.sparkle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  --size: 7%;
+}
+
+.ui-base {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--root);
+  color: var(--text);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "tabList tabList" "mii tabContent";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media screen and (max-width: 960px) {
+  .ui-base {
+    grid-gap: 0 !important;
+    padding: 0 !important;
+  }
+}
+.ui-base.not-fixed {
+  position: static;
+}
+.ui-base.closing {
+  pointer-events: none;
+  animation: fadeOut 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.ui-base .top-left {
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  left: 1rem;
+  mix-blend-mode: difference;
+}
+.ui-base .bottom-left {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.ui-base .bottom-right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+@media screen and (max-width: 959px) {
+  .ui-base {
+    grid-template-areas: "mii" "tabList" "tabContent";
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto auto;
+  }
+  .ui-base .tab-list {
+    gap: 0.5rem;
+    padding: 8px;
+  }
+  .ui-base .tab-list .tab.tab-square {
+    min-width: 64px;
+    min-height: 64px;
+    padding: 8px;
+  }
+  .ui-base .tab-list .tab.tab-square.active {
+    box-shadow: 0 0 0 0.3rem var(--selection-color);
+  }
+  .ui-base .tab-list .tab.tab-rectangle {
+    min-width: 64px;
+    padding: 14px 24px;
+  }
+  .ui-base .tab-list .tab {
+    width: auto !important;
+    height: auto !important;
+  }
+  .ui-base .tab-content {
+    max-height: 40vmax;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1875px) {
+  .ui-base {
+    grid-template-areas: "tabList tabList" "mii tabContent";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .ui-base > .tab-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .ui-base .tab-square:last-child {
+    margin-top: auto;
+  }
+}
+.ui-base .tab-square:last-child {
+  margin-left: auto;
+}
+.ui-base {
+  padding: 1rem;
+  grid-gap: 1rem;
+}
+.ui-base > div {
+  border-radius: 8px;
+  overflow: auto;
+}
+.ui-base .mii-holder {
+  grid-area: mii;
+  background-color: var(--hover-transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.ui-base .mii-holder .render-mode-options {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ui-base .mii-holder canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background: radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 45%);
+  background-repeat: no-repeat;
+  background-size: 100vmin 100vmin;
+  background-position: center;
+}
+.ui-base > .tab-list {
+  grid-area: tabList;
+  align-items: center;
+}
+.ui-base > .tab-content {
+  grid-area: tabContent;
+  border: 2px solid var(--stroke-dim);
+}
+
+.sparkle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sparkle 0.4s linear forwards;
+  width: var(--size);
+  height: var(--size);
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    transform: translate(var(--old-x), var(--old-y)) scale(1);
+  }
+  80% {
+    opacity: 0.2;
+    transform: translate(var(--new-x), var(--new-y)) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--new-x), var(--new-y)) scale(0.5);
+  }
+}
+canvas.scene {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.tab-save {
+  width: max-content !important;
+  gap: 8px;
+  padding: 0 12px;
+  background-color: var(--container-solid);
+}
+
+.tab-list {
+  display: flex;
+  background-color: var(--container);
+  padding: 8px;
+  gap: 8px;
+}
+.tab-list .tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.tab-list .tab:hover {
+  background-color: var(--hover);
+}
+.tab-list .tab.tab-square {
+  width: 48px;
+  height: 48px;
+}
+.tab-list .tab.tab-square.active {
+  box-shadow: 0 0 0 0.3rem var(--selection-color);
+}
+.tab-list .tab.active {
+  background-color: var(--focus);
+}
+.tab-list .tab {
+  overflow: visible;
+  position: relative;
+}
+.tab-list .tab::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--selection-color);
+}
+.tab-list .tab.tab-rectangle {
+  min-width: 64px;
+  padding: 14px 24px;
+}
+.tab-list .tab.tab-rectangle.active {
+  border-radius: 12px 12px 12px 12px;
+}
+.tab-list .tab.tab-rectangle.active::after {
+  height: 0.3rem;
+}
+
+.tab-content {
+  background-color: var(--sub-container);
+}
+.tab-content .tab-content {
+  background-color: unset !important;
+  backdrop-filter: unset !important;
+}
+.tab-content {
+  display: flex;
+  flex-direction: column;
+}
+.tab-content .feature-set-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  gap: 0.75rem;
+}
+.tab-content .feature-set-container .tab-list {
+  overflow: auto;
+  margin: 0 auto;
+  background-color: var(--container);
+  border-radius: 0 0 8px 8px;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: var(--stroke-dim);
+}
+.tab-content .feature-set-container .tab-list .tab-rectangle {
+  padding: 10px 14px;
+}
+.tab-content .feature-set-container .tab-list .tab-rectangle.active::after {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.75rem;
+  height: 0.3rem;
+}
+.tab-content .feature-set-container .tab-content {
+  overflow: auto;
+  flex: 1;
+}
+.tab-content .feature-set-group {
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+.tab-content .feature-set-group .feature-set-header {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--hover);
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  border-radius: 6px;
+  margin: 4px;
+}
+.tab-content .feature-set-group .feature-switch {
+  display: flex;
+}
+.tab-content .feature-set-group .feature-switch .feature-switch-item:first-of-type {
+  border-radius: 8px 0 0 8px !important;
+}
+.tab-content .feature-set-group .feature-switch .feature-switch-item:last-of-type {
+  border-radius: 0 8px 8px 0 !important;
+}
+.tab-content .feature-set-group .feature-switch .feature-switch-item {
+  padding: 2.5px 14px;
+  flex: 1;
+  display: flex;
+  min-width: 64px;
+  height: max-content;
+  justify-content: center;
+  align-items: center;
+  border-right-width: 1px;
+  border-radius: 0;
+}
+.tab-content .feature-set-group .feature-switch .feature-switch-item.active {
+  border-radius: 8px !important;
+  z-index: 1;
+  background-color: var(--focus);
+  box-shadow: 0 0 0 0.3rem var(--selection-color);
+}
+.tab-content .feature-set-group .feature-slider,
+.tab-content .feature-set-group .feature-range {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.tab-content .feature-set-group .feature-slider span,
+.tab-content .feature-set-group .feature-range span {
+  border: 2px solid var(--stroke-dim);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab-content .feature-set-group .feature-item {
+  min-width: 52px;
+  min-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.tab-content .feature-set-group .feature-item:hover {
+  background-color: var(--hover);
+}
+.tab-content .feature-set-group .feature-item.active {
+  box-shadow: 0 0 0 0.3rem var(--selection-color);
+}
+.tab-content .feature-set-group .feature-item.is-color {
+  position: relative;
+}
+.tab-content .feature-set-group .feature-item.is-color::before {
+  border-radius: 8px;
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px - 4px);
+  height: calc(100% - 8px - 4px);
+  background-color: var(--color);
+  border: 2px solid var(--hover);
+}
+[data-hair-flip=yes] .tab-content .feature-set-group .feature-item svg[data-can-hair-flip=yes] {
+  transform: scaleX(-1);
+}
+@media screen and (min-width: 540px) {
+  .tab-content .feature-set-group .feature-item {
+    min-width: 68px;
+    min-height: 68px;
+  }
+  .tab-content .feature-set-group .feature-item svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+:root[data-theme=classic] .tab-content .feature-set-group .feature-item svg,
+:root[data-theme=sw2] .tab-content .feature-set-group .feature-item svg {
+  filter: url(#outline);
+}
+
+[data-tab-num="11"] .tab-content .feature-set-group .feature-item {
+  min-width: 76px;
+  min-height: 76px;
+}
+[data-tab-num="11"] .tab-content .feature-set-group .feature-item svg {
+  width: 76px;
+  height: 76px;
+}
+[data-tab-num="11"] .tab-content .feature-set-group .feature-item.is-color {
+  min-width: 68px !important;
+  min-height: 68px !important;
+}
+
+.mii-library {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: grid;
+  grid-template-areas: "sidebar miiList" "sidebar miiList";
+  grid-template-columns: auto 1fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mii-library .library-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--sub-container);
+  grid-area: sidebar;
+}
+.mii-library .library-sidebar .sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mii-library .library-sidebar .sidebar-credits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mii-library .library-sidebar .sidebar-credits span {
+  color: var(--label);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.mii-library .library-list {
+  display: flex;
+  flex-direction: column;
+  grid-area: miiList;
+  overflow: auto;
+}
+.mii-library .library-list .library-list-header {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mii-library .library-list .library-list-content {
+  flex: 1;
+  padding: 2rem;
+  padding-top: 1.5rem;
+  overflow: visible;
+  overflow-y: auto;
+  display: grid;
+  position: relative;
+  overflow: auto;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-auto-rows: min-content;
+  grid-auto-flow: row dense;
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 540px) {
+  .mii-library .library-list .library-list-content {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    padding: 1rem 0;
+  }
+}
+.mii-library .library-list .library-list-content .library-list-mii {
+  display: flex;
+  flex-direction: column;
+  background: var(--color);
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+  border-radius: 8px;
+  overflow: visible;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+  box-shadow: 0 0 0 0 var(--selection-color);
+}
+.mii-library .library-list .library-list-content .library-list-mii.highlight {
+  box-shadow: 0 0 0 0.3rem var(--selection-color);
+}
+.mii-library .library-list .library-list-content .library-list-mii:hover {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5333333333), rgba(255, 255, 255, 0.5333333333));
+}
+.mii-library .library-list .library-list-content .library-list-mii img {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  --scale: 0.1rem;
+  --blur: 0;
+  --color: rgba(255, 255, 255);
+}
+.mii-library .library-list .library-list-content .library-list-mii span {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5333333333);
+  color: white !important;
+  text-align: center;
+  font-size: 16px;
+  text-align: center;
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 0 0 8px 8px;
+}
+@media screen and (prefers-color-scheme: dark) {
+  .mii-library .library-list .library-list-content .library-list-mii {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3333333333), rgba(255, 255, 255, 0.3333333333));
+  }
+  .mii-library .library-list .library-list-content .library-list-mii:hover {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4666666667), rgba(255, 255, 255, 0.4666666667));
+  }
+}
+html[data-color-scheme=light] .mii-library .library-list .library-list-content .library-list-mii {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) !important;
+}
+html[data-color-scheme=light] .mii-library .library-list .library-list-content .library-list-mii:hover {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) !important;
+}
+html[data-color-scheme=dark] .mii-library .library-list .library-list-content .library-list-mii {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3333333333), rgba(255, 255, 255, 0.3333333333)) !important;
+}
+html[data-color-scheme=dark] .mii-library .library-list .library-list-content .library-list-mii:hover {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4666666667), rgba(255, 255, 255, 0.4666666667)) !important;
+}
+@media screen and (max-width: 959px) {
+  .mii-library {
+    grid-template-areas: "miiList miiList" "sidebar sidebar";
+    grid-template-rows: 1fr auto;
+  }
+  .mii-library .library-sidebar {
+    flex-direction: column-reverse;
+    padding: 0.5rem;
+  }
+  .mii-library .library-sidebar button {
+    flex: 1;
+  }
+  .mii-library .library-sidebar h1 {
+    display: none;
+  }
+  .mii-library .library-sidebar .sidebar-buttons {
+    flex: 1;
+  }
+  .mii-library .library-sidebar .sidebar-credits {
+    flex-shrink: 1;
+  }
+}
+@media screen and (max-width: 540px) {
+  .mii-library {
+    zoom: 0.8;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .responsive-row-lg {
+    flex-direction: row !important;
+  }
+}
+.notify-box {
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  z-index: 9999999999;
+  top: 1.5rem;
+  right: 1.5rem;
+  gap: 1rem;
+  max-width: calc(100vw - 3rem);
+}
+.notify-box > .notify {
+  background-color: var(--container);
+  border: 0.125rem solid var(--stroke);
+  border-radius: 0.32rem;
+  padding: 0.9rem 1rem;
+  min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  backdrop-filter: blur(0.5rem) brightness(0.5) contrast(1.05);
+  pointer-events: all;
+  width: max-content;
+  max-width: 100%;
+}
+.notify-box > .notify .notify-title {
+  font-size: 1.25rem;
+  color: var(--text);
+}
+.notify-box > .notify .notify-description {
+  /* . . . */
+  opacity: 1;
+}
+
+.disable-item {
+  min-width: 120px;
+  font-size: 20px;
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctx-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--container-solid);
+  border: 1px solid var(--stroke);
+  color: var(--text);
+  border-radius: 6px;
+  user-select: none;
+  min-width: 120px;
+  min-height: 16px;
+  max-height: 80vh;
+  overflow: auto;
+  z-index: 99999999999;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctx-menu .header {
+  color: var(--label);
+  font-weight: 550;
+  font-size: 0.8em;
+  align-self: flex-start;
+  padding: 0 14px;
+  margin: 6px 0;
+  text-transform: uppercase;
+}
+
+.ctx-menu .item {
+  user-select: none;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ctx-menu .item span {
+  display: flex;
+}
+.ctx-menu .item.selected {
+  background-color: var(--focus);
+  border: 2px solid var(--selection-color);
+}
+
+.ctx-menu .item:hover,
+.ctx-menu .item.over {
+  background-color: var(--hover);
+}
+
+.md h1 {
+  border-bottom: 4px solid var(--stroke);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}

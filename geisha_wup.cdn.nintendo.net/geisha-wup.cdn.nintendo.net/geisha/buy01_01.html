@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="Content-Script-Type" content="text/javascript"><meta http-equiv="Content-Style-Type" content="text/css"><title data-message="buy01_01_001">内容のご確認</title><link rel="stylesheet" href="css/minified/mymenu.css"><link rel="stylesheet" href="css/index.css"><link rel="stylesheet" href="css/buy.css"><script type="text/javascript" src="js/import.js?ts=1465872859469" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script><script type="text/javascript" src="js/buy.js" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script></head><body class="display_cover"><div id="wrap"><div id="sb_cont"><div id="buy01_01"><div class="header_common hero ob pdz"><h1></h1><p class="btn_b0201"><a href="" class="btn_004 se evt_next"><span data-message="common01_01_033">Next</span><img src="image/btn_right.png" width="62" height="60"></a></p></div><div class="buy_body"><div id="coupon_type"></div><script id="template_coupon_type_select" type="text/x-jquery-tmpl"><ul class="fox coupon_type_select">
+      {{if has_owned_coupon}}
+      <li>
+        <input type="radio" id="use_owned_coupon" name="coupon_type" value="owned_coupon" data-sound-assigned="true" />
+        <label for="use_owned_coupon">${ str_use_owned_coupon }</label>
+      </li>
+      {{/if}}
+      {{if can_use_coupon_code}}
+      <li>
+        <input type="radio" id="use_coupon_code" name="coupon_type" value="coupon_code" data-sound-assigned="true" />
+        <label for="use_coupon_code">${ str_use_coupon_code }</label>
+      </li>
+      {{/if}}
+      <li class="disuse_coupon">
+        <div class="disuse_coupon_option">
+          <input type="radio" id="disuse_coupon" name="coupon_type" value="disuse_coupon" data-sound-assigned="true" />
+          <label for="disuse_coupon">${ str_disuse_coupon }</label>
+        </div>
+        <div class="disuse_coupon_price">
+          <span class="price">${price}</span>
+        </div>
+      </li>
+    </ul></script><h2 id="buy_confirm_h2" data-message="buy01_01_002"></h2><div id="rating_display" class="clearfix"><div id="rd_l"></div><div id="rd_r"></div></div><div id="buy_about_this"></div></div><div class="buy_submit ob cho clearfix"><p class="btn_b0201"><a href="" class="btn_004 se evt_next"><span data-message="common01_01_033">Next</span><img src="image/btn_right.png" width="62" height="60"></a></p></div></div><div id="buy01_02"><div class="header_common"><h1></h1></div><div class="buy_body"><div class="fox"><p class="lf" data-message="buy01_02_002_02">空き容量が足りません。</p><p id="bb_media"><span id="sel_media"></span></p><p id="bb_capa"><span id="sel_title_size"></span></p><p class="lf" data-message="buy01_02_002">空き容量が足りないときは、本体設定のデータ管理で<br>ソフトを整理し、空き容量を確保してください。<br><br>データ管理画面へ移動するには、ニンテンドーeショップを<br>終了する必要があります。</p><p class="lf" data-message="buy01_02_004">ソフトを整理しても空き容量が足りない場合は、<br>容量の大きいUSB記録メディアをご利用ください。<br>くわしくはWii U電子説明書または任天堂ホームページを<br>ご確認ください。<br><br>インストール先について<br>インストール先はUSB記録メディアが優先となります。<br>また、すでにインストールするソフトのデータ（セーブデータなど）が<br>ある場合は、そのデータのある場所にインストールされます。<br>データのある場所に空き容量が無い場合は、別のインストール先へ<br>データを移動してお試しください。<br>（データの移動は本体設定のデータ管理で行ってください。）</p></div><p class="btn_c"><a href="" id="evt_data_manage" class="btn_002 se" data-message="buy01_02_003">データ管理へ</a></p></div></div><div id="buy01_03"><div class="header_common"><h1></h1></div><div class="buy_body"><h2 id="buy_payment_h2" data-message="buy01_03_001">購入するには残高が不足しています。</h2><dl id="buy_insufficient_funds" class="amount_indicator clearfix"><dt class="bb balance_line" data-message="common01_01_020">Balance:</dt><dd class="bb balance_line">&nbsp;</dd><dt class="required_amount" data-message="buy01_03_002">購入に必要な金額:</dt><dd class="required_amount">&nbsp;</dd></dl><ul id="buy_payment" class="select_ul"><li id="evt_pcard" class="btn_010"><a href="" class="se" data-se-label="SE_WAVE_OK"><span data-message="buy01_03_004" class="add_balance_text">残高を追加する</span></a></li><li id="evt_ccard" class="btn_010" style="display:none"><a href="" class="se" data-se-label="SE_WAVE_OK"><span data-message="buy01_03_003" class="pay_ccard_text">クレジットカードで<br>不足分を支払う</span></a></li><li id="sel_ccard_disabled" class="ccard_diabled" style="display:none;"><div class="ccard_disabled_eu hide"><img src="image/money/qr-eu.png" width="100" height="100"><div data-message="money01_01_009">For credit card usage, please visit
+https://www.nintendo.eu/N3DS_payment
+for details.</div></div><div class="ccard_disabled_au hide"><img src="image/money/qr-au.png" width="100" height="100"><div data-message="money01_01_009_02">For credit card usage, please visit
+https://www.nintendo.com.au/n3ds-payment
+for details.</div></div></li><li id="evt_iccard" class="btn_010" style="display:none"><a href="" class="se pay_iccard" data-se-label="SE_WAVE_OK"><span data-message="buy01_03_005" class="pay_iccard_text">電子マネーで<br>不足分を支払う</span> <span data-message="buy01_03_006" class="gamepad_text">Use Wii U GamePad</span></a></li></ul><p id="sel_settlement_law" class="btn_r" style="display:none;"><a href="" id="evt_settlement_law" class="btn_001 se" data-se-label="SE_WAVE_OK" data-message="common01_01_031">Payment Services Act Notices</a></p></div></div><div id="buy01_07"><div class="header_common"><h1></h1></div><div id="contents_common"><div id="simple_box"><h2 id="sel_attention"></h2></div><p class="btn_c"><a href="" id="evt_attention" class="btn_002 se" data-message="buy01_07_003">持っている</a></p></div></div><div id="buy02_01"><div id="sel_header" class="header_common hero ob pdz"><h1></h1><p class="btn_b0201 muk"><a href="#" class="btn_004 se evt_purchase" data-message="common01_01_011">Purchase</a></p></div><div class="buy_body"><div class="buy_confirm"><div class="buy_confirm_text"><div id="bfr_release_date" style="display:none;"><p data-message="buy02_01_002_02">配信日：%{yyyy}年%{mm}月%{dd}日</p></div><div id="bfr_message" style="display:none;"><p data-message="buy02_01_002">「購入する」ボタンを押すと、お支払いが確定します。</p></div><div id="bfr_not_cancelable_message" style="display:none;"><p data-message="buy02_01_002_05">購入後のキャンセルや返金はできません。</p></div><div id="bfr_pre_order_message" style="display:none;"><p data-message="buy02_01_002_03">予約購入後のキャンセルや返金はできません。</p></div></div><div id="specific_trade_law" style="display: none"><p class="btn_r"><a href="" id="evt_trade_law" class="btn_001 se" data-se-label="SE_WAVE_OK" data-message="common01_01_030">Legal Notices</a></p></div></div><div id="buy_final_reminder" class="clearfix"><div id="bfr_bottom" class="clearfix"><p id="sel_main_title" class="confirm_scroll" data-message="buy02_01_021" style="display:none;">追加コンテンツの対応ソフト：</p><p id="using_coupon" class="apply_coupon" data-message="buy02_01_023" style="display: none">クーポンを使用しています。</p><p id="using_owned_coupon" class="apply_coupon" data-message="buy02_01_025" style="display: none">「あなただけ割引」を使用しています。<br>「あなただけ割引」とは、特定の条件を満たされた方々を対象とするサービスです。</p><div id="bfr_top"><img src="image/placeholder/place_icon_buy02.png" data-original="" class="sel_title_img" width="82" height="82"><h2 class="sel_title_name"></h2></div><div id="reminder_content"></div><script id="template_title_taxex" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd class="buy_dl_total">${ str_total_data }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_title_taxin" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_title_free" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt class="orange sel_color">${ str_description }</dt>
+          <dd></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_aoc_tax_ex" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd class="buy_dl_total">${ str_total_data }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+            <dd class="aoc_contain">${ str_include_update }</dd>
+        </dl>
+      </div>
+    <p class="confirm_scroll" >{{html str_scroll }}</p>
+    <hr class="add_con_hr" /></script><script id="template_aoc_taxin" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+          <dd class="aoc_contain">${ str_include_update }</dd>
+        </dl>
+      </div>
+    <p class="confirm_scroll" >{{html str_scroll }}</p>
+    <hr class="add_con_hr" /></script><script id="template_aoc_free" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt class="orange sel_color">${ str_description }</dt>
+          <dd>${ str_free }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+          <dd class="aoc_contain">${ str_include_update }</dd>
+        </dl>
+      </div>
+    <p class="confirm_scroll">{{html str_scroll }}</p>
+    <hr class="add_con_hr" /></script><script id="template_ticket_taxex" type="text/x-jquery-tmpl"><h3 class="riyo_h3">${ str_ticket_title }</h3>
+      <div class="frame_white riyo clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd class="buy_dl_total">${ str_total_data }</dd>
+        </dl>
+      </div></script><script id="template_ticket_taxin" type="text/x-jquery-tmpl"><h3 class="riyo_h3">${ str_ticket_title }</h3>
+      <div class="frame_white riyo clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+      </div></script><script id="template_ticket_free" type="text/x-jquery-tmpl"><h3 class="riyo_h3">${ str_ticket_title }</h3>
+      <div class="frame_white riyo clearfix">
+        <dl class="buy_2pane_l">
+            <dt class="orange sel_color">${ str_description }</dt>
+            <dd>${ str_free }</dd>
+        </dl>
+      </div></script><div id="aoc_detail"></div><script id="template_aoc_detail_taxex" type="text/x-jquery-tmpl"><h3 class="add_con_h3">${ aoc_title }</h3>
+      <div class="frame_white add_con clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd>${ str_total_data }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_aoc_detail_taxin" type="text/x-jquery-tmpl"><h3 class="add_con_h3">${ aoc_title }</h3>
+      <div class="frame_white add_con clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_aoc_detail_free" type="text/x-jquery-tmpl"><h3 class="add_con_h3">${ aoc_title }</h3>
+      <div class="frame_white add_con clearfix">
+        {{if is_redeem}}
+        <dl class="buy_2pane_l">
+            <dt class="orange sel_color_aoc">${ str_redeem }</dt>
+            <dd></dd>
+        </dl>
+        {{else}}
+        <dl class="buy_2pane_l">
+            <dt class="orange sel_color_aoc">${ str_description }</dt>
+            <dd>${ str_free }</dd>
+        </dl>
+        {{/if}}
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><div id="reminder_content_detail"></div><script id="template_detail_taxex" type="text/x-jquery-tmpl"><div class="frame_white">
+      <div class="buy_dl_bottom clearfix">
+        <h3 class="frame_white_title">${ str_detail }</h3>
+
+        <dl class="frame_white_contents clearfix">
+          <dt class="bdb">${ str_balance_before }</dt>
+          <dd class="bdb">${ str_balance_before_data }</dd>
+          <dt class="bdr">${ str_price }</dt>
+          <dd class="bdr">${ str_price_data }</dd>
+          <dt class="bdr">${ str_tax }</dt>
+          <dd class="bdr">${ str_tax_data }</dd>
+          <dt class="bdr">${ str_total }</dt>
+          <dd class="bdr">${ str_total_data }</dd>
+          <dt class="bdb">${ str_balance_after }</dt>
+          <dd class="bdb">${ str_balance_after_data }</dd>
+        </dl>
+      </div>
+      </div></script><script id="template_detail_taxin" type="text/x-jquery-tmpl"><div class="frame_white">
+      <div class="buy_dl_bottom clearfix">
+        <h3 class="frame_white_title">${ str_detail }</h3>
+
+        <dl class="frame_white_contents clearfix">
+          <dt class="bdb">${ str_balance_before }</dt>
+          <dd class="bdb">${ str_balance_before_data }</dd>
+          <dt class="bdr">${ str_price }</dt>
+          <dd class="bdr">${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+          <dt class="bdb">${ str_balance_after }</dt>
+          <dd class="bdb">${ str_balance_after_data }</dd>
+        </dl>
+      </div>
+      </div></script><script id="template_detail_free" type="text/x-jquery-tmpl"><div class="frame_white">
+      <div class="buy_dl_bottom clearfix">
+        <h3 class="frame_white_title">${ str_detail }</h3>
+
+        <dl class="frame_white_contents clearfix">
+          {{if is_redeem}}
+          <dt class="orange">${ str_description }</dt>
+          <dd></dd>
+          {{else}}
+          <dt class="bdb orange sel_color">${ str_description }</dt>
+          <dd class="bdb orange">${ str_free }</dd>
+          {{/if}}
+        </dl>
+      </div>
+      </div></script><div id="jp_legal_description"><p id="jp_legal_sales_end" data-message="buy02_01_026" style="display:none;">Wii Uソフト（ダウンロード版）の販売は、2023年3月28日に終了します。なお一部のソフトはより早期に販売終了する場合があります。</p><p id="jp_legal_service_normal" data-message="buy02_01_027" style="display:none;">役務の対価の支払の時期及び役務の提供時期については「法令に基づく表示」をご確認ください。</p><p id="jp_legal_service_pre_prder" data-message="buy02_01_028" style="display:none;">役務の対価の支払の時期については「法令に基づく表示」をご確認ください。</p></div></div></div></div><div class="buy_submit ob cho clearfix"><p class="btn_b0201 muk"><a href="#" class="btn_004 se evt_purchase" data-message="common01_01_011">Purchase</a></p></div></div><div id="buy02_02" class="scroll_escape"><div class="buy_body"><div id="buy_loading_wrap"><div id="buy_loading" data-message="buy02_02_001">手続きをしています。<br>この手続きには時間がかかることがあります。<br>電源を切らずにしばらくお待ちください。</div></div></div></div><div id="buy02_03"><div class="header_common"><h1></h1></div><div class="buy_body"><div class="buy_completed clearfix"><h2 data-message="buy02_03_001">ありがとうございました。</h2><p id="thanks_message" data-message="buy02_03_002">ただいまよりダウンロードを開始しました。<br>ダウンロードの状況は、HOMEボタンメニューにある<br>「ダウンロード管理」でご確認いただけます。</p><p class="btn_r"><a href="" id="evt_receipt" class="btn_002 se" data-se-label="SE_WAVE_OK" data-message="buy02_03_006">ご利用記録へ</a></p></div><p id="continue_shopping"><a href="#" id="flow_p" class="btn_002 se" data-se-label="SE_WAVE_OK" data-message="common01_01_034">Continue Shopping</a></p></div></div></div><div id="sel_menu_bar"></div></div><div style="display: none"><span id="dialog_msg_reDL" data-message="buy01_05_001">すでにこの本体に登録済みのものがあります。
+
+ダウンロードしますか？</span> <span id="dialog_msg_reDL_ok" data-message="common01_01_014_02">Download</span> <span id="dialog_back" data-message="common01_01_001_02">Back</span> <span id="dialog_purchase" data-message="common01_01_011">Purchase</span> <span id="dialog_back_indisc_aoc" data-message="common01_01_007_02">Cancel</span> <span id="dialog_purchase_indisc_aoc" data-message="common01_01_011_02">Proceed to Purchase Screen</span> <span id="str_DL" data-message="common01_01_026">Download</span> <span id="dialog_msg_DL" data-message="buy01_06_001">このソフトは、すでにご利用いただけます。</span> <span id="dialog_msg_indisc_aoc" data-message="buy01_06_003">この追加コンテンツは
+既にディスクからインストール済みです。
+それでも購入しますか？</span> <span id="dialog_msg_ok" data-message="common01_01_006">OK</span> <span id="str_pre_confirm" data-message="buy01_01_001">内容のご確認</span> <span id="str_final_confirm" data-message="buy02_01_001">最終確認画面</span> <span id="str_update_confirm" data-message="buy02_01_016">「更新する」ボタンを押すと確定します。</span> <span id="str_scroll" data-message="buy02_01_022"><span class="orange">スクロールして、以下の内容をご確認ください。</span></span></span> <span id="str_size_info" data-message="buy01_02_001">容量: %{0}</span> <span id="str_price_taxin" data-message="buy02_01_004">(税込)</span> <span id="str_price_taxin_AU" data-message="buy02_01_004_02">(税込)</span> <span id="str_price" data-message="common01_01_019">Amount</span> <span id="str_tax" data-message="buy02_01_006">Tax</span> <span id="str_total" data-message="buy02_01_007">Total</span> <span id="str_size" data-message="buy02_01_010">容量</span> <span id="str_total_price" data-message="buy02_01_019">合計金額</span> <span id="str_free" data-message="common01_01_056">Free</span> <span id="str_install" data-message="buy02_01_018">インストールに必要な容量: %{0}</span> <span id="str_total_size" data-message="buy02_01_018_001">インストールに必要な容量</span> <span id="str_media" data-message="buy01_02_005">インストール先: %{s}</span> <span id="str_media_nand" data-message="common01_01_066">System Memory</span> <span id="str_media_usb" data-message="common01_01_067">USB Storage Device</span> <span id="str_inc_update" data-message="buy02_01_015">(追加コンテンツ更新分を含む)</span> <span id="str_balance_before" data-message="buy02_01_008">現在の残高</span> <span id="str_balance_after" data-message="buy02_01_009">購入後の残高</span> <span id="str_purchased" data-message="buy02_01_012">すでに購入済みのため、残高は減りません。</span> <span id="str_demo" data-message="buy02_01_013">体験版のため残高は減りません。</span> <span id="str_redeem" data-message="buy02_01_014">引換のため残高は減りません。</span> <span id="str_redeem2" data-message="buy02_03_010">引き換える</span> <span id="str_aoc_update" data-message="buy02_01_017">追加コンテンツ更新のため残高は減りません。</span> <span id="str_btn_redl" data-message="common01_01_014">Download</span> <span id="str_btn_dl" data-message="common01_01_026">Download</span> <span id="str_btn_dl_free" data-message="common01_01_082">Free Download</span> <span id="str_detail" data-message="buy02_01_011">詳細</span> <span id="str_in_app_purchase" data-message="buy02_01_024">ソフト内購入あり</span> <span id="str_ticket_msg" data-message="buy02_03_002_02">利用券は<span class="orange">ただいまより</span>有効になりました。<br>すぐにソフトをプレイする場合は、画面左下にある「おわる」ボタンを<br>押して、ニンテンドーeショップを終了してください。</span>有効になりました。<br>すぐにソフトをプレイする場合は、画面左下にある「おわる」ボタンを<br>押して、ニンテンドーeショップを終了してください。</span><div id="str_gb"><span class="capa_gb" data-message="common01_01_062"><span class="capa_gb">GB</span></span></span></div><div id="str_mb"><span class="capa_mb" data-message="common01_01_063"><span class="capa_mb">MB</span></span></span></div><div id="str_kb"><span class="capa_kb" data-message="common01_01_064"><span class="capa_kb">KB</span></span></span></div><span id="str_aoc_attention" data-message="buy01_07_001">この追加コンテンツをご利用いただくには、<br>%{title}<br>のソフトが必要です。<br><br>このソフトを持っていますか？<br>持っていない場合は「もどる」を押してください。</span> <span id="str_ticket_attention" data-message="buy01_07_002">この利用券をご利用いただくには、<br>%{title}<br>のソフトが必要です。<br><br>このソフトを持っていますか？<br>持っていない場合は「もどる」を押してください。</span> <span id="dialog_msg_full" data-message="buy02_02_002">一度に登録できるダウンロード数の
+上限を超えました。
+
+｢HOMEボタンメニュー｣ → ｢ダウンロード管理｣で
+ダウンロードが完了しているデータをインストール
+するか、不必要なデータを削除してください。
+
+そのあと、以下の場所で目的のソフト/追加コン
+テンツをダウンロードをしてください。
+｢マイメニュー｣ →｢購入済みソフト｣</span> <span id="dialog_msg_age" data-message="legal05_01_001">お客様の年齢では、このソフトの情報の
+閲覧および購入はできません。</span> <span id="dialog_msg_latest_version" data-message="buy01_06_002">追加コンテンツを購入できません。
+
+■『New スーパーマリオブラザーズ U』を
+　　お持ちの方
+
+『New スーパーマリオブラザーズ U』を
+最新のデータに更新すると、
+この追加コンテンツを
+購入できるようになります。
+
+Wii Uメニューでソフトを
+起動すると更新できます。
+
+■『New スーパーマリオブラザーズ U』を
+　　お持ちでない方
+
+この追加コンテンツを購入するには、
+『New スーパーマリオブラザーズ U』
+（パッケージ版/ダウンロード版のどちらか）を
+お持ちいただく必要があります。</span> <span id="str_ru" data-message="buy01_01_004">先へ進む場合は、下記事項に同意したことになります。<br><br>本ソフトウェアは、非商業的な個人的利用のために簡易な非独占的使用権を下記条項に基づき任天堂が許諾するものです。任天堂の書面による事前の承諾を得ることなく、本ソフトウェアのサブライセンスを第三者へ譲渡することはできません。本ソフトウェアのライセンスは、本ソフトウェアに指定されたライセンス料が支払われた日から有効となります。本約款に定められていない事項に関しては全てニンテンドー・ネットワーク・ユーザー・アグリーメントの適用対象となります。</span> <span id="str_use_owned_coupon" data-message="buy01_01_008">「あなただけ割引」を使用する</span> <span id="str_use_coupon_code" data-message="buy01_01_007">クーポンを使用する</span> <span id="str_disuse_coupon" data-message="buy01_01_009">何も使用しない</span> <span id="dialog_msg_update" data-message="boot01_01_005">A system update is available.
+Please perform a system update in System Settings and try again.</span> <span id="dialog_update" data-message="data03_03_002">Update</span> <span id="dialog_msg_withdrawal" data-message="buy01_01_006">I consent that Nintendo begins with its performance when I click on the “Purchase” button, before the withdrawal period ends. I acknowledge that I thereby lose my right of withdrawal.</span> <span id="dialog_agree" data-message="common01_01_075">Agree</span> <span id="dialog_cancel" data-message="common01_01_024">Cancel</span></div></body></html>

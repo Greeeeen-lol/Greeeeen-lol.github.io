@@ -1,0 +1,41 @@
+<script id="wrapper" type="text/template">
+    <div id="header-search">
+        <input type="text" name="AOC_freeword" value="" placeholder="" keyboard="full" minlength="0" maxlength="50" class="textbox">
+        <a href="#" class="se evt_search" data-se-label="SE_WAVE_OK"><span data-message="always02_01_019">Search</span></a>
+    </div>
+    <div id="main-search">
+        {{if (data.aoc_category_group) { }}
+        {{ _.each(data.aoc_category_group, function(group){ }}
+        <div class="category-group" id="group-{{- group.id }}">
+            <h2>{{= group.name }}</h2>
+            <ul>
+                <li class="all">
+                    <input type="checkbox" id="group_{{- group.id }}_cate_0" name="AOC_category[]" value="0">
+                    <label for="group_{{- group.id }}_cate_0" data-message="always02_01_009">All</label>
+                </li>
+                {{ _.each(group.aoc_category, function(category){ }}
+                <li>
+                    <input type="checkbox" id="group_{{- group.id }}_cate_{{- category.id }}"
+                        name="AOC_category[]" value="{{- category.id }}">
+                    <label for="group_{{- group.id }}_cate_{{- category.id }}">{{- category.name }}</label>
+                </li>
+                {{ }); }}
+            </ul>
+        </div>
+        {{ }); }}
+        {{ } }}
+        <div class="category-group">
+            <h2 data-message="always02_01_014">Price</h2>
+            <div class="price-setting">
+                <input type="text" name="AOC_priceMin" value="" placeholder="" keyboard="tenkey" inputform="monospace" capslock="true" minlength="1" maxlength="8" class="textbox">
+                <span data-message="always02_01_016_02">~</span>
+                <input type="text" name="AOC_priceMax" value="" placeholder="" keyboard="tenkey" inputform="monospace" capslock="true" minlength="1" maxlength="8" class="textbox">
+            </div>
+            <a href="#" class="reset-price se" data-se-label="SE_WAVE_RESET"><span data-message="always02_01_017">Reset Price</span></a>
+        </div>
+        <a href="#" class="reset-all se" data-se-label="SE_WAVE_RESET"><span data-message="always02_01_018">Reset All Criteria</span></a>
+    </div>
+    <div id="footer-search">
+        <a href="#" class="se evt_search" data-se-label="SE_WAVE_OK"><span data-message="always02_01_019">Search</span></a>
+    </div>
+</script>

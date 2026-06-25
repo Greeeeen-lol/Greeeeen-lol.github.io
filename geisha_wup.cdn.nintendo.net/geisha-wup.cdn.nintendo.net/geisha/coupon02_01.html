@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/minified/mymenu.css" />
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/coupon.css" />
+</head>
+<body>
+<div id="wrapper">
+    <div><!-- mymenu表示のためdivの階層を作る -->
+        <div id="header_common">
+            <h1 data-message="coupon03_01_001">Just for You Offers</h1>
+        </div>
+        <div id="contents_common">
+            <div id="coupon02_01">
+                <p class="loading" data-message="common01_01_068">Loading...</p>
+            </div>
+            <div id="coupon02_02" class="hide">
+                <div id="simple_box">
+                    <h2 data-message="coupon02_01_002">現在、有効な「あなただけ割引」はありません。</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sel_menu_bar"></div>
+</div>
+
+<!-- localize string -->
+<div style="display:none">
+<span id="dialog_msg_ok" data-message="common01_01_006">OK</span>
+<span id="str_tax_included"><span class="tax-included" data-message="buy02_01_004">(税込)</span></span>
+<span id="str_tax_included_au"><span class="tax-included" data-message="buy02_01_004_02">(税込)</span></span>
+<span id="str_off" data-message="coupon03_01_003">%{0}OFF</span>
+<span id="str_can_use_at_once" data-message="coupon03_01_008">期間中1回のみ</span>
+<span id="str_can_use_many_times" data-message="coupon03_01_009">期間中何度でも</span>
+<span id="msg_input_code_placeholder" data-message="coupon01_01_001">クーポンコードを入力してください</span>
+<span id="msg_input_code_guide" data-message="coupon01_01_005">クーポンコードを入力してください。</span>
+<span id="valid_duration_format" data-message="coupon01_01_006_03">%{e_yyyy}年%{e_MM}月%{e_dd}日 %{e_hh}:%{e_mm}まで</span>
+</div>
+<script id="template_coupon02_01" type="text/template">
+<p class="enable_coupon_num">{{= coupon_num }}</p>
+<ul class="enable_coupon_list"></ul>
+</script>
+<script id="template_coupon02_01_item" type="text/template">
+{{if (is_new) { }}
+<p class="ico-new" data-message="common01_01_046">NEW</p>
+{{ } }}
+<h2 class="heading_orange">
+    <span>{{- name }}</span>
+    <span class="coupon">{{= discount_rate }}</span>
+</h2>
+<div class="coupon_item">
+    <div class="coupon_info">
+        <dl>
+            <dt data-message="coupon01_01_003">有効期間：</dt>
+            <dd>{{= valid_duration }}</dd>
+            <dt data-message="coupon03_01_004">使用回数：</dt>
+            <dd>{{= usage_count }}</dd>
+            <dt data-message="coupon03_01_005">取引内容：</dt>
+            <dd class="description">{{= description }}</dd>
+        </dl>
+        <a href="#" class="show-detail se" data-se-label="SE_WAVE_OK_SUB" data-sound-assigned="true" style="display:none">
+            <span class="detail-label" data-message="coupon03_01_007">もっと読む</span>
+        </a>
+    </div>
+    <div class="target_title_wrap{{if (!image) { }} no_image{{ } }}">
+    {{if (!is_target_type_all) { }}
+        <div class="target_title">
+            <a href="./#shelf?coupon_ins={{= instance_code }}" class="{{if (!image) { }}btn_002 {{ } }}se" data-se-label="SE_WAVE_OK_SUB" data-sound-assigned="true">
+                {{if (image) { }}
+                <img src="image/placeholder/place_free_dcdcdc.png" data-original="{{= image.url }}" width="{{= image.width }}" height="{{= image.height }}" class="lazy"/>
+                {{ } }}
+                <span data-message="coupon02_01_001">対象ソフトを見る</span>
+            </a>
+        </div>
+    {{ } }}
+    </div>
+</div>
+</script>
+
+<!-- wood:aggregatejs:extlibs -->
+<script type="text/javascript" src="js/minified/extlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:extlibs -->
+<!-- wood:aggregatejs:woodlibs -->
+<script type="text/javascript" src="js/minified/woodlibs.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:woodlibs -->
+<script type="text/javascript" src="js/environment.js" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- wood:aggregatejs:coupon02_01 -->
+<script type="text/javascript" src="js/minified/coupon02_01.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:coupon02_01 -->
+
+<!-- wood:aggregatejs:analytics -->
+<script type="text/javascript" src="js/minified/analytics.js?ts=1661318669" onerror="wiiuErrorViewer.openByCode(1119000);wiiuBrowser.jumpToHomeButtonMenu();"></script>
+<!-- /wood:aggregatejs:analytics -->
+
+
+<script lang="javascript">
+$(document).ready(function() {
+    new Wood.Controller.Coupon02_01;
+    Backbone.history.start({});
+});
+</script>
+</body>
+</html>

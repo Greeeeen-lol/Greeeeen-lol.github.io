@@ -1,0 +1,166 @@
+<script type="text/template" id="main">
+<div id="always_02_wrapper">
+<div id="header">
+  <input type="text" name="freeword" value="" placeholder="" keyboard="full" minlength="0" maxlength="50" class="textbox" />
+  <a href="#" class="search-submit se" data-se-label="SE_WAVE_OK">
+    <span class="search-label" data-message="always02_01_019">Search</span>
+  </a>
+</div>
+<div id="main">
+  <div id="search_category" class="category">
+    <h2 data-message="always02_01_023">What are you looking for?</h2>
+    <ul>
+      <li>
+        <input type="radio" id="soft" name="searchType" value="title" checked="checked"/>
+        <label for="soft"><span data-message="always02_01_006">Software</span></label>
+      </li>
+      <li>
+        <input type="radio" id="movie" name="searchType" value="movie" />
+        <label for="movie"><span data-message="always02_01_007">Videos</span></label>
+      </li>
+      <li>
+        <input type="radio" id="both" name="searchType" value="both" />
+        <label for="both"><span data-message="always02_01_021">Software & Videos</span></label>
+      </li>
+    </ul>
+  </div>
+  <div id="search-title">
+    <div id="search-platform" class="platform">
+      <h2 data-message="always02_01_008">Software Category</h2>
+      <ul>
+        <li class="all">
+          <input type="checkbox" id ="platform-0" name="platform[]" value="0" checked="checked" />
+          <label for="platform-0"><span data-message="always02_01_027">All Categories</span></label>
+        </li>
+      </ul>
+      <p class="loading" data-message="common01_01_068">Loading...</p>
+    </div>
+    <div id="search-genre" class="genre">
+      <h2 data-message="always02_01_010">Genre</h2>
+      <a href="#" id="show-genre" class="assign-genre se" data-se-label="SE_WAVE_OK_SUB">
+        <span data-message="always02_01_024">Select Genre</span>
+      </a>
+      <dl class="assigned-genre">
+        <dt data-message="always02_01_025">Selected Genre:</dt>
+        <dd id="selected-genre" data-message="always02_01_028" >All Genres</dd>
+      </dl>
+    </div>
+    <div id="search-publisher" class="publisher">
+      <h2 data-message="always02_01_011">Publisher</h2>
+      <a href="#" id="show-publisher" class="assign-publisher se" data-se-label="SE_WAVE_OK_SUB">
+        <span data-message="always02_01_012">Select Publisher</span>
+      </a>
+      <dl class="assigned-publisher">
+        <dt data-message="always02_01_013">Selected Publisher:</dt>
+        <dd id="selected-publisher" data-message="always02_01_029" >All Publishers</dd>
+      </dl>
+    </div>
+    <div class="price">
+      <h2 data-message="always02_01_014">Price</h2>
+      <div class="price-setting">
+        <input type="text" name="price_min" value="" placeholder="" keyboard="tenkey" inputform="monospace" capslock="true" minlength="1" maxlength="8" class="textbox" />
+        <span data-message="always02_01_016_02">~</span>
+        <input type="text" name="price_max" value="" placeholder="" keyboard="tenkey" inputform="monospace" capslock="true" minlength="1" maxlength="8" class="textbox" />
+      </div>
+      <a href="#" class="reset-price se" data-se-label="SE_WAVE_RESET">
+        <span data-message="always02_01_017">Reset Price</span>
+      </a>
+    </div>
+    <a href="#" class="reset-all se" data-se-label="SE_WAVE_RESET">
+      <span data-message="always02_01_018">Reset All Criteria</span>
+    </a>
+  </div>
+  <div id="serach-movie" class="scene-movie" style="display: none">
+    <h2 data-message="always02_01_008">Software Category</h2>
+    <ul>
+      <li class="scene-movie-all all">
+        <input type="checkbox" id="device-0" name="device[]" value="0" checked="checked" />
+        <label for="device-0"><span data-message="always02_01_027">All Categories</span></label>
+      </li>
+      <li>
+        <input type="checkbox" id="device-5" name="device[]" value="5" />
+        <label for="device-5"><span data-message="always02_01_031">Wii U</span></label>
+      </li>
+      <li>
+        <input type="checkbox" id="device-4" name="device[]" value="4" />
+        <label for="device-4"><span data-message="always02_01_032">3DS</span></label>
+      </li>
+    </ul>
+  </div>
+</div><!-- #main -->
+<div id="footer">
+  <a href="#" class="search-submit se" data-se-label="SE_WAVE_OK">
+    <span class="search-label" data-message="always02_01_019">Search</span>
+  </a>
+</div>
+</div>
+
+
+<div id="genre_dialog" class="search-dialog" style="display: none">
+  <div class="dialog-option">
+    <h3 data-message="always02_01_026">Choose a genre to search for</h3>
+    <ul>
+      <li class="all">
+        <input type="checkbox" id="genre-0" name="genre[]" value="0" checked="checked" />
+        <label for="genre-0"><span data-message="always02_01_028">All Genres</span></label>
+     </li>
+    </ul>
+    <p class="loading" data-message="common01_01_068">Loading...</p>
+  </div>
+  <div class="dialog-footer">
+    <a href="#" class="dialog-submit se" data-se-label="SE_WAVE_OK">
+      <span data-message="common01_01_040">Confirm</span>
+    </a>
+  </div>
+</div>
+<div id="publisher_dialog" class="search-dialog" style="display: none">
+  <div class="dialog-option">
+    <h3 data-message="always02_01_020">Choose a publisher to search for</h3>
+    <ul>
+      <li class="all">
+        <input type="checkbox" id="publisher-0" name="publisher[]" value="0" checked="checked" />
+        <label for="publisher-0"><span data-message="always02_01_029">All Publishers</span></label>
+      </li>
+    </ul>
+    <p class="loading" data-message="common01_01_068">Loading...</p>
+  </div>
+  <div class="dialog-footer">
+    <a href="#" class="dialog-submit se" data-se-label="SE_WAVE_OK">
+      <span data-message="common01_01_040">Confirm</span>
+    </a>
+  </div>
+</div>
+  <div style="display: none">
+    <!-- string textbox -->
+    <span id="str_freeword" data-message="always02_01_003">Please enter a keyword.</span>
+    <span id="str_priceMin" data-message="always02_01_015">Free</span>
+    <span id="str_priceMax" data-message="always02_01_016">No Limit</span>
+    <span id="str_nocheck" data-message="always02_01_009">All</span>
+    <span id="str_genre_all" data-message="always02_01_028">All Genres</span>
+    <span id="str_publisher_all" data-message="always02_01_029">All Publishers</span>
+  </div>
+</script>
+<script type="text/template" id="platform">
+{{ _.each(data, function(item) { }}
+  <li>
+    <input type="checkbox" id="platform-{{= item.id }}" name="platform[]" value="{{= item.id }}" />
+    <label for="platform-{{= item.id }}">{{= item.name }}</label>
+  </li>
+{{ }); }}
+</script>
+<script type="text/template" id="genre">
+{{ _.each(data, function(item) { }}
+  <li>
+    <input type="checkbox" id="genre-{{= item.id }}" name="genre[]" value="{{= item.id }}" />
+    <label for="genre-{{= item.id }}">{{= item.name }}</label>
+  </li>
+{{ }); }}
+</script>
+<script type="text/template" id="publisher">
+{{ _.each(data, function(item) { }}
+  <li>
+    <input type="checkbox" id="publisher-{{= item.id }}" name="publisher[]" value="{{= item.id }}" />
+    <label for="publisher-{{= item.id }}">{{= item.name }}</label>
+  </li>
+{{ }); }}
+</script>

@@ -1,0 +1,153 @@
+<script id="main" type="text/x-ejs-template">
+<div id="mymenu">
+    <div id="header-menu">
+        <h1 data-message="common01_01_002">My Menu</h1>
+        <div class="help">
+            <a href="#" class="se" data-se-label="SE_WAVE_OK_SUB">
+                <span data-message="always01_01_008">Help</span>
+            </a>
+        </div>
+    </div>
+    <div id="main-menu">
+        <div class="profile">
+            <div class="profile-info">
+                <div class="mii">
+                    <% if (data.mii && data.mii.icon_url) { %>
+                        <img src="<%= data.mii.icon_url %>" width="96" height="96" />
+                    <% } else { %>
+                        <img src="image/img_unknown_MiiIcon.png" width="96" height="96" />
+                    <% } %>
+                </div>
+                <div class="balance">
+                    <span class="name"><%= data.mii ? data.mii.name || "" : "" %></span>
+                    <div class="current">
+                        <span data-message="common01_01_020">Balance:</span><span class="amount"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-relation">
+                <div class="add">
+                    <a href="money01_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                        <span data-message="common01_01_004">Add Funds</span>
+                    </a>
+                </div>
+                <div class="ccard" style="display: none;">
+                    <a href="set04_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                        <span data-message="set01_01_005">Confirm Credit Card Info</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <% if (data.is_owned_coupon_available) { %>
+        <div class="owned-coupon">
+            <h2 data-message="common01_01_084">Just for You Offer</h2>
+            <a href="coupon02_01.html" class="show-owned-coupon-list se" data-se-label="SE_WAVE_OK">
+                <span data-message="coupon03_01_001">Just for You Offers</span>
+            </a>
+        </div>
+        <% } %>
+        
+        <div class="wishlist">
+            <h2 data-message="always01_01_003">Wish List</h2> 
+            <% if (data.wish && data.wish.length > 0) { %>
+                <ul class="clearfix">
+                    <% _.each(data.wish, function(item) { %>
+                        <li>
+                            <a href="<%= item.url %>" class="se" data-se-label="SE_WAVE_OK">
+                                <img src="image/placeholder/place_icon_wii_u.png" data-original="<%= item.icon %>" class="lazy" width="110" height="110" />
+                            </a>
+                        </li>
+                    <% }); %>
+                </ul>
+                <a href="shelf02_01.html#wishlist" class="show-detail se" data-se-label="SE_WAVE_OK">
+                    <span data-message="common01_01_039">Cancel</span>
+                </a>
+            <% } else { %>
+                <p data-message="wish01_01_006">There are no titles on your Wish List.</p>
+            <% } %>
+        </div>
+
+        <div class="recommend">
+            <h2 data-message="always01_01_005">User Recommendations</h2>
+            <div class="load" data-message="common01_01_068">Loading...</div>
+        </div>
+
+        <div class="history">
+            <h2 data-message="always01_01_009">Account Activity</h2>
+            <ul>
+                <li>
+                    <a href="history03_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                        <span data-message="history01_01_004">Redownloadable Software</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="history04_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                        <span data-message="history01_01_003">Account Activity</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="setting">
+            <h2 data-message="set01_01_002">Settings</h2>
+            <a href="#" id="evt_show_all" class="show-all se" data-se-label="SE_WAVE_OK_SUB" style="display: none;">
+                <span data-message="common01_01_023">View All</span>
+            </a>
+            <ul style="">
+                <li>
+                    <a href="set03_01.html" class="se" data-se-label="SE_WAVE_OK_SUB">
+                        <span data-message="set01_01_003">Notification Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="sel_menu_bar"></div>
+
+    <div style="display:none;">
+        <span id="mymenu_msg_age" data-message="reco01_01_003">You cannot recommend this software because of your age restrictions.</span>
+        <span id="mymenu_msg_ok" data-message="common01_01_006">OK</span>
+    </div>
+</div>
+</script>
+
+<script id="recommend" type="text/x-ejs-template">
+<% if (data.votable && data.votable.length > 0) { %>
+  <ul class="clearfix">
+    <% _.each(data.votable, function(item) { %>
+      <li>
+        <a href="<%= item.url %>" class="se" data-se-label="SE_WAVE_OK" data-sound-assigned="true" data-age="<%= item.title.rating_age || 0 %>">
+          <img src="image/placeholder/place_icon_wii_u.png" data-original="<%= item.title.icon_url %>" class="lazy" width="110" height="110" />
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p data-message="common01_01_042" style="font-size:24px; text-align:center; color:#787878; margin-top:20px;">View Software Details</p>
+<% } %>
+</script>
+
+<script id="help" type="text/x-ejs-template">
+<div id="main-help">
+  <ul>
+    <li>
+      <a href="manual/manual01_00.html" class="manual se" data-se-label="SE_WAVE_OK">
+        <span data-message="common01_01_006">OK</span>
+      </a>
+    </li>
+    <li>
+      <a href="legal02_01.html" class="about-eshop se" data-se-label="SE_WAVE_OK">
+        <span data-message="common01_01_008">Close</span>
+      </a>
+    </li>
+    <% if (is_inquiry_available) { %>
+      <li>
+        <a href="set05_01.html" class="contact se" data-se-label="SE_WAVE_OK">
+          <span data-message="set05_01_001">Contact Support</span>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+</div>
+</script>

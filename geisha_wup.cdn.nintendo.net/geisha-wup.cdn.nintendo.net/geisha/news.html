@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>News</title>
+    <link rel="stylesheet" href="css/minified/index.css">
+</head>
+<body>
+<div id="wrapper" class="js-news" style="position: static; top: 0px; display: block;">
+    <div id="top02_01">
+        <div class="news-header">
+            <h1><span data-message="top01_01_001">News</span></h1>
+        </div>
+
+        <div class="news-main">
+            <ul id="sel_list" class="news-list">
+                <li>
+                    <a href="#" data-detail="#news_41525" class="se evt_show_detail" data-sound-assigned="true">
+                        <span>Welcome to the Custom Games Portal!</span>
+                    </a>
+                    <span class="sel-new ico-new">NEW</span>
+                </li>
+            </ul>
+
+            <div id="sel_detail" class="news-detail">
+                <div id="news_41525" class="news-detail-frame" style="display:none;">
+                    <h2>Welcome to the Custom Games Portal!</h2>
+                    <div class="news-detail-content">
+                        Dear Developer,<br><br>
+                        Welcome to your custom homebrew and templates offline launcher portal! This app is configured to act as a local sandbox template directory for all your custom free games.<br><br>
+                        <strong>Key Features:</strong><br>
+                        - Completely offline: No connection to Nintendo servers is required.<br>
+                        - Local games database: Dynamically loaded from <code>js/database.js</code>.<br>
+                        - Simulation support: Click "Free Download" to simulate a local download and installation. Once complete, start games directly.<br>
+                        - Fully English UI localization.<br><br>
+                        Enjoy customizing your launcher and coding new games!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sel_menu_bar">
+        <ul id="ft_navi">
+            <li id="top_link_01" class="top"><div data-href="index.html" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Home</span></div></li>
+            <li id="top_link_02" class="menu"><div data-href="always01_01.html" class="se" data-se-label="SE_WAVE_OK_SUB"><img src="image/img_unknown_MiiIcon.png" width="70" height="70"><br><span>My Menu</span></div></li>
+            <li id="top_link_03" class="balance"><div data-href="money01_01.html" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Balance:</span><span id="balance">¥0</span></div></li>
+            <li id="top_link_04" class="search"><div data-href="always02_01.html" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Search</span></div></li>
+            <li id="top_link_06" class="exit"><div data-href="index.html" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Exit</span></div></li>
+            <li id="top_link_05" class="back" style="display:none;"><div data-href="" class="se" data-se-label="SE_WAVE_OK_SUB"><span>Back</span></div></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/environment.js"></script>
+<script type="text/javascript" src="js/news.js"></script>
+</body>
+</html>

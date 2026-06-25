@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wii U Menu Remake</title>
+    <script>window.NO_BOOT_MII_CREATOR = true;</script>
+    <!-- Backend location (empty in dev → vite proxy). Must load before the app. -->
+    <script src="/platform-config.js"></script>
+    <!-- Register the asset/game service worker EARLY. When a backend base is
+         configured (hosted frontend), it rewrites /platform, /local-assets and
+         /games to that origin — the production replacement for the vite proxy.
+         If the page isn't controlled yet, reload once so the first paint's
+         assets route through it. -->
+    <script>
+      (function () {
+        if (!('serviceWorker' in navigator)) return;
+        var base = window.PLATFORM_BASE || '';
+        var url = '/vfs-sw.js' + (base ? '?base=' + encodeURIComponent(base) : '');
+        navigator.serviceWorker.register(url, { scope: '/' }).then(function () {
+          if (base && !navigator.serviceWorker.controller) {
+            navigator.serviceWorker.ready.then(function () {
+              if (!sessionStorage.getItem('sw-reloaded')) {
+                sessionStorage.setItem('sw-reloaded', '1');
+                location.reload();
+              }
+            });
+          }
+        }).catch(function (e) { console.warn('SW register failed:', e); });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/mock-api.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/wii-u-menu/src/main.tsx"></script>
+  </body>
+</html>

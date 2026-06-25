@@ -1,0 +1,57 @@
+<script id="wrapper" type="text/template">
+    <div class="detail">
+        {{ if (is_aoc_purchase) { }}
+        <div class="checklist">
+        </div>
+        {{ } }}
+        <div class="content{{if (!is_aoc_purchase) { }} single {{ } }}">
+            <div class="info">
+                <div class="icon">
+                    <div class="image"><img src="image/placeholder/place_icon_add_c.png" data-original="{{- icon_url }}" class="lazy" width="160" height="160"/></div>
+                    {{if (is_discount) { }}
+                    <div class="status"><span data-message="common01_01_047">SALE</span></div>
+                    {{ } }}
+                </div>
+                <div class="title">
+                    <div class="name">{{- name }}</div>
+                    {{if (is_discount) { }}
+                    <span class="strike-through"><span class="ordinary-price">{{- regular_price }}</span></span>
+                    <span class="price sale">{{= discount_price }}</span>
+                    {{ } else { }}
+                    <span class="strike-through"><span class="ordinary-price"></span></span>
+                    <span class="price">{{= regular_price }}</span>
+                    {{ } }}
+                    <span class="size">{{= data_size }}</span></span>
+                </div>
+                <div class="action-wrap">
+                    <div class="action">
+                        {{if (downloadable) { }}
+                        <a href="#" class="{{- context }} {{- checked }} {{= is_aoc_purchase ? '"' : 'se" data-se-label="SE_WAVE_OK"'}}>
+                            <span>{{= purchase_status_str }}</span>
+                        </a>
+                        {{ } else { }}
+                        <div class="disable">
+                            <span>{{= purchase_status_str }}</span>
+                        </div>
+                        {{ } }}
+                        {{if (mov_disp) { }}
+                        <a href="{{- url_mov }}" class="movie se" data-se-label="SE_WAVE_OK"><span data-message="data03_01_008">映像を見る</span></a>
+                        {{ } }}
+                    </div>
+                </div>
+            </div>
+            <p class="price-description">
+                {{= discount_description }}
+            </p>
+            <p class="text">
+                {{= description }}
+            </p>
+            <p>
+            {{ _.each(screenshot_urls, function(url){ }}
+                <img src="image/placeholder/place_free_dcdcdc.png" data-original="{{- url }}" class="lazy" width="1010px" height="568px" />
+            {{ }); }}
+            </p>
+        </div>
+    </div>
+</script>
+

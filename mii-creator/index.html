@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script>
+    // Suspend AudioContext inside iframe until loading screen finishes
+    if (window.parent !== window.self) {
+      const OriginalAudioContext = window.AudioContext || window.webkitAudioContext;
+      if (OriginalAudioContext) {
+        window.suspendedAudioContexts = [];
+        window.allowAudioResume = false;
+
+        // Override AudioContext.prototype.resume to block it unless explicitly allowed
+        const originalResume = OriginalAudioContext.prototype.resume;
+        OriginalAudioContext.prototype.resume = function() {
+          if (window.allowAudioResume) {
+            return originalResume.apply(this);
+          }
+          return Promise.resolve();
+        };
+
+        const WrappedAudioContext = function(...args) {
+          const ctx = new OriginalAudioContext(...args);
+          try {
+            ctx.suspend();
+          } catch (e) {
+            console.error("Failed to suspend AudioContext", e);
+          }
+          window.suspendedAudioContexts.push(ctx);
+          return ctx;
+        };
+        WrappedAudioContext.prototype = OriginalAudioContext.prototype;
+        Object.keys(OriginalAudioContext).forEach(key => {
+          WrappedAudioContext[key] = OriginalAudioContext[key];
+        });
+        window.AudioContext = WrappedAudioContext;
+        window.webkitAudioContext = WrappedAudioContext;
+      }
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mii Creator</title>
+  <meta property="og:title" content="Mii Creator - Web-based Mii editor" />
+  <meta property="og:description" content="Create and share Mii characters online with just a few clicks!" />
+  <meta name="description" content="Create and share Mii characters online with just a few clicks!" />
+  <meta name="keywords" content="Mii, Mii Creator, Nintendo, Pretendo, FFL, Wii U, 3DS, Mii Maker, Web Mii Maker" />
+  <meta property="theme-color" content="#484848" />
+  <meta property="og:site_name" content="mii.nxw.pw" />
+  <meta property="og:image" content="https://mii.nxw.pw/assets/images/preview2025.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:image" content="https://mii.nxw.pw/assets/images/preview2025.png" />
+
+  <style>
+    html,
+    body {
+      background-color: white;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+      html,
+      body {
+        background-color: black;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="/src/main.css" />
+</head>
+
+<body>
+  <script src="/mock-api.js"></script>
+  <script type="module" src="/src/main.ts"></script>
+
+  <svg width="0" height="0" style="position: absolute; visibility: hidden" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="paint0_linear_1196_50" x1="24.2801" y1="12.96" x2="39.1601" y2="35.04"
+        gradientUnits="userSpaceOnUse">
+        <stop stop-color="#EC0000" />
+        <stop offset="0.955263" stop-color="#B50400" />
+      </linearGradient>
+      <linearGradient id="paint0_linear_1196_45" x1="20.1601" y1="24" x2="37.9201" y2="41.76"
+        gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F78E00" />
+        <stop offset="0.11" stop-color="#FCBA00" />
+        <stop offset="0.42" stop-color="#FCBA00" />
+        <stop offset="0.63" stop-color="#EF4D00" />
+      </linearGradient>
+      <linearGradient id="paint0_linear_1966_21" x1="20.2045" y1="18.6886" x2="29.2193" y2="30.9992"
+        gradientUnits="userSpaceOnUse">
+        <stop stop-color="#EF9600" />
+        <stop offset="0.63" stop-color="#EF9600" />
+      </linearGradient>
+      <linearGradient id="paint1_linear_1966_21" x1="16.32" y1="22.0801" x2="32.4548" y2="38.1065"
+        gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F4AD00" />
+        <stop offset="0.29" stop-color="#FADF00" />
+        <stop offset="0.665" stop-color="#FCE200" />
+        <stop offset="1" stop-color="#EC7900" />
+      </linearGradient>
+
+      <filter id="outline" color-interpolation-filters="sRGB">
+        <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="1" />
+        <feFlood flood-color="var(--drop-shadow)" result="FLOOD" />
+        <feComposite in="FLOOD" in2="DILATED" operator="in" result="OUTLINE" />
+        <feComposite in="SourceGraphic" in2="OUTLINE" operator="over" />
+      </filter>
+    </defs>
+  </svg>
+
+</body>
+
+</html>
