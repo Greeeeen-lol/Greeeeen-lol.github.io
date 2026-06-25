@@ -1,8 +1,9 @@
 # Dependencies
 node_modules/
 
-# Build output (GitHub Actions rebuilds it)
-dist/
+# Build output (GitHub Actions rebuilds it). Root-anchored so it does NOT match
+# public/dist/ (runtime engine assets: three.js, brotli, icons.json).
+/dist/
 geisha_wup.cdn.nintendo.net/dist/
 
 # Backend-only game payloads — too big for GitHub (3 zips > 100MB hard limit)
