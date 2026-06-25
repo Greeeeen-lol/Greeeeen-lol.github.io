@@ -166,6 +166,14 @@ export default defineConfig({
             fs.cpSync(from, path.join(outDir, dir), { recursive: true });
           }
         }
+        // version.json — read by System Settings → System Update to detect a new
+        // deploy. `build` changes every CI run (commit SHA), so the client can
+        // tell when the live build differs from the one it last applied.
+        const build = process.env.GITHUB_SHA || String(Date.now());
+        fs.writeFileSync(
+          path.join(outDir, 'version.json'),
+          JSON.stringify({ version: '1.0.0', build }),
+        );
       }
     }
   ],
